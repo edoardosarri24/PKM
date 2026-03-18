@@ -1,0 +1,2 @@
+Nelle [TPN](Time%20Petri%20Net%20(TPN).md) il tempo è trattato in modo non deterministico: quando definiamo LFT e EFT stiamo dicendo che la transizione è una durata in questo intervallo ma non sappiamo quanto esso sia.
+Con le stochastic TPN una volta che la transizione è abilitata si campiona dalla sua distribuzione il suo firing time. Siccome la distruzione è una [general distribution](general%20distribution.md), non abbiamo un mapping con le [markov chain](markov%20chain.md).

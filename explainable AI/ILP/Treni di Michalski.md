@@ -1,0 +1,4 @@
+Un esempio in cui un classico modello black box funziona molto male è quello dei treni di Michalski. In questa situazione per addestrare un modello è bene utilizzare un [ILP system](ILP%20system.md).
+##### Formulazione
+Abbiamo dei treni per cui sappiamo se vanno a est od ovest; vogliamo, tramite le loro caratteristiche, definire delle regole sul fatto che vadano a est od ovest.
+Il motivo per cui modelli basati su reti neurali falliscono, nel senso che funzionano molto male, è che se rappresentiamo le caratteristiche dei treni sotto forma di features allora il loro numero esplode. Le caratteristiche infatti tengono in considerazione la forma dei vagoni, il loro contenuto, il numero, la posizione di un vagone con determinate caratteristiche rispetto agli altri; rappresentare queste infromazioni tramite predicati è molto semplice, ma rispetto a features tabellari è molto complesso.

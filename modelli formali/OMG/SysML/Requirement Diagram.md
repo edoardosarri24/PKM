@@ -1,0 +1,3 @@
+Un'allocazione indica la relazione tra elementi diversi del modello. Possiamo avere allocazioni che riguardano aspetti comportamentali, strutturali, che riguardano comportamenti di tipo diverso (es: hw, sw).
+- La stereotipo $<<requirement>>$ rappresenta un requirement testuale che contiene: id, proprietà e proprietà definite dall'utente, categoria della proprietà.
+- La relazione delle requisiti include: Satisfy, Verify, Refine, Trace e Copy.

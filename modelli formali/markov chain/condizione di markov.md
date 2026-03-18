@@ -1,0 +1,2 @@
+La condizione di Markov ci dice che per prevedere i futuro ci basta conoscere il presente e non dobbiamo sapere nulla del passato.
+Formalmente si ha che, dati $t>t_n>\cdots>t_0$, $P\{M(t)=m|M(t_n)=m_n\}=$$=P\{M(t)=m|M(t_n)=m_n,\cdots,M(t_0)=m_0\}$, cioè conoscere quanto successo prima di $t_n$ non cambia la probabilità di $t$.

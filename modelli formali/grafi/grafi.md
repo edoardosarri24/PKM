@@ -1,0 +1,3 @@
+Un grafo è un modello matematico.
+È usato in molti ambiti, ad esempio in reti di [agenti](agenti.md), dove i nodi rappresentano gli agenti e gli archi un'interazione o uno scambio di informazioni.
+I grafi in generale si distinguono i [diretti](grafi%20diretti.md) e [indiretti](grafi%20indiretti.md) (che sono i più comuni): nei primi gli archi, e quindi le relazioni tra nodi, sono monodirezionali, nei secondi bidirezionali.

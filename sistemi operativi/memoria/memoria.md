@@ -1,0 +1,3 @@
+La memoria può essere vista come un vettore di celle consecutive che possono essere trattate singolarmente o a gruppi.
+# Cache
+Oggi siamo in un paradigma dove ogni processore ha più core, dove ognuno di questi è composto ALU e cache (e altro). Stiamo seguendo il [CTA model](memory%20model.md#CTA%20model): tra la cache più vicina al core e la RAM, ci sono altri livelli di memoria (solitamente 3 totali più la RAM).

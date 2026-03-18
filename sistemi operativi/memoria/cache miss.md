@@ -1,0 +1,3 @@
+Quando il core di un processore ha bisogno di un dato che non si trova nei registri, lo va a cercare nella cache L1; se non lo trova, si verifica un cache miss e lo va a cercare in una cache di livello più alto fino alla RAM.
+# Costo
+Ogni accesso a una cache di livello più alto provoca una latenza $\lambda$ nell'accesso al dato, calcolato in cicli di clock: per un dato che si trova nei registri il tempo di accesso è 1$\lambda$; se il dato è nella cache L1 allora abbiamo $\sim5\lambda$; per la RAM si parla di $\sim k\cdot10^2\lambda$.

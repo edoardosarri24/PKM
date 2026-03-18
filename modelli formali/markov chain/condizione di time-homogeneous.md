@@ -1,0 +1,2 @@
+Afferma che il comportamento di un sistema non dipende dal tempo assoluto, ma solo dal tempo relativo all'inizio. In pratica non da quando parto ma da quanto è iniziato il processo.
+Formalmente $P\{M(t)=m|M(t_n)=m_n\}=P\{M(t-t_n)=m|M(0)=m_n\}$, cioè la probabilità non cambia se considero lo stesso intervallo di tempo $t-t_n$ in posizioni del tempo diverse.

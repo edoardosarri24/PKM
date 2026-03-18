@@ -1,0 +1,20 @@
+Vediamo l'algoritmo del [consenso](legge%20del%20consenso.md) a tempo continuo; da questo deriva la versione a tempo [discreto](consenso%20a%20tempo%20discreto.md).
+Useremo il caso della [sincronizzazione](multiagent%20system/multi%20objective%20MAS/coordination/task.md#Sincronizzazione) per arrivare alla legge.
+# APF
+Dal punto di vista dell'agente $i$-esimo quello che vogliamo fare è andare verso l'agente $j$-esimo e andarci il più vicino possibile. Per definire l'azione di andare verso tutti i vicini $N_i$ si utilizza l'approccio dell'[artificial potential field](artificial%20potential%20field.md), definendo la forza attrattiva come $J_i(x)=\displaystyle\sum_{j\in N_i}\|x_i-x_j\|^2$; in realtà la forza attrattiva sarebbe in funzione di $y_i$ (i.e., $J_i(y_i)$) perché l'$i$-esimo agente non conoscerà lo stato globale ma solo quello che vede.
+##### Definizione policy
+Siccome siamo nella dinamica del [singolo integratore](single%20integrator%20dynamic.md) e usiamo APF si ha che $\dot{x}_i(t)=u_i(t)=-K_P\tfrac{\partial J_i}{\partial x_i}|_{x=x(t)}$: la velocità dell'agente (variazione di stato infinitesimale) è in direzione dell'antigradiente del potenziale attrattivo, cioè verso il suo minimo. Definendo $K_P=\tfrac{1}{2}$, si ha che $\dot{x}_i(t)=u_i(t)=\tfrac{\partial}{\partial x_i}(-\tfrac{1}{2}\sum_{j\in N_i}\|x_i-x_j\|^2)=\sum_{j\in N_i}(x_j(t)-x_i(t))$.
+# Legge
+Volgiamo adesso arrivare a una definizione della policy osservano il grafo che definisce il sistema multi agente. 
+Possiamo trasformare algebricamente la policy come $\dot{x}_i(t)=\sum_{j\in N_i}(x_j(t)-x_i(t))=-\sum_{j\in N_i}x_i(t)+\sum_{j\in N_i}x_j(t)=$$=-d_ix_i(t)+\sum_{j\in N_i}x_j(t)$ (visto che nel primo termine $x_i$ non dipende dall'indice della sommatoria), dove $d_i$ è il grado del nodo relativo all'$i$-esimo agente nel [grafo indiretto](grafi%20indiretti.md) che rappresenta il sistema.
+Se la riscriviamo in forma vettoriale otteniamo $\dot{x}(t)=-Dx(t)+Ax(t)$, dove $D$ è la [matrice dei gradi](grafi%20indiretti.md#Matrice%20dei%20gradi), $x(t)=[x_1(t)\ \cdots\ x_N(t)]$ è il vettore degli stati e $A$ è la [matrice di adiacenza](grafi%20indiretti.md#Matrice%20di%20adiacenza).
+A questo punto possiamo ottenere $\dot{x}(t)=-Lx(t)$, dove $L$ è il [laplanciano](laplanciano.md) del grafo che rappresenta il sistema multi agente.
+# Convergenza
+C'è un teorema sulla convergenza della legge del consenso: se applichiamo la policy del consenso e supponiamo che il sistema multiagente sia definito da un grafo indiretto connesso, allora per ogni stato inziale $x(0)$ si ha che $\displaystyle\lim_{t\to\infty}x_i(t)=\bar{x},\forall i$, dove $\bar{x}=\tfrac{1}{N}\sum_{i=1}^Nx_i(0)$.
+- Vedi dimostrazione slides 4 pagine 31/35.
+##### Significato
+Vuol dire che non solo convergiamo ma che il valore a cui convergiamo è la media degli stati iniziali.
+Questo vuol dire che il problema della [sincronizzazione](multiagent%20system/multi%20objective%20MAS/coordination/task.md#Sincronizzazione), se usiamo questa policy, risolve anche il problema della [media distribuita](multiagent%20system/multi%20objective%20MAS/coordination/task.md#Media%20distribuita).
+##### Velocità
+La velocità di convergenza del sistema multiagente allo stato $\bar{x}$, dipende dalla velocità con cui gli esponenziali $e^{-\lambda_2t},\cdots,e^{-\lambda_Nt}$ vanno a zero (questo si vede dalla dimostrazione della convergenza).
+Siccome sappiamo che per il laplanciano di un grafo indiretto connesso abbiamo $\lambda_2\le\cdots\le\lambda_N$, la velocità di convergenza dipende da $\lambda_2$, cioè dalla [connettività algebrica](laplanciano.md#Connettività%20algebrica): più il grafo è connesso e quindi questo valore è alto più la convergenza è veloce, perché l'esponenziale $e^{-\lambda_2t}$ va a 0 più lentamente per $t\to\infty$.

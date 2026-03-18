@@ -1,0 +1,11 @@
+Astraendo in modo significativo l'architettura nasce sostituendo il backend delle SOA in tanti micro servizi, cioè in tanti piccoli backend ognuno indipendente dall'altro.
+Per fare questo possiamo introdurre una fase ulteriore della classica progettazione: la suddivisione del [domain model](domain%20model.md). Questa può essere fatta in due modi, ma in ogni caso si dovrebbe partire da componenti il più piccoli possibili e poi scalare aumentando le funzionalità.
+# Sotto dominio
+Si basa sul Domain Drive Development (DDD) ed è una tecnica top-down. Il domain model viene suddiviso in sotto domini, dove ogni sotto dominio rappresenta un domain model di un micro servizio.
+In questo scenario viene fuori il problema del bounded context e delle entità replicate: una classe di entità deve essere rappresentata interamente all'interno di un sotto dominio, mentre negli altri al più ci deve essere una sua rappresentazione più semplice, cioè un [DTO](Prestazioni.md#Data%20Tranfer%20Object%20(DTO)). In ogni caso con questa decomposizione più le entità sono separate meglio è.
+- La difficoltà maggiore è quella di saper gestire modello formali con un [Class diagram](Class%20diagram.md).
+- Garantisce un grande disaccoppiamento tra entità. Da un punto di vista dell'indipendenza tra data base è manna dal cielo.
+# Funzionalità di business
+Si identificano i micro servizi sulla base degli use case del sistema. Può essere vista come una procedura bottom-up perché a paritre dallo [Use-case diagram](Use-case%20diagram.md) si aggregano entità per definire un micro servizio. Il risultato è definire un micro servizio per ogni macro funzionalità, con l'idea che funzionalità grandi possano essere decomposte in micro servizi più piccoli.
+- È preferibile quando anche non abbiamo tutto il domain model e non è possibile definirlo.
+- Può portare al problema della God Class, cioè una classe che ha troppe responsabilità, viola il [SRP](single%20responsability%20principle.md) e conosce troppo rispetto alle altre.

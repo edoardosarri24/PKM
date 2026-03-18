@@ -1,0 +1,6 @@
+Quando un dato (singolo o array) viene dichiarato, la sua allocazione in [memoria](memoria.md), se viene usato il modello first touch, avviene solo quando un [thread](thread.md) lo legge o scrive per prima volta. Secondo tale politica la memoria allocata per quel dato è quella più vicina al thread che lo ho toccato per la prima volta. Con questo modello è interessa notare che un array può non essere allocato in modo contiguo in memoria.
+La policy del first touch ha senso quando lavoriamo con un'architettura [NUMA](UMA%20vs%20NUMA.md#NUMA), dove per un thread accedere a una memoria più lontana è più costoso in termini di tempo. Se siamo su un portatile allora non si seguirà questo modello.
+# Performace
+Se un thread alloca in memoria una variabile condivisa, allora essa sarà allocata in quella del core dove sta girando questo thread; gli altri thread avranno un tempo di accesso maggiore se eseguono su un'altra cpu.
+##### Soluzione
+Per limitare questo problema si solitamente si parallelizza il ciclo di inizializzazione del dato (e.g., vettore): in questo modo ogni thread prende un blocco del vettore e ogni dato sarà allocato nella memoria del core in cui esegue quel thread.

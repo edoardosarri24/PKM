@@ -1,0 +1,14 @@
+Vogliamo risolvere il problema del [coordinazione in MAS](coordinazione%20in%20MAS.md) con l'[artificial potential field](artificial%20potential%20field.md). L'idea è quella di definire il potenziale del sistema $J(x)=k_aJ_{att}(x)+k_rJ_{rep}(x)$ che porti ogni agente nello stato desiderato, cioè che porti in $x_g\in X_G\subset\mathbb{X}$ attraverso una sequenza di stati ammissibili $x_a\in X_A\subset\mathbb{X}$.
+Studieremo il caso del [single integrator dynamic](single%20integrator%20dynamic.md).
+# Definizione
+Essendo nel caso del [single integrator dynamic](single%20integrator%20dynamic.md) con APF, sappiamo che la policy è data da $\dot{q}=\dot{x}_i(t)=u_i(t)$, dove $u_i(t)=-K_P\tfrac{\partial J}{\partial x_i}|_{x=x(t)}$.
+L'obiettivo generale è suddividere gli obiettivi in: globali a tutti gli agenti e locali al singolo agente. Sotto questi termini il potenziale del sistema può essere scritto come $J(x)=\displaystyle\sum_{i=1}^NJ_i(x_i)+\sum_{\{i,j\}\in E}J_{\{i,j\}}(x_i,x_j)$, dove:
+- La prima sommatoria rappresenta il potenziale del singolo agente e si basa su obiettivi indipendenti (e.g., l'agente non deve collidere con un ostacolo) dagli altri agenti.
+- La seconda sommatoria rappresenta il potenziale che si sviluppa tra coppie di vicini e si basa su obiettivi collettivi.
+##### Must
+Per usare l'APF nella coordinazione di MAS si richiedere che il potenziale possa essere scomposto in termini in cui sono implicati al più (anche obiettivi sul singolo agente) coppie di vicini.
+##### Esempio sincronizzazione
+Un esempio che abbiamo già visto quando abbiamo definito la [legge del consenso a tempo continuo](consenso%20a%20tempo%20continuo.md) è quello della sincronizzazione che abbiamo usato per definire la legge del consenso avevamo visto che il potenziale poteva essere definito come $J_{\{i,j\}}(x_i,x_j)=||x_i-x_j||^2$, cioè avevamo $x_i=x_j,\ \forall j\in N_i$. Questo ci porta esattamente alla formula precedente, dove la relazione è tra coppie di vicini.
+# Policy
+La policy dell'$i$-esimo agente definisce lo spostamento $\dot{x}_i(t)$ che l'$i$-esimo agente deve fare e sappiamo che questo sarà nella direzione del minimo del potenziale, cioè in direzione $-\tfrac{\partial J}{\partial x_i}$.
+Derivando la legge ottenuta sopra otteniamo che la policy dell$'i$-esimo agente è $\displaystyle\tfrac{\partial J}{\partial x_i}=\tfrac{\partial}{\partial x_i}J_i(x_i)+\sum_{j\in N_i}\tfrac{\partial}{\partial x_i}J_{i,j}(x_i,x_j)$. Osserviamo quindi che la policy è in funzione del solo stato locale dell'agente, cioè del suo stato $x_i$ e degli stati dei vicini $x_j,\forall j\in N_i$.

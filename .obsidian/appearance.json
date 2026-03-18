@@ -1,0 +1,9 @@
+{
+  "accentColor": "#ff0000",
+  "interfaceFontFamily": "Palatino",
+  "textFontFamily": "Palatino",
+  "monospaceFontFamily": "Palatino",
+  "baseFontSize": 20,
+  "showViewHeader": true,
+  "translucency": true
+}

@@ -1,0 +1,5 @@
+Un Markov decision process è alla base del [reiforcement learning](reiforcement%20learning.md). In generale si tratta di un modello che esprime in modo stocastico l'incertezza legata a un evento: quando un agente esegue un'azione in un dato stato, nella realtà l'output non è sempre quello atteso, ma è affetto da un errore.
+# Markov transition density
+In molte situazioni la transizione dallo [stato](modello.md) $x(t)$ a $x(t+1)$ non è deterministica, ma dipende da qualcosa che non possiamo sapere a priori (i.e., lo scopriamo solamente in fase di esecuzione dell'[agente](agenti.md)). La Markov transition density è una [PDF](random%20variable.md#PDF) $\phi$ che esprime l'incertezza legata al prossimo stato tramite una la sua distribuzione dato stato attuale e azione, cioè rappresenta da $\phi(x(t+1)|x(t),u(t))$.
+##### Expected return
+Il fatto che il prossimo stato non sia deterministico ma stocastico ci porta a definire in modo probabilistico anche il [return](modello.md#Reward%20e%20return) come $R=\displaystyle E[\sum_{t=0}^Tr(t,x(t),u(t))]$.

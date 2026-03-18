@@ -1,0 +1,91 @@
+# NUOVI
+- Container vs Hypervisor
+# VECCHI
+- Stream
+- Inheritance
+- Sealed
+- Generigi
+- Lambda
+- fondamenti OOP
+- double dispatch e dispatch
+- linguaggi dichiarativi e iterativi (O non iterativi ma altro)
+## DA VEDERE
+- Concetti
+	- Paradigmi
+		- Strutturale
+		- Funzionale
+		- Procedurale
+		- Imperativa
+    - Competitive programming
+    - Code documentation
+- Java
+	- Enum 141
+	- Asserzioni 175
+	- Annotazioni 341
+	- I/O 259
+	- Logging
+		- java.util.logging
+		- SLF4J
+		- Log4J
+		- Logback
+	- Serialized
+	- Reflection - java.lang.reflect
+	- Moduli - java.lang.module
+	- Garbage collection
+		La Garbage Collection (GC) è un meccanismo automatico di gestione della memoria (Java, Python, Go, JavaScript); è incaricato di rimuovere gli oggetti che non sono più raggiungibili dal programma. Questo rende più facile programare, ma può influire sulle prestazioni e sull’uso della memoria generale; gestire la memoria in modo autonomo (C, C++, Assembly) è più efficiente.
+	- Memoria
+	- Handler
+	- Java Doc
+	- Eventi
+- Esami vecchi
+	- Sistemi operativi
+	- DataBase
+	- Metodologie
+	- Architetture degli elaboratori
+	- Algoritmi
+- Libri
+	- Tdd by example
+	- Algortimi
+		- Algorithm design manual
+	- Pulizia codice
+		- Clean code (Robert Martin)
+		- Refactoring. Improving the design of existing code
+- Open source
+	- OSSU
+	- Open source guides
+	- Rete P2P
+- Lavori
+- Esercizi
+	- LeetCode
+	- CodinGames
+	- Exercism
+	- Codewars
+	- Hackerrank
+	- Algo expert
+	- Coursera
+- Piattaforme
+	- Stackoverflow
+	- Git & GitHub
+	- Linkdin
+	- Discord
+	- Reddit
+- Paradigma
+	- Funzionale
+	- Logico
+	- Concorrente
+- Da rivedere
+		- [ ] JavaDoc.
+		- [ ] Reflection.
+		- [ ] Enum.
+		- [ ] JAR.
+		- [ ] Classi anonime.
+		- [ ] Classi interne.
+		- [ ] Var.
+		- [ ] Covarianza, controvarianza.
+		- [ ] Classi statiche e metodi statici.
+		- [ ] System.out o err e System in generale.
+		- [ ] Log.
+		- [ ] Quante interfacce può estendere un'interfaccia.
+		- [ ] Classi interne vs classi interne statiche.
+		- [ ] Classi sealed.
+		- [ ] Pattern.

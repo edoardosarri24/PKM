@@ -1,0 +1,3 @@
+- [quakus official](https://quarkus.io)
+- [quarkus in action](https://github.com/xstefank/quarkus-in-action)
+- [Kubernetes Native Microservices with Quarkus and MicroProfile](https://github.com/jclingan/manning-kube-native-microservices)

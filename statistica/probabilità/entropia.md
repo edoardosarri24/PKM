@@ -1,0 +1,1 @@
+Nella probabilità l'entropia misura l'incertezza di una [random variable](random%20variable.md): più la sua [PDF](random%20variable.md#PDF) è concentrata in pochi eventi, più l'entro è bassa; più si avvicina a una distribuzione uniforme più l'entro è massima.

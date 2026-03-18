@@ -1,0 +1,1 @@
+Quando si parla di distribuzione generale (GEN distribution) si intende una [random variable](random%20variable.md) che non è [esponenziale](distribuzione%20esponenziale.md).

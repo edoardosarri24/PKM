@@ -1,0 +1,5 @@
+Il problema dell'apprendimento superivisonato in [Machine learning](Machine%20learning.md) sta nel, dato un insieme di dati dove $x$ è l'input e $y$ è l'output, determinare una funzione $\phi(x,w)$ tale che $y\approx\phi(x,w)$; se $y$ è continuo allora si parla di regressione, se invece $y$ è discreto si parla di classificazione.
+L'addestramento consiste nel, una volta definita la struttura della funzione $\phi$, determinare i migliori pesi che massimizzano questa similitudine; per migliori si intendono i pesi che minimizzano una qualche [funzione di loss](Funzioni%20di%20loss.md).
+# Over/Under fitting
+Vogliamo che la funzione $\phi$ appresa generalizzi bene anche (e sopratutto) su input non visti.
+Per evitare questo dobbiamo evitare l'overfitting e l'underfitting. Si presentano quando il modello si adatta troppo bene (o troppo male) ai dati del train set, cioè quando abbiamo una [loss](Funzioni%20di%20loss.md) perfetta sui dati di trainging. Se grafichiamo la soluzione vediamo che la curva definita dai parametri è molto complessa e copre perfettamente tutti i dati.

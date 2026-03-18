@@ -1,0 +1,4 @@
+Le reti siamesi sono usate nel mondo del [Deep learning](Deep%20learning.md) solitamente per confrontare le coppie (o tuple) di input e determinare il loro grado di similarità.
+# Architettura
+Concettualmente si ha una coppia (o una tupla) di sotto reti con la stessa architettura e che condividono i pesi; in pratica la rete è solamente una.
+Ogni input viene passato a una sotto rete che ne estrae le features, cioè ne estrae le caratteristiche principali. A questo punto le due features vengono confrontate tramite una distanza (come quella euclidea o Cosine Similarity): se i due input hanno una distanza bassa allora sono simili, altrimenti sono diversi. 

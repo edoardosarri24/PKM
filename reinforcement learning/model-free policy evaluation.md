@@ -1,0 +1,32 @@
+La [policy iteration](policy%20iteration.md) è in generale un algoritmo model-based richiede la conoscenza della [markov transition density](reinforcement%20learning/markov%20decision%20process.md#Markov%20transition%20density) e della funzione di [reward](reward.md).
+Quando non abbiamo queste informazioni siamo allora in un costesto model-free e possiamo usare metodi basati sul campionamento: non possiamo usare l'[equazione di Bellman](equazione%20di%20Bellman.md) per valutare una [policy](reinforcement%20learning/policy.md), ma possiamo far usare la policy al nostro agente e valutare la sua bontà sulla base dei [return](reward.md) ottenuti durante molte esecuzioni dell'esperimento, quindi possiamo calcolare la media dei return invece che usando il valore atteso.
+# Monte carlo
+Con questa tecnica l'aggiornamento della stima della value function avviene dopo aver eseguito tutto l'esperimento. Questo non è efficiente; per eseguire l'aggiornamento della value function subito dopo aver ottenuto una reward dall'esperimento si usa il [temporal difference learning](#Temporal%20difference%20learning).
+##### First visit algorithm
+Si eseguono $M$ esperimenti sotto la policy $\pi$ e per l'esperimento $m$-esimo si raccolgono sequenze di coppie <stato_attraversato,reward_ottenuto> ($x_m(t), r_m(t)$), per $t=0,\cdots,T_m,$ dove $T_m$ è la fine dell'esperimento.
+Per valutare lo stato $x$ sotto la policy $\pi$ si fa:
+- Si determina il sottoinsieme $M(x)$ degli esperimenti $M$ dove si è visitato lo stato $x$.
+- Per ogni esperimento $m\in M(x)$, dato che il first time è il tempo $t$ in cui si è visitato lo stato $x$ la prima volta durante l'esperimento $m$, si calcola $\hat{V}_m(x)=r_m(t)+\gamma r_m(t+1)+\cdots$, cioè sommando i reward scontati ottenuti dal first time in poi.
+- Si calcola l'approssimazione della [value function](value%20function.md) dello stato $x$ come $\displaystyle\hat{V}_\pi(x)=\tfrac{1}{|M(x)|}\sum_{m\in M(x)}\hat{V}_m(x)$.
+##### Osservazioni
+- Per la legge dei grandi numeri se $|M(x)|\to\infty$ allora $\hat{V}_\pi(x)\to V_\pi(x)$.
+- Se lo spazio degli stati $\mathbb{X}$ è molto grande o è continuo allora non è possibile visitare tutti gli stati, neanche per $|M(x)|$ molto grande; in questo caso $\hat{V}_\pi(x)$ rappresenta una stima della value function solo per un insieme finito di stati e ci saranno alcuni stati per cui non sappiamo nulla. Possiamo risolvere questo problema approssimando la value function con una funzione (i.e., una rete neurale) $V(x,w)\approx V_\pi(x)$, dove i parametri $w$ sono trovati con un problema di regressione.
+# Temporal difference learning
+È un algoritmo iterativo che permette di aggiornare la stima della [value function](value%20function.md) in real-time (i.e., dopo aver raccolto un solo reward) tramite esperimenti.
+##### TD(0)
+È un algoritmo asincrono perché si aggiorna un solo valore della value function, cioè si aggiorna solo stato in cui siamo al tempo $t$. Supponiamo di essere al tempo $t$ e avere una stima $V_t(x)$ della value function $V_\pi(x)$.
+Dopo aver eseguito l'azione abbiamo a disposizione la tupla $<x(t),u(t)=\pi(x(t)),r(t),x(t+1)>$. Possiamo calcolare una nuova stima campionaria della value function $\hat{V}_{t+1}(x(t))=r_\pi(t)+\gamma V_t(x(t+1))$: prendiamo il reward attuale (che lo osserviamo) e la stima del valore del prossimo stato (che abbiamo perché il prossimo stato lo vediamo e l'approssimazione della value function è quella precedente).
+Usare questo valore come prossima approssimazione del valore di quello stato sarebbe sbagliato, perché si tratta del valore ottenuto da un'iterazione del singolo esperimento. Quello che si fa è quindi una media pesata del valore che avevamo prima e di tale valore, cioè $V_{t+1}(x(t))=[1-\alpha(t)]V_t(x(t))+\alpha(t)\hat{V}_{t+1}(x(t))$.
+Manipolando questa si ottiene l'aggiornamento con le differenze temporali come $V_{t+1}(x(t))=V_t(x(t))+\alpha(t)[r_\pi(t)+\gamma V_t(x(t+1))-V_t(x(t))]$, dove i membri ra parentesi sono dette temporal differenze e rappresentano la differenza tra la vecchia value fucntion e la stima attuale. Il learning rate $\alpha(t)\in[0,1]$ quantifica il peso che stiamo dando al nuovo valore calcolato. È in funzione del tempo: all'inizio è alto e poi si abbassa; all'inizio il valore attuale è molto importante perché non abbiamo fatto ancora molti esperimenti; alla fine ci interessa poco del singolo valore ottenuto ma più quanto osservato in precedenza.
+##### TD($\lambda$)
+TD(0) è il caso specifico di TD($\lambda$). Il questo l'aggiornamento avviene su tutti gli stati della value function, ma con un peso differente dato dall'eligibility trace. L'algortimo, $\forall x\in \mathbb{X}$, aggiorna il vettore della value function come $V_{t+1}(x)=V_t(x)+\alpha(t)E_t(x)[r_\pi(t)+\gamma V_t(x(t+1))-V_t(x)]$, che è lo stesso di TD(0) dove $E_t(x)$ è detto [eligibility trace](eligibility%20trace.png) ed è il peso dell'aggironamento associato a ogni stato: l'idea è che il reward che ottengo quantifica la bontà dello stato attuale e degli stati precedenti che mi hanno portato in quello stato; ogni volta che visito uno stato il suo eligibility trace aumenta e via via che non lo visito diminuisce.
+##### Eligibility trace
+L'importanza degli stati precedenti è in relazione con l'iperparametro $\lambda$:
+- In generale, cioè in TD($\lambda$) l'eligibility trace si aggiorna come $E_t(x)=\begin{cases}\gamma\lambda E_{t-1}(x)+1&\text{ if }x=x(t)\\\gamma\lambda E_{t-1}(x)&\text{ otherwise}\end{cases}$.
+- Un caso particolare è l'algoritmo TD(0), dove si aggiorna solo il valore dello stato attuale e quindi è un algoritmo asincrono. In questo caso l'eligibility trace è definito come $E_t(x)=\begin{cases}1&\text{ if }x=x(t)\\0&\text{ otherwise}\end{cases}$.
+##### Convergenza
+L'algoritmo TD(0) (e credo in generale TD($\lambda$)) converge, cioè $V_t(x)\to_{t\to\infty}V_\pi(x)$, con probabilità 1 supponendo che:
+- Tutti gli stati siano visitati infinite volte.
+- $\alpha(t)$ deve soddisfare le condizioni di Robbins-Monrò.
+	Il learning rate deve tendere a 0, ma non troppo velocemente: rispettivamente $\displaystyle\sum_{t=0}^\infty\alpha(t)^2<\infty$ e $\displaystyle\sum_{t=0}^\infty\alpha(t)=\infty$.
+	Una scelta che soddisfa questa condizione è $\alpha(t)=\tfrac{c_1}{c_2+t}$.

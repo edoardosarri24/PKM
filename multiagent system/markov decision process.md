@@ -1,0 +1,4 @@
+# Markov transition density
+In molte situazioni la transizione dallo [stato](modello.md) $x(t)$ a $x(t+1)$ non è deterministica, ma dipende da qualcosa che non possiamo sapere a priori (i.e., lo scopriamo solamente in fase di esecuzione dell'[agente](agenti.md)). Per questo motivo il prossimo stato si definisce tramite un Markov transition density $\varphi(x(t+1)|x(t),u(t))$, cioè tramite una distribuzione di probabilità sul prossimo stato.
+##### Expected return
+Il fatto che il prossimo stato non sia deterministico ma stocastico ci porta a definire in modo probabilistico anche il [return](modello.md#Reward%20e%20return) come $R=\displaystyle E[\sum_{t=0}^Tr(t,x(t),u(t))]$.

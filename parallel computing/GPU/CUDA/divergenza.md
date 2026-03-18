@@ -1,0 +1,8 @@
+In [CUDA](CUDA.md) tutti i thread di un [warp](gerarchia%20thread.md#Warp) devono eseguire lo stesso codice. Quando questo non è possibile a causa della presenza di qualche salto (i.e., $if$) si parla di divergenza.
+I salti condizionali non ci devono far paura a prescindere nella programmazione delle GPU, ma solo quando la condizione dipende da [threadId.x](gerarchia%20thread.md#Indici): i thread di uno [warp](gerarchia%20thread.md#Warp) appartengono tutti allo stesso blocco e inoltre sono thread vicini, quindi la cui componente $y$ di threadId non cambia o cambia più lentamente; se la condizione dipendesse da $threadId.y$ comunque per tutti la condizione sarebbe la stessa o comunque ci sarebbero pochi warp dove si avrebbe la divergenza.
+# Compilazione
+Quello che dovrebbe accadere nell'hw è che i thread per cui vale la condizione di salto lavorano, mentre gli altri stanno fermi; più thread stanno fermi più stiamo serializzando l'esecuzione sulla GPU.
+Il compilatore $nvcc$ esegue invece un'ottimizzazione per evitare la divergenza: i thread che dovrebbero stare fermi in realtà eseguono comunque l'istruzione, ma il risultato non viene considerato. Questo è il motivo per cui la divergenza non è così grave.
+# Sincronizzazione
+Il vero problema è quando abbiamo divergenza e sincronia contemporaneamente. Non dobbiamo infatti [sincronizzare](parallel%20computing/GPU/CUDA/sincronizzazione.md) i thread all'interno di un blocco condizionale: i thread che eseguono nel branch devono aspettare quei thread che invece non stanno eseguendo e che raggiungeranno mai la barriera.
+In questo modo si può mandare in deadlock la GPU, cosa che comunque non succede grazie all'ottimizzazione che fa il compilatore (quella sopra).

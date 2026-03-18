@@ -1,0 +1,3 @@
+Oltre ai [task di coordinamento](multiagent%20system/multi%20objective%20MAS/coordination/task.md) ci sono altri compiti che sono fondamentali in un sistema multi agente: [mantenere la connettività](connectivity%20manteinance.md) tra agenti, [evitare le collisioni](collision%20avoidance.md) sia con gli altri agenti che con gli ostacoli, il [flocking](flocking.md), il [coverage](coverage.md), la [mappatura](mapping.md) e l'[SLAM](SLAM.md).
+# Soluzione
+Per realizzare questi obiettivi, possiamo usare l'[artificial potential field](artificial%20potential%20field.md) e definire i rispettivi potenziali. Il potenziale finale che il sistema dovrà seguire è definito dalla somma di più termini, ognuno dei quali rappresenta un obiettivo.

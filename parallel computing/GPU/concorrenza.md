@@ -1,0 +1,5 @@
+Un thread in una [GPU](GPU.md) è esattamente composto dalle stesse componenti di un [thread](thread.md) CPU.
+La vera forza delle GPU è la loro gestione della concorrenza tra thread: all'interno dei core di uno SM possono vengono eseguiti più warp, ma possone essere arrivi (i.e., pronti all'esecuzione) fino a milioni di thread.
+# Context switch
+Questo è possibile grazie al rapidissimo swap di contesto tra thread in un core, che praticamente ha un costo nullo.
+A livello implementativo questo avviene grazie al [register file](architettura.md#Streaming%20multiprocessor) e alla [private memory](architettura.md#Private%20memory): i registri non devono essere caricati nel core, ma la presenza di decine di migliaia di core fa si che i valori al loro interno possa rimanere persistente anche quando il thread non è in esecuzione.

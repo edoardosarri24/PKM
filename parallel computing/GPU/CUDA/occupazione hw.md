@@ -1,0 +1,1 @@
+In [CUDA](CUDA.md) possiamo valutare l'occupazione della [GPU](GPU.md) grazie a un tool: NVIDIA NSight Compute.

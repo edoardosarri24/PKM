@@ -1,0 +1,5 @@
+Una policy (legge di controllo in automatica) è una legge che definisce l'azione che un [agente](agenti.md) deve prendere quando si trova in un dato [stato](modello.md). È definita come $u(t)=\pi(t,x(t))$ e porta a quello che è chiamato il feedback (o closed-loop) model.
+Spesso il problema principale è capire come possiamo progettare una policy che permetta all'agente di arrivare al suo scopo.
+# Planning-based approch
+Per decidere l'azione che un agente deve prendere in uno stato, possiamo seguire anche un approccio più semplice della policy: se l'ambiente è totalmente deterministico e noto a priori, allora possiamo decidere le azioni prima di far eseguire l'agente. Questo porta a quello che è chiamato con il nome di open-loop model ed è usato nel [robot motion planning](robot%20motion%20planning.md#Planning-based%20solution).
+Il problema di questa soluzione è che l'agente non sarà [intelligente](agenti.md#Intelligenti): manca infatti l'adattamento, la robustezza e il learning.

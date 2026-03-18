@@ -1,0 +1,2 @@
+Per costruire un sistema [safety](attributi.md#Safety) si devono rispettare degli standard, i quali sono valutati durante una fase assesment.
+Questi standard sono in pratica documenti che derivano da IEC61508 e quindi che anche se il dominio è diverso hanno dei punti in comune.

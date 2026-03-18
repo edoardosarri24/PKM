@@ -1,0 +1,9 @@
+È una tecnica usata nel [Self supervised learning](Self%20supervised%20learning.md) per far apprendere alla rete i dettagli semantici usati poi per scopi generici.
+Se il nostro obiettivo è imparare la semantica di un'immagine, possiamo predisporre il proxy task in modo che apprenda la spazialità di una sotto immagine rispetto al centro.
+# Proxy task
+![esempio spatial context prediction](esempio%20spatial%20context%20prediction.png)
+Data un'immagine ne estraiamo 9 pezzi, di cui uno è il centrale. La rete riceverà in input il pezzo centrale e un altro e dovrà imparare a classificare la sua posizione rispetto al centro. Per fare questo la rete dovrà imparare a focalizzarsi sulla semantica dell'oggetto; se guardiamo l'esempio del gatto sarà importante considerare quale è l'orecchio destro e quale è quello sinistro.
+L'architettura usata in questo caso è quella della [rete siamese](Siamese%20net.md): i due input vengono passati ai due pezzi di sotte reti le quali calcolano le relative features e sulla base di queste vengono predetta la posizione. In pratica il problema diventa una classificazione in 8 classi. È stata usata la classica [cross-entropy loss](Funzioni%20di%20loss.md#Cross-entropy%20loss).
+# Cheating
+- Gli otto pezzi adiacenti al centro non devono essere perfettamente continui. In questo modo la rete potrebbe imparare a trovare connessioni di adiacenza invece che apprendere dettagli semantici.
+- I sensori hanno un problema del canale RGB: il centro dell'immagine ha il canale verde più compresso. Se non modifichiamo questa imperfezione, allora la rete può dedurre la posizione del pezzo adiacente senza imparare veramente la semantica.

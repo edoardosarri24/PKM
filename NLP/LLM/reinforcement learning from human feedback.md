@@ -1,0 +1,22 @@
+Nel [reiforcement learning](reiforcement%20learning.md) abbiamo un agente che interagisce con un ambiente tramite un'azione e che dopo l'interazione riceve il nuovo stato dell'ambiente e un reward relativo all'azione appena svolta; tale reward è un premio o una penalità in base alla qualità dell'azione svolta.
+# Allineamento
+Tramite questa idea vogliamo risolvere il problema dell'allineamento in un [LLM](LLM.md): questi modelli sono addestrati solo per predire il prossimo token, ma non danno nessuna garanzia che la risposta generata sia in linea con le preferenze dell'uomo.
+Con il reinforcement learning from human feedback (RLHF) vogliamo allineare questi modelli senza fare fine tuning supervisionato, in modo da poter scalare l'apprendimento.
+# Formalmente
+Consideriamo un task di summarization, dove $s$ è un riassunto e $R(s)$ è la reward associata a $s$. Vogliamo cambiare i pesi del modello in modo da massimizzare il valore atteso del reward, cioè massimizzare $E_{\hat{s}\sim P_\theta(s)}[R(\hat{s})]$: $P_\theta$ è la distribuzione del nostro modello; $P_\theta(s)$ indica la probabilità di campiona dalla distribuzione il riassunto $s$, cioè indica quanto è probabile che il modello generi il riassunto $s$; $\hat{s}\sim P_\theta(s)$ indica il campione estratto dalla distribuzione parametrizzata da $\theta$, cioè un riassunto generato dal modello; $E_{\hat{s}\sim P_\theta(s)}[R(\hat{s})]$ indica il valore atteso del reward che un riassunto generato dal modello ottiene, cioè è $E_{\hat{s}\sim P_\theta(s)}[R(s)]=\sum_sR(s)P_\theta(s)$.
+# Ottimizzazine
+Vediamo come ottimizzare i pesi in modo da massimizzare $E_{\hat{s}\sim P_\theta(s)}[R(s\hat{s})]$.
+##### Gradient ascent
+Una soluzione è fare la salita del gradiente $\theta_{t+1}=\theta+\epsilon\nabla_{\theta_t}E_{\hat{s}\sim P_{\theta_t}(s)}[R(\hat{s})]$.
+Questo ha due problemi:
+- Non ho una forma nota del reward $R$. Sono delle preferenze espresse dall'utente, ma non riesco a modellarla trovando una forma analitica. Magari tale forma analitica non sarebbe neanche differenziabile.
+- Sarebbe un aggiornamento on-policy: i campioni sono estratti dai pesi che stiamo aggiornando; dopo l'aggiornamento la distribuzione da cui si campionano i riassunti cambia.
+##### Policy gradient methos
+Siccome non funziona la salita del gradiente si usano i policy gradient.
+Se deriviamo il valore atteso rispetto ai pesi possiamo scrivere $\nabla_\theta E_{\hat{s}\sim P_\theta(hat{s})}[R(s)]=\nabla_\theta\sum_sR(s)P_\theta(s)=\sum_sR(s)\nabla_\theta P_\theta(s)$: il primo passaggio è per la definizione di valore atteso; il secondo è per la linearità del gradiente, visto che $R(s)$ non dipende da $\theta$.
+Calcoliamo ora il gradiente del logaritmo della distribuzione: $\nabla_\theta logP_\theta(s)=\tfrac{1}{P_\theta(s)}\nabla_\theta P_\theta(s)$ (questo passaggio dipende dalla chain rule) e quindi si ha $\nabla_\theta P_\theta(s)=P_\theta(s)\nabla_\theta logP_\theta(s)$. Possiamo ora sostituire in quanto ottenuto sopra e ottenere $\nabla_\theta E_{\hat{s}\sim P_\theta(s)}[R(s)]=\sum_SR(s)\nabla_\theta P_\theta(s)=$$=\sum_sR(s)P_\theta(s)\nabla_\theta logP_\theta(s)=\sum_sP_\theta(s)[R(s)\nabla_\theta logP_\theta(s)]$: questa che abbiamo ottenuto è una somma (di $R(s)\nabla_\theta logP_\theta(s)$) pesata dalla distribuzione $P_\theta(s)$ e quindi abbiamo che (per la definizione di valore atteso) $\nabla_\theta E_{\hat{s}\sim P_\theta(s)}[R(s)]=\sum_sP_\theta(s)[R(s)\nabla_\theta logP_\theta(s)]=E_{\hat{s}\sim P_\theta(s)}[R(\hat{s})\nabla_\theta logP_\theta(\hat{s}))]\approx$
+$\approx\tfrac{1}{m}\sum_{i=1}^mR(s_i)\nabla_\theta logP_\theta(s_i)$, dove l'approssimazione viene dal montecarlo sampling.
+In questo modo più la reward $R(s_i)$ è alta più il modello cambierà i suoi pesi in modo che alla prossima domanda dello stesso tipo il modello sarà portato a dare la stessa risposta di quella che ha ottenuto un reward alto.
+##### Eliminare lo human feedback
+Quando abbiamo molte coppie $(s_i,R(s_i))$ definite dall'utente allora abbiamo sostanzialmente un dataset annotato: possiamo costruire un altro modello che dato un riassunto $s_i$ genera un reward $R(s_i)$.
+In questo modo il modello può genera un riassunto, un altro modello gli assegna una valutazione e infine si cabiano i pesi.

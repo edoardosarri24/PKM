@@ -1,0 +1,5 @@
+La dinamica in un sistema multi agente descrive come l'agente cambia il suo stato nel tempo. La dinamica a doppio integratore definisce tale cambiamento $u(t)$ sulla base dell'accelerazione $\ddot{x}(t)$ dell'agente, cioè $\ddot{x}(t)=u(t)$; integrando una volta tale accelerazione si ottiene la velocità $\dot{x}(t)$ e integrando due volte si ottiene la posizione $x(t)$.
+Intuitivamente $\ddot{x}(t)$ indica il cambio di stato infinitesimale di un agente approssimato a un punto mobile.
+# Vantaggi
+In questo modello lo stato dell'agente è definito sulla base della posizione $x(t)$ e della velocità $\dot{x}(t)$.
+Questo ci permette di prendere decisioni più adeguate al contesto. Se ad esempio di interessa definire un potenziale repulsivo con [APF](artificial%20potential%20field.md) che implementa la [collision avoidance](collision%20avoidance.md), se un agente è molto vicino a un altro, ma le loro velocità hanno direzione opposta, allora non importa definire un alto potenziale attrattivo; questo tipo di precisione non è possibile osservarla con il modello a [singolo integratore](single%20integrator%20dynamic.md), dove lo stato è basato solo sulla posizione.

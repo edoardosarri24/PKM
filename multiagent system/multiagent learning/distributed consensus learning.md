@@ -1,0 +1,20 @@
+Se vogliamo [apprendere in modo distribuito](multiagent%20learning.md) modelli semplici (e.g., regressione lineare ai minimi quadrati) allora possiamo usare la [forma chiusa](distributed%20linear%20least-squares.md). Quando il problema è più complesso invece dobbiamo ricorrere a una formulazione generale che userà una qualche variante di gradient descent.
+# Formalmente
+I pesi che vogliamo trovare si possono definire come $w^o=\displaystyle\arg\min_wJ(w)=\arg\min_w\left\{\sum_{k=1}^KL(y_j,\phi(x,w))+\rho R(w)\right\}$, dove $R(w)$ è un qualche regolarizzatore. Possiamo esprimere la loss totale in fattori come $J(w)=\displaystyle\sum_{i=1}^NJ_i(w_i)$, dove $J_i(w_i)=\displaystyle\sum_{k\in K_i}L(y_k,\phi(w_k,w))+\tfrac{\rho}{N}R(w_i)$, cioè come somme parziali dipendenti solo dai dati dell'$i$-esimo agente.
+A questo punto il nostro obbiettivo è minimizzare $J(w)=\displaystyle\sum_{i=1}^NJ_i(w_i)$.
+# Soluzioni
+Per risolvere questo problema in modo distribuito ci sono due soluzioni. La prima usa vincoli hard, la seconda li rilassa trasformandoli in soft.
+##### Vincoli hard
+Si minimizza $J(w)=\displaystyle\sum_{i=1}^NJ_i(w_i)$ con il vincolo per cui $w_i=w_y,\ \forall j\in N_i$; vogliamo quindi che l'agente $i$-esimo ottimizzi i suoi pesi in modo che $\displaystyle w_i(t)\to_{t\to\infty} w^o$.
+Abbiamo trasformato il problema di addestramento distribuito in un problema di [sincronizzazione](multiagent%20system/multi%20objective%20MAS/coordination/task.md#Sincronizzazione) a un valore comune, dove ogni agente utilizza solo le informazioni locali e quelle dei vicini; se il grafo è connesso allora sincronizzarsi tra vicini equivale a sincronizzarsi globalmente.
+##### Vincoli soft
+Possiamo rilassare il vincoli hard riscrivendo la loss in modo da ottimizzare la rete locale all'$i$-esimo agente penalizzando quelle soluzione che sono troppo distanti dalle soluzioni dei vicini: $J(w)=J(w_1,\cdots,w_N)=\displaystyle\sum_{i=1}^NJ_i(w_i)+\tfrac{1}{2}\alpha\displaystyle\sum_{\{i,j\}\in E}\left\| w_i-w_j\right\|^2$, dove il primo termine è il responsabile dell'ottimizzazione e il secondo penalizza la distanza delle soluzioni tra vicini (un $\alpha$ maggiore implica meno tolleranza alle differenze).
+# Consensus-based distributed gradient-descent
+È la soluzione al problema dell'apprendimento distribuito che si basa sulla forma con i vincoli soft.
+Se facciamo il gradiente rispetto ai pesi dell'agente $i$-esimo allora abbiamo $\tfrac{\partial}{\partial w_i}J(w_1,\cdots,w_N)=\tfrac{\partial}{\partial w_i}J_i(w_i)+\alpha\displaystyle\sum_{j\in N_i}(w_i-w_j)$.
+##### Aggiornamento
+L'aggiornamento dei pesi a questo punto diventa, usando gradient descent, $w_i(t+1)=w_i(t)-\epsilon\tfrac{\partial}{\partial w_i}J_i(w_i(t))+\epsilon\alpha\displaystyle\sum_{j\in N_i}(w_j(t)-w_i(t))$: i primi due termini sono la parte classica di gradient descent; l'ultimo termine è il termine di sincronizzazione.
+Questo aggiornamento deve soddisfare $0<\epsilon<\tfrac{1}{\alpha d_{max}}$, dove $d_{max}$ è il massimo grado nella rete di agenti: siccome $\epsilon$ è il learning rate, c'è un trade-off tra la velocità di apprendimento e l'importanza $\alpha$ che diamo alla sincronizzazione; l'idea è che se un agente va troppo veloce allora i suoi vicini non riescono a seguirlo.
+##### Aggiornamento con consenso
+Da quanto sopra possiamo scrivere $w_i(t+1)=(1-\epsilon\alpha d_i)w_i(t)+\displaystyle\sum_{j\in N_i}\epsilon\alpha w_j(t)-\epsilon\tfrac{\partial}{\partial w_i}J_i(w_i(t))$ e allora $w_i(t+1)=\pi_{ii}w_i(t)+\displaystyle\sum_{j\in N_i}\pi_{ij}w_j(t)-\epsilon\tfrac{\partial}{\partial w_i}J_i(w_i(t))$: i primi due termini rappresentano il [consenso a tempo discreto](consenso%20a%20tempo%20discreto.md); l'ultimo termine è gradient descent.
+Come nel classico consenso la [matrice del consenso](consenso%20a%20tempo%20discreto.md#Matrice%20del%20consenso) deve essere simmetrica (i.e. doppimente stocastica); possiamo usare i [pesi di Metropolis](consenso%20a%20tempo%20discreto.md#Scelte%20dei%20pesi).

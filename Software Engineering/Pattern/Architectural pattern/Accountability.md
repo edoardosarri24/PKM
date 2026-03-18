@@ -1,0 +1,12 @@
+È un [pattern architetturale](Architectural%20pattern.md) usato nelle fasia di [design](system%20design.md#Design).
+
+Il suo obiettivo è quello di gestire la grande complessità causata dall'elevato numero di entità e loro di relazioni nel domain model. Questo porterebbe a un'esplosione nel numero delle classi e delle relazioni nel [Class diagram](Class%20diagram.md).
+
+Il modello diretto, cioè il [Class diagram](Class%20diagram.md) classico generato dai requisiti, è buono per avere un'idea, ma non scala rispetto alla complessità del problema. Succede infatti spesso che per modificare, aggiungere e rimuovere si debba rivere tutto il diagramma.
+# Party
+Ci sono situazioni comuni in cui più entità hanno degli attributi comuni. Tramite party vogliamo generalizzare queste entità in modo da limitare il numero di relazioni.
+In [questo esempio](esempio1%20-%20accountability.png) Company, Person e Post condividono TelephoneNumber, Address ed EMailAddress; potrebbe però essere qualsiasi altra situazione simile, con più o meno entità e attributi. Quello che facciamo è introdurre una classe astratta da cui le tre lassi possono generalizzare (la implementeranno) e che contiene dei riferimenti agli attributi. Questa classe, come si vede in [questa soluzione](esempio2%20-%20accountability.png) prende il nome di Party.
+
+Supponiamo di avere una gerarchia (cosa che succede spesso nelle grandi aziende); in [questo esempio](esempio3%20-%20accountability.png) un'Organization può essere fatta da più OperatingUnit (e cosi via). In questo caso possiamo generalizzare il tipo dei componenti all'interno del supertipo, come si vede in [questa soluzione](esempio4%20-%20accountability.png); magari poi ogni sottotipo avrà degli attributi propri e diversi dagli altri.
+Il vantaggio è che possiamo anche avere più relazioni nel caso un soggetto si interfacci con più classi.
+Il problema di questa soluzione è che se ci sono dei vincoli specifici si può rompere la generalizzazione. Per risolvere questo problema si passa a una soluzione più raffinata: OrganizzationStructure e OrganizzationStructureType mantengono le relazioni tra componenti: OrganizzationStructureType serve per delegare la scelta del tipo di OrganizzationStructure a un oggetto a parte (sarà implementato con degli enum); inoltre possiamo poi applicare altre informazioni come il TimePeriod.

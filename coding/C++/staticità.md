@@ -1,0 +1,1 @@
+In [C++](C++.md) la staticità rende un membro (attributo e/o metodo) di classe, cioè non legato a una singola istanza ma presente per tutte le istanze.

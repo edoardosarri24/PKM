@@ -1,0 +1,1 @@
+Il reiforcement learning si basa sul modello dei [markov decision process](reinforcement%20learning/markov%20decision%20process.md).
