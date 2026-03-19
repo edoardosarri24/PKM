@@ -10,6 +10,7 @@
 - el.en.
 - seco
 - progress rail signaling
+- beker houges
 # Non presenti posizioni
 - deloitte
 - menarini

@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "04b1210b0a12fbf1",
+        "id": "996d17c8652c21de",
         "type": "tabs",
         "children": [
           {
-            "id": "4387cfc20092b13a",
+            "id": "c048e57150950485",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20260316.md",
+                "file": "modelli formali/markov chain/markov chain.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "20260316"
+              "title": "markov chain"
             }
           }
         ]
@@ -136,31 +136,37 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "4387cfc20092b13a",
+  "active": "c048e57150950485",
   "lastOpenFiles": [
+    "modelli formali/markov chain/disctete time markov chain (DTMC).md",
+    "modelli formali/markov chain/markov chain.md",
+    "Software Engineering/dependability/tasso di guasto.md",
+    "Software Engineering/dependability/misure.md",
+    "Software Engineering/dependability/file/failure rate distribution.png",
+    "Software Engineering/dependability/file/tasso di guasto lognormale.png",
+    "Software Engineering/dependability/file/gaussiana tasso di guasto.png",
+    "Software Engineering/dependability/file/failure rate weibull.png",
+    "Software Engineering/dependability/file/weibull gamma.png",
+    "Software Engineering/dependability/file/weibull distribution beta.png",
+    "Software Engineering/dependability/file/weibull distribution eta.png",
+    "Software Engineering/dependability/attributi.md",
+    "statistica/distribuzioni/distribuzione gaussiana.md",
+    "statistica/distribuzioni/continuos Phase Type (PH) distribution.md",
+    "statistica/distribuzioni/bernstein phase type distributions.md",
     "carrier.md",
     "20260316.md",
-    "Software Engineering/dependability/attributi.md",
-    "Software Engineering/dependability/tasso di guasto.md",
-    "Software Engineering/dependability/file/weibull gamma.png",
-    "Software Engineering/dependability/file/failure rate weibull.png",
     "Software Engineering/dependability/file/reliability with weibull.png",
-    "Software Engineering/dependability/file/weibull distribution eta.png",
-    "Software Engineering/dependability/file/weibull distribution beta.png",
     "Software Engineering/dependability/file/reliability with constant fault rate.png",
     "UniFi/SRS/SRS.md",
     "Software Engineering/dependability/human reliability analysis.md",
     "UniFi/tesi/tesi.md",
-    "statistica/distribuzioni/bernstein phase type distributions.md",
     "statistica/distribuzioni/polinomi di Bernstein.md",
     "statistica/random variable.md",
-    "statistica/distribuzioni/continuos Phase Type (PH) distribution.md",
     "data mining/map reduce/File system distributi.md",
     "risorse/paper/statistica/approximation of cumulative distribution functions by bernstein phase-type distributions.pdf",
     "risorse/paper/paper.md",
     "Real time/timing analysis/timing analysis.md",
     "UniFi/SRS/1-intro.md",
-    "Software Engineering/dependability/misure.md",
     "Software Engineering/dependability/qualità.md",
     "Software Engineering/dependability/previsione guasti.md",
     "modelli formali/markov chain/File/PH aciclica CFA.jpeg",
@@ -168,15 +174,9 @@
     "statistica/distribuzioni/distribuzione binomiale.md",
     "statistica/distribuzioni/whitt approximation.md",
     "modelli formali/markov chain/continuous time markov chain (CTMC).md",
-    "modelli formali/markov chain/markov chain.md",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
     "Software Engineering/dependability/fault tollerance.md",
-    "Software Engineering/dependability/dependability.md",
-    "Software Engineering/dependability/ridondanza.md",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
-    "statistica/file/limite centrale di Lyapunov.png",
-    "statistica/distribuzioni/file/CDF gaussiana.png",
-    "statistica/distribuzioni/file/distribuzione binomiale.png",
     "statistica/distribuzioni/file",
     "Real time/timing analysis/file/unfeasible example RTA example with DM.pdf",
     "Real time/timing analysis/file/feasible RTA example with DM.pdf",
