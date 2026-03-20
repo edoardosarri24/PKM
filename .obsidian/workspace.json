@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "52569b92b910f92c",
+        "id": "46cd05ca834dbbeb",
         "type": "tabs",
         "children": [
           {
-            "id": "b382423079699c82",
+            "id": "69cdca8d328324e6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -47,8 +47,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 215.5,
-    "collapsed": true
+    "width": 215.5
   },
   "right": {
     "id": "7dd79967413147f7",
@@ -132,14 +131,15 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "b382423079699c82",
+  "active": "fc91d6136d8be2b9",
   "lastOpenFiles": [
+    "carrier.md",
+    "20260316.md",
     "Software Engineering/dependability/fault tollerance.md",
     "Software Engineering/dependability/fault masking.md",
     "Software Engineering/dependability/reliability block diagram.md",
     "Software Engineering/dependability/file/TMR reliability.png",
     "Software Engineering/dependability/dependability.md",
-    "20260316.md",
     "20260320.md",
     "Senza nome.canvas",
     "Testing/Testing.md",
@@ -165,7 +165,6 @@
     "statistica/distribuzioni/distribuzione gaussiana.md",
     "statistica/distribuzioni/continuos Phase Type (PH) distribution.md",
     "statistica/distribuzioni/bernstein phase type distributions.md",
-    "carrier.md",
     "UniFi/SRS/SRS.md",
     "Software Engineering/dependability/human reliability analysis.md",
     "UniFi/tesi/tesi.md",
