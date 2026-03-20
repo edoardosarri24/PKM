@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "996d17c8652c21de",
+        "id": "52569b92b910f92c",
         "type": "tabs",
         "children": [
           {
-            "id": "c048e57150950485",
+            "id": "b382423079699c82",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "modelli formali/markov chain/markov chain.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "markov chain"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -52,7 +47,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 215.5
+    "width": 215.5,
+    "collapsed": true
   },
   "right": {
     "id": "7dd79967413147f7",
@@ -136,10 +132,26 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "c048e57150950485",
+  "active": "b382423079699c82",
   "lastOpenFiles": [
-    "modelli formali/markov chain/disctete time markov chain (DTMC).md",
+    "Software Engineering/dependability/fault tollerance.md",
+    "Software Engineering/dependability/fault masking.md",
+    "Software Engineering/dependability/reliability block diagram.md",
+    "Software Engineering/dependability/file/TMR reliability.png",
+    "Software Engineering/dependability/dependability.md",
+    "20260316.md",
+    "20260320.md",
+    "Senza nome.canvas",
+    "Testing/Testing.md",
+    "Software Engineering/dependability/rischio/analisi del rischio.md",
+    "Software Engineering/dependability/rischio/FMECA.md",
+    "Software Engineering/dependability/rischio/FMEA.md",
+    "Software Engineering/dependability/rischio/logica fuzzy.md",
+    "Software Engineering/dependability/rischio/file/fuzzy trapezoidale.png",
+    "Software Engineering/dependability/rischio/file/fuzzy tringalolare.png",
+    "Software Engineering/dependability/rischio/gestione del rischio.md",
     "modelli formali/markov chain/markov chain.md",
+    "modelli formali/markov chain/disctete time markov chain (DTMC).md",
     "Software Engineering/dependability/tasso di guasto.md",
     "Software Engineering/dependability/misure.md",
     "Software Engineering/dependability/file/failure rate distribution.png",
@@ -154,28 +166,12 @@
     "statistica/distribuzioni/continuos Phase Type (PH) distribution.md",
     "statistica/distribuzioni/bernstein phase type distributions.md",
     "carrier.md",
-    "20260316.md",
-    "Software Engineering/dependability/file/reliability with weibull.png",
-    "Software Engineering/dependability/file/reliability with constant fault rate.png",
     "UniFi/SRS/SRS.md",
     "Software Engineering/dependability/human reliability analysis.md",
     "UniFi/tesi/tesi.md",
     "statistica/distribuzioni/polinomi di Bernstein.md",
-    "statistica/random variable.md",
-    "data mining/map reduce/File system distributi.md",
     "risorse/paper/statistica/approximation of cumulative distribution functions by bernstein phase-type distributions.pdf",
-    "risorse/paper/paper.md",
-    "Real time/timing analysis/timing analysis.md",
-    "UniFi/SRS/1-intro.md",
-    "Software Engineering/dependability/qualità.md",
-    "Software Engineering/dependability/previsione guasti.md",
-    "modelli formali/markov chain/File/PH aciclica CFA.jpeg",
-    "statistica/distribuzioni/berstein Phase Type.md",
-    "statistica/distribuzioni/distribuzione binomiale.md",
-    "statistica/distribuzioni/whitt approximation.md",
-    "modelli formali/markov chain/continuous time markov chain (CTMC).md",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "Software Engineering/dependability/fault tollerance.md",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "statistica/distribuzioni/file",
     "Real time/timing analysis/file/unfeasible example RTA example with DM.pdf",
@@ -183,7 +179,6 @@
     "Real time/timing analysis/file",
     "Real time/timing analysis",
     "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
-    "Real time/file/responce time analysis example.pdf",
-    "Senza nome.canvas"
+    "Real time/file/responce time analysis example.pdf"
   ]
 }

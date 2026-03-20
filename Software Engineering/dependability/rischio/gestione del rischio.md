@@ -2,6 +2,7 @@ Una volta che abbiamo definito il [rischio](rischio.md) è importante gestirlo.
 La gestione del rischio è una [pipeline](gestione%20del%20rischio.png) strutturata in più fasi che sono eventualmente svolte in loop fino a che il sistema è online.
 # Analisi del rischio
 La prima fase è l'[analisi del rischio](analisi%20del%20rischio.md).
+Alle tecniche che sono elencate è possibile aggiungere un'ottimizzazione detta [logica fuzzy](logica%20fuzzy.md), che permette di migliorare la tecnica a cui è applicata (e.g., [FMECA](FMECA.md)).
 # Valutazione dei rischi
 Una volta che ho capito quali sono i rischi devo rappresentarli per capire quali sono accettabili e quali no. Alla fine di questo step ho identificato tutti i rischi e definito i valori per cui sono accettabili o no.
 ##### Curva del rischio

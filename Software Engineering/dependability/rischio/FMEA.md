@@ -20,10 +20,14 @@ Ci sono diverse varianti:
 # Fasi
 Le fasi della FMEA si basano su:
 - Si devono identificare le funzioni del sistema, cioè lo scopo per cui è stato realizzato.
-- I modi del guasto (i.e., una non conformità, cioè il modo in cui mi accorgo che il sistema ha un guasto.) vengono divise in categorie; per identificare la categoria a cui un guasto appartiene possiamo usare una tabella che la norma mette a disposizione, perché un guasto può avere molti modi di guasto.
-- Devo individuare le cause di guasto (i.e., sono le circostanze che hanno portato al guasto) per trovare il modo di risolverlo.
-- Non sempre, ma a volte si devono trovare anche i meccanismi di guasto (i.e., il processo che ha portato al guasto).
-- Si valutano gli effetti dei guasti, sia a livello di componente che a livello di sistema: l'idea nel fare questo deve essere quella della [fault error failure chain](fault%20error%20failure%20chain.md). Possiamo avere molti effetti perché un modo di guasto può avere più cause di guasto, le quali possono portare a più effetti.
+- Modi si guasto
+	I modi del guasto (i.e., una non conformità, cioè il modo in cui mi accorgo che il sistema ha un guasto.) vengono divise in categorie; per identificare la categoria a cui un guasto appartiene possiamo usare una tabella che la norma mette a disposizione, perché un guasto può avere molti modi di guasto.
+- Cause di guasto
+	Devo individuare le cause di guasto (i.e., sono le circostanze che hanno portato al guasto) per trovare il modo di risolverlo.
+- Meccanismi di guasto
+	Non sempre, ma a volte si devono trovare anche i meccanismi di guasto (i.e., il processo che ha portato al guasto).
+- Effetti dei guasti
+	Si valutano gli effetti dei guasti, sia a livello di componente che a livello di sistema: l'idea nel fare questo deve essere quella della [fault error failure chain](fault%20error%20failure%20chain.md). Possiamo avere molti effetti perché un modo di guasto può avere più cause di guasto, le quali possono portare a più effetti.
 ##### Risultato
 Si deve quindi compilare una tabella come [questa](tabella%20effetti%20FMEA.png). Questo è il nostro output.
 # Scenari

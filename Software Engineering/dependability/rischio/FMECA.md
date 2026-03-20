@@ -1,4 +1,4 @@
-La Failure Modes and Effects and Criticality Analysis (FMECA) è una tecnica per l'[analisi del rischio](analisi%20del%20rischio.md), che rispetto alla [FMEA](FMEA.md) aggiunge un'analisi delle criticità, che mi permette di dare un peso ai modi di guasto e agli effetti che questi hanno e quindi la rendere semi-quantitativa. 
+La Failure Modes and Effects and Criticality Analysis (FMECA) è una tecnica per l'[analisi del rischio](analisi%20del%20rischio.md), che rispetto alla [FMEA](FMEA.md) aggiunge un'analisi delle criticità (dopo l'[analisi degli effetti](FMEA.md#Fasi)), che mi permette di dare un peso ai modi di guasto e agli effetti che questi hanno e quindi la rendere semi-quantitativa. 
 L'analisi delle criticità deve essere svolta su: persone che interagiscono con il sistema, il sistema stesso e l'ambiente in cui il sistema esegue.
 # Parametri di rischio
 Alla tabella vista per la FMEA, si devono [aggiungere](tabella%20effetti%20FMECA.png) delle colonne. Ognuno di questi valori ha un range tra 1 e 10.
@@ -50,3 +50,17 @@ Vediamo vantaggi e svantaggi della FMECA
 		In questo caso abbiamo una soglia troppo bassa e quindi abbiamo troppo falsi positivi.
 	- Boxplot
 		Si rappresentano i dati in 25-esimo, 50-esimo e 75-esimo percentile. I valori fino alla mediana vanno bene, quelli dalla mediana fino al 75-esimo percentile sono da controllare e quelli sopra il 75-esimo hanno valori critici da ridurre.
+# Fuzzy if-then
+È la tecnica FMECA alla quale abbiamo aggiunto la [logica fuzzy](logica%20fuzzy.md) dopo l'analisi degli effetti e prima dell'analisi del rischio. In questo caso il RPN fuzzy non è più ottenuto come $RPM=O\times S\times D$, ma si utilizza un sistema di inferenza basato un set specifico di regole.
+##### Step
+La pipeline per ottenere il RPN fuzzy è la seuquente. Gli input a questo processo sono le tre variabili occurance, severity e detection.
+- Si devono determinale le [funzioni di appartenenza](logica%20fuzzy.md#Funzioni%20di%20appartenenza) per i tre input. Queste possono essere diverse per ognuna delle tre variabili linguistiche, dove ogni variabile può avere più valori linguistici e più funzioni di appartenenza.
+- Si definsice il motore di inferenza, cioè le regole $if (and/or) then$.
+- Faccio il defuzzificamento dell'output ottenedo un valore numerico.
+# Fuzzy aritmico
+La parte più complessa è quella di definire tutte le regole $if-then$. Per ovviare a questo problema possiamo usare direttamente le operazioni matematiche sul valore delle variabili linguistica ottenuto dopo la fuzzizazione.
+##### Pipeline
+- Si definiscono dei pesi $(w_O​,w_S​,w_D​)$ per i valori degli input, i.e. per i valori di occurance, severity e detection.
+- Ogni valore passato viene fuzzificato e trasformato in una variabile linguistica.
+- Per ogni variabile linguistica, e per ogni valore linguistico, si utilizzano i pesi come esponente, e.g. si fa $O^{w_{O}}$.
+- Per ottenere il valore RPN finale si fa il prodotto dei tre input dopo questo processo e poi si fa la defuzzificazione.

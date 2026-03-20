@@ -1,5 +1,5 @@
 In un sistema la probabilità di attivare un [fault](fault%20error%20failure%20chain.md#Fault%20(guasto/difetto)), se il sistema gira all'infinito, è 1. L'idea della [fault tollerance](dependability.md#Tecniche) è permettere al sistema di non deviare dal corretto funzionamento anche quando un guasto si attiva.
-La fault tollerance utilizza la ridondanza, in particolare mira alla [design diversity](ridondanza.md#Design%20diversity). Essa può essere a livello di tempo, se eseguiamo più volte la stessa cosa, o a livello di componente, se mettiamo più elementi che fanno la stessa cosa in parallelo.
+Si implementa spesso con sclete architetturali data dalla [fault masking](fault%20masking.md) che si basano sulla ridondanza e in particolare mira alla [design diversity](ridondanza.md#Design%20diversity).
 ![Screenshot 2026-03-12 alle 09.47.44](fault%20tollerance%20tesps.png)
 ##### Tassonomia
 Non è possibile gestire tutti i fualt e tutti gli errori: c'è una tassonomia che ci permette di scegliere quali classi vogliamo gestire.
@@ -10,8 +10,8 @@ L'idea generale è che il componente che controlla deve essere molto più sempli
 Dopo aver implementato una tecnica dobbiamo capire se questa è valida. Per farlo si usa la coverage, una misura probabilistica condizionata: dato un fault, vogliamo calcolare la probabilità che esso sia trovato.
 Non è possibile avere una coverage di 1 per via delle assunzioni che facciamo: oltre al fatto che questo possonoe essere sbagliate, ci saranno sempre degli scenari che possono accadere (anche se con probabilità molto bassa) e che non sono coperti.
 # Error detection
-Si devono trovare all'interno del sistema gli [errori](fault%20error%20failure%20chain.md#Error) che si sono già verificati: se questi sono originati da messaggi allora è semplice, altrimenti se sono latenti è più complesso.
-In teoria se tutti gli errori fossero rilevati non ci sarebbe nessun fallimento, ma aggiungere tecniche di error detercndetection è un costo, sia in termini di ovehead che di denaro per i componenti ridondati.
+L'obiettivo è trovare all'interno del sistema gli [errori](fault%20error%20failure%20chain.md#Error) che si sono già verificati: se questi sollevano dei messaggi allora è semplice, altrimenti se sono latenti è più complesso.
+In teoria se tutti gli errori fossero rilevati non ci sarebbe nessun fallimento, ma aggiungere tecniche di error detection è un costo, sia in termini di ovehead che di denaro per i componenti ridondati.
 ##### Strategie
 Ci sono due strategie che possiamo usare:
 - Concorrenza
@@ -45,12 +45,21 @@ Ci sono diversi tipi di checker:
 - Resersal
 	Il codice implementa semplicemente una funziona; se riesco a trova la funzione inversa e questa è più semplice da calcoalre (e.g., radice e elevamento a potenza) allora posso eseguire l'inversa passandogli il risultato e vedere se ottengo l'input.
 - Coding
-	Si vuole ridondare i dati: se abbiamo un array di $n$ bit, allora possiamo replicare 4 volte 25 bits. Per valutare se i dati sono corrotti allora possiamo usare la [hamming](Distanza.md#Hamming) distance.
+	Si vuole ridondare l'informazione: se abbiamo un array di $n$ bit, allora possiamo replicare 4 volte 25 bits. Dato un insieme di code words, cioè un dizionario di parole (i.e., sequenze di bit) corrette, per valutare se i dati sono corrotti allora possiamo usare la [hamming](Distanza.md#Hamming) distance tra i dati e le parole del dizionario.
 	In questo contesto è importante valutare l'efficienza che vogliamo avere: più replichiamo, meno dati possiamo inviare a parità di spazio.
+	- se un insieme di code words ha una distanza di hamming minima $d$ allora il sistema è in grado di rilevare al più $t|t<d$ errori in una parola: se ci fossero $t=d$ errori allora la parola corretta che è diventata sbagliata per questi $t$ errori potrebbe sovrapporsi a una corretta.
+	- Tecniche
+		Ci sono varie tecniche per decidere come ridondare le informazioni: con i codici di parità si aggiungono bit infonda ai dati in modo da rendere pari il numero di bit o (byte) a 1; in $\frac{m}{n}$ per avere una parola valida di $n$ bit esattamente $m$ bit devono valere 1; nel checksum si fa un'operazione di modulo e si concatena infondo al dato.
 - Reasonableness
+	Hanno l'obiettivo di controllare lo stato dei componenti per capire se esso è allineato semanticamente con i requisiti di quel componenti. Solitamente si verifica tramite difence programming, implementata tramite asserzioni a run-time.
+	Per esempio se abbiamo una variabile $angle$ questa dovrà avere un valore in $[0,360]$.
 - Structural
+	Si applica alle strutture dati per controllare la consistenza semantica delle informazioni e quella strutturale.
+	Un esempio è capire se tutti i puntatori in una linked list sono ancora validi.
 - Diagnstic
+	Sono spesso controlli sull'hw e si implementano conoscendo sia l'input che l'output.
 - Control flow
+	Non sono controlli sui data ma sul flusso che un programma deve eseguire.
 ##### Quando
 Possiamo utilizzare il checker in due momento, possibilmente insieme:
 - Last moment
