@@ -13,3 +13,4 @@
 - [FMECA](FMECA.md)
 - [human reliability analysis](human%20reliability%20analysis.md)
 - [tasso di guasto](tasso%20di%20guasto.md)
+- [safety](Software%20Engineering/dependability/safety.md)

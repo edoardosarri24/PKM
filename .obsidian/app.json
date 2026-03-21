@@ -134,7 +134,9 @@
     "berstain",
     "Bernstein",
     "Interferza",
-    "stocasticamente"
+    "stocasticamente",
+    "safety",
+    "security"
   ],
   "promptDelete": false,
   "pdfExportSettings": {

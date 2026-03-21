@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "46cd05ca834dbbeb",
+        "id": "4e3e4a882ced8243",
         "type": "tabs",
         "children": [
           {
-            "id": "69cdca8d328324e6",
+            "id": "00b6c9c922944db6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -131,8 +131,14 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "fc91d6136d8be2b9",
+  "active": "00b6c9c922944db6",
   "lastOpenFiles": [
+    "Software Engineering/dependability/safety.md",
+    "UniFi/SRS/SRS.md",
+    "Software Engineering/dependability/rischio/analisi del rischio.md",
+    "Software Engineering/dependability/rischio/gestione del rischio.md",
+    "Software Engineering/dependability/rischio/rischio.md",
+    "Software Engineering/dependability/attributi.md",
     "carrier.md",
     "20260316.md",
     "Software Engineering/dependability/fault tollerance.md",
@@ -143,13 +149,11 @@
     "20260320.md",
     "Senza nome.canvas",
     "Testing/Testing.md",
-    "Software Engineering/dependability/rischio/analisi del rischio.md",
     "Software Engineering/dependability/rischio/FMECA.md",
     "Software Engineering/dependability/rischio/FMEA.md",
     "Software Engineering/dependability/rischio/logica fuzzy.md",
     "Software Engineering/dependability/rischio/file/fuzzy trapezoidale.png",
     "Software Engineering/dependability/rischio/file/fuzzy tringalolare.png",
-    "Software Engineering/dependability/rischio/gestione del rischio.md",
     "modelli formali/markov chain/markov chain.md",
     "modelli formali/markov chain/disctete time markov chain (DTMC).md",
     "Software Engineering/dependability/tasso di guasto.md",
@@ -161,14 +165,11 @@
     "Software Engineering/dependability/file/weibull gamma.png",
     "Software Engineering/dependability/file/weibull distribution beta.png",
     "Software Engineering/dependability/file/weibull distribution eta.png",
-    "Software Engineering/dependability/attributi.md",
     "statistica/distribuzioni/distribuzione gaussiana.md",
     "statistica/distribuzioni/continuos Phase Type (PH) distribution.md",
     "statistica/distribuzioni/bernstein phase type distributions.md",
-    "UniFi/SRS/SRS.md",
     "Software Engineering/dependability/human reliability analysis.md",
     "UniFi/tesi/tesi.md",
-    "statistica/distribuzioni/polinomi di Bernstein.md",
     "risorse/paper/statistica/approximation of cumulative distribution functions by bernstein phase-type distributions.pdf",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",

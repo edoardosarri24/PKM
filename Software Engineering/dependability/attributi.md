@@ -32,11 +32,7 @@ Si parla di residual reliability quando si vuole calcolare la realiability per $
 - 2/3 (elementi uguali)
 	Abbiamo che $R(t)=2e^{-\lambda t}-e^{-2\lambda t}$ e quindi $R(MTTF)=0,402$ con $MMTF=\tfrac{5}{6\lambda}$.
 # Safety
-La [safety](Software%20Engineering/dependability/safety.md) è un'estensione del concetto di [reliability](#Reliability): lo stato corretto del sistema è quello in cui il sistema funziona correttamente unito a quello dove non funziona correttamente, dal punto di vista delle specifiche funzionali, ma non si verifica conseguenze per la salute delle persone.
-##### Misura
-Si misura con il SIL (Safe Integrety Level) ed è il livello di assenza di rischi che coinvolgono la vita umana. Non è la sicurezza intesa come security (i.e., protezione da eventi dannosi volontari).
-##### Esempio
-Un incrocio dove tutti i semafori sono rossi non va bene per la reliability ma va bene per la safety.
+La [safety](Software%20Engineering/dependability/safety.md) è un'estensione del concetto di [reliability](#Reliability): un sistema che rispetta la safety è un sistema che si trova in uno stato di corretto funzionamento oppure in uno stato di comportamento non allineato con le specifiche funzionali ma non dannoso per la salute delle persone.
 # Confidentiality
 Il servizio non deve divulgare dati senza autorizzazione.
 # Integrity
