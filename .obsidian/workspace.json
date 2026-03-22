@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4e3e4a882ced8243",
+        "id": "30ac314686422398",
         "type": "tabs",
         "children": [
           {
-            "id": "00b6c9c922944db6",
+            "id": "b11308e1e8e000f1",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -47,7 +47,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 215.5
+    "width": 215.5,
+    "collapsed": true
   },
   "right": {
     "id": "7dd79967413147f7",
@@ -131,9 +132,11 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "00b6c9c922944db6",
+  "active": "b11308e1e8e000f1",
   "lastOpenFiles": [
     "Software Engineering/dependability/safety.md",
+    "Software Engineering/dependability/rischio/FMEA.md",
+    "Software Engineering/dependability/rischio/FMECA.md",
     "UniFi/SRS/SRS.md",
     "Software Engineering/dependability/rischio/analisi del rischio.md",
     "Software Engineering/dependability/rischio/gestione del rischio.md",
@@ -149,8 +152,6 @@
     "20260320.md",
     "Senza nome.canvas",
     "Testing/Testing.md",
-    "Software Engineering/dependability/rischio/FMECA.md",
-    "Software Engineering/dependability/rischio/FMEA.md",
     "Software Engineering/dependability/rischio/logica fuzzy.md",
     "Software Engineering/dependability/rischio/file/fuzzy trapezoidale.png",
     "Software Engineering/dependability/rischio/file/fuzzy tringalolare.png",
