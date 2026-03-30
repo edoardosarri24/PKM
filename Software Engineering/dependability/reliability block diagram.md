@@ -18,7 +18,7 @@ La sintassi è la seguente:
 Il sistema è operativo se e solo se tutti i componenti sono operativi.
 La reliability al tempo $t$ è data dalla probabilità che tutti i componenti siano operativi, cioè $R(t)=P\{\cap_{i=1}^ne_i\}=P(e_1)P(e_2|e_1)\cdots P(e_n|e_1\cap\cdots\cap e_{n-1})$. Semplificando e supponendo che gli eventi siano indipendenti, cioè che il guasto a uno non implichi nulla sul guasto degli altri, abbiamo $R(t)=\prod_{i=1}^np(e_i)$. In ogni caso è chiaro che aumentando i componenti si diminuisce la reliability del sistema.
 - Il tasso di guasto del sistema è dato dalla somma dei tassi di guasto dei componenti, cioè $\lambda=\sum_{i=1}^n\lambda_i$.
-- Se il tasso di guasto è costante allora abbiamo il [main taime to failure](attributi.md#Maintenability) è $MTTF=\tfrac{1}{\sum_i\lambda_i}$.
+- Se il tasso di guasto è costante allora abbiamo il [mean time to failure](attributi.md#Time%20to%20failure)è $MTTF=\tfrac{1}{\sum_i\lambda_i}$.
 - Abbiamo $R(t)\le \min_i{R_i(t)}$ (moltiplicazione di numeri minori di 1), cioè l'anello debole del sistema è il componente con la reliability più bassa.
 ##### Parallelo
 ![RBD parallel configuration](RBD%20parallel%20configuration.png)

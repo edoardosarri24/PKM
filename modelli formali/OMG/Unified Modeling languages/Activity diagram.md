@@ -1,4 +1,4 @@
-Vuole modellare il business process, ovvero la sequenza di azioni di un sistema; è adatto sia per sistemi object-oriented sia non object-oriented.
+Vuole modellare il business process, ovvero la sequenza di azioni logiche di un sistema; è adatto sia per sistemi object-oriented sia non object-oriented; se il problema è rappresentare l'esecuzione logica allora è questo.
 È basato sui token (come le [Petri Net](Petri%20Net%20(PN).md); indicano dove sono i token durante il flusso di esecuzione): un'azione viene eseguita se ha un token di autorizzazione. Un token può essere moltiplicato o consumato attraverso la parallelizzazione o la gestione del flusso.
 ## RAPPRESENTAZIONE
 ### Azione

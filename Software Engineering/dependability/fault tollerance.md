@@ -1,5 +1,5 @@
-In un sistema la probabilità di attivare un [fault](fault%20error%20failure%20chain.md#Fault%20(guasto/difetto)), se il sistema gira all'infinito, è 1. L'idea della [fault tollerance](dependability.md#Tecniche) è permettere al sistema di non deviare dal corretto funzionamento anche quando un guasto si attiva.
-Si implementa spesso con sclete architetturali data dalla [fault masking](fault%20masking.md) che si basano sulla ridondanza e in particolare mira alla [design diversity](ridondanza.md#Design%20diversity).
+In un sistema la probabilità di attivare un [fault](fault%20error%20failure%20chain.md#Fault%20(guasto/difetto)), se il sistema gira all'infinito, è 1.
+L'idea della fault tollerance è permettere al sistema di non deviare dal corretto funzionamento anche quando un guasto si attiva. L'implementazione avviene solitamente con scelte architetturali fornite dalla [fault masking](fault%20masking.md) e con [riconfigurazioni dinamiche](dinamic%20fault%20masking.md) si basano sulla ridondanza e in particolare sulla [design diversity](ridondanza.md#Design%20diversity).
 ![Screenshot 2026-03-12 alle 09.47.44](fault%20tollerance%20tesps.png)
 ##### Tassonomia
 Non è possibile gestire tutti i fualt e tutti gli errori: c'è una tassonomia che ci permette di scegliere quali classi vogliamo gestire.

@@ -19,8 +19,12 @@ Alcuni esempio sono i limiti di Chernoff, Bernstein e Hoeffding oppure una tecni
 Si tratta di una distribuzione che esprime l'execution time nel caso peggiore, cioè quella distribuzione che sovrasta tutte quelle ottenute dall'esecuzione di vari scenari. È definito come il limite superiore delle distribuzioni dei tempi di esecuzione di ogni possibile scenario (i.e., curve diverse nella figura), cioè $pWCET=\displaystyle\sup_{\theta\in \Theta}\bar{F}_{\theta}$, dove $\bar{F}_{\theta}$ è $1-CDF$ per lo scenario $\theta$ e $\Theta$ è lo spazio dei possibili scenari.
 Si rappresenta solitamente come $1-CDF$, una funzione detta exceedance funtion della pWCET: dato che la [CDF](random%20variable.md#CDF) è la probabilità che la random variable $X$ assuma un valore minore di una data soglia $x$, $1-CDF$ è la probabilità che la random variable assuma un valore maggiore di una data soglia. Questo è comodo in uno scenario [real time](real%20time.md) perché, dove il valore di $x$ è la dead line, possiamo dire che vogliamo che questa probabilità sia il più bassa possibile.
 Nella figura si nota che pWCET può essere precisa, e questa può non corrispondere con nessuna delle CDF degli scenari presi in esame, oppure può essere un upper bound (solitamente il least uppur buond) di tutti gli scenari.
+##### Relazione con WCET
+Il WCET nella pWCET potrebbe avere una porbabilità bassisima, ma sicuramente sarò presente.
 ##### Scenario
-Per ottenere questo pWCET non ci basiamo più sull'esecuzione di molti singoli run, ma sull'esecuzione di più scenari: uno scenario è una sequenza di run (teoricamente infinita) dove ogni run ha stti di input e stati dell'hardware diversi ma ottenuti con la stessa logica (e.g., campionati dalla stessa distribuzione); ciò che invece differenza gli scenari è la logica con sono scelti gli stati dell'input e dell'hardware.
+Per ottenere questo pWCET non ci basiamo più sull'esecuzione di molti singoli run prendendo poi il worst case, ma sull'esecuzione di più scenari.
+Uno scenario è una sequenza di run (teoricamente infinita) definita da un set di stati di input e un insieme di configurazioni hardware (e.g., cache libera).
+
 # Measurement-based analysis
 L'idea è la stessa della classica [measurement-based analaysis](timing%20analysis.md#Measurement-based%20analaysis), ma per ottenere il pWCET invece che il WCET si raccolgono i dati di più scenari e poi si utilizzano tecniche di Extreme Value Theory (EVT) per ottenere una stima statistica della distribuzione pWCET.
 Gli scenari son decisi anche in questo caso da un measurement protocol; gli scenari decisi devono essere rappresentativi anche di casi futuri in modo che la pWCET sia rappresnetativa di tutte le posisbili situazioni.

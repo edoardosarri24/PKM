@@ -9,11 +9,11 @@ Oltre a quelle specifiche dei singoli attributi, altre misure che comprendo più
 ##### Tempo
 L'affidabilità e in generale molte misure sono in funzione del tempo. È difficile dire se un valore è alto o basso, ma possiamo contestualizzarlo meglio se parliamo di quando abbiamo riscontrato quel valore.
 # Availability
-È intesa come la disponibilità, cioè la continuità di servizio durante tutto il tempo a disposizione.
-Se il sistema ha bisogno di un'alta Availability allora vogliamo che esso sia online la maggior parte del tempo. I sistemi con più alta avaibility al momento sono rete elettrica e i data center.
+È intesa come la disponibilità, cioè la continuità di servizio durante tutto il tempo a disposizione; se il sistema ha bisogno di un'alta availability allora vogliamo che esso sia online la maggior parte del tempo.
+I sistemi con più alta avaibility al momento sono rete elettrica e i data center.
 ##### Misura
 La misura di availability $A(t)$ è definita come la probabilità che al tempo $t$ il sistema sia online.
-Può essere definita in modo adimensionale con un valore in $[0,1]$ come $A=\tfrac{MTBF}{MTBF+MTTR}$.
+Può essere definita in modo adimensionale con un valore in $[0,1]$ come $A=\tfrac{MTBF}{MTBF+MTTR}$: più il [MTTR](manutenibilità.md#Time%20To%20Recovry) è basso più la disponibilità sarà vicino a 1.
 # Reliability
 È la capacità di un sistema di svolgere la sua funzione nel modo corretto per un determinato periodo di tempo e nelle condizioni definite dai requisiti. Se consideriamo solo i due stati del sistema di corretto ed errato funzionamento, allora la reliability è una misura del tempo consecutivo passato nello stato corretto 
 Se il sistema ha bisogno di un'alta reliability (e.g., aerei) allora stiamo chiedendo che quando il sistema è online esso funzioni senza [fallimenti](fault%20error%20failure%20chain.md#Failure).
@@ -38,19 +38,11 @@ Il servizio non deve divulgare dati senza autorizzazione.
 # Integrity
 Il sistema non deve essere alterato in modo non corretto.
 # Maintenability
-È l'abilità di riparare il sistema dopo un problema, cioè di portare il sistema nuovamente nello stato di corretto funzionamento.
+La [manutenibilità](manutenibilità.md) è l'abilità di riparare il sistema dopo un problema, cioè di portare il sistema nuovamente nello stato di corretto funzionamento. È fondamentale perché il [tasso di guasto](tasso%20di%20guasto.md) non è mai zero e il [l'errore umano](human%20reliability%20analysis.md) è sempre possibile.
 - Ciò che fa diminuire la manutenibilità è la complessità, l'età del sistema e la povertà di documentazione.
 - Ciò che fa aumentare la maintenability è la corretta progettazione (e.g., [DFR](1-intro.md#Design%20for%20Reliability)): si deve prevedere come il sistema si danneggerà e come ripararlo; questo è vero soprattutto nel caso di componenti critici.
-##### Misura
-Se consideriamo solo i due stati del sistema di corretto ed errato funzionamento, allora la mantenability è anche espressa dal TTR (Time To Repair), cioè del tempo passato nello stato errato.
+##### Time to failure
 Nei sistemi che sono riparabili abbiamo:
 - Mean time to failure (MTTF/MTBF)
 	È il valore atteso del tempo in cui il sistema è in uno stato di corretto funzionamento espresso in ore.
 	In generale abbiamo $MTTF=\int_0^\infty R(t)dt$; se abbiamo un [tasso di guasto costante](tasso%20di%20guasto.md#Costante) allora non si deve risolvere l'integrale e abbiamo $MTTF=\tfrac{1}{\lambda}$.
-- Mean time to recovery (MTTR)
-	È il tempo medio in cui il sistema è continuamente in uno stato errato e non funzionante.
-- Mean time to repair (MTTR)
-	È il tempo medio che è necessario per riparare effettivamente un guasto, cioè del tempo necessario per eseguire l'operazione.
-##### Supportability
-Legato alla mantenability abbiamo la supportability (o anche Integrated Logistic Support (ILS)): è la capacità di gestire a livello logistico (e.g., acquisto e trasporto) di tutto ciò che è necessario per la riparazione.
-Una buona supportability riduce il MTTR (mean time to recovery). Inoltre è necessario garantire un livello di approvvigionamento delle scorte alto sopratutto per quei componenti che sono critici.

@@ -1,16 +1,30 @@
-- [1-intro](1-intro.md)
-- [dependability](dependability.md)
-- [attributi](attributi.md)
-- [design for reliability](design%20for%20reliability.md)
-- [qualità](qualità.md)
-- [misure](Software%20Engineering/dependability/misure.md)
-- [reliability block diagram](reliability%20block%20diagram.md)
-- [previsione guasti](previsione%20guasti.md)
-- [rischio](rischio.md)
-- [gestione del rischio](gestione%20del%20rischio.md)
-- [analisi del rischio](analisi%20del%20rischio.md)
-- [FMEA](FMEA.md)
-- [FMECA](FMECA.md)
-- [human reliability analysis](human%20reliability%20analysis.md)
-- [tasso di guasto](tasso%20di%20guasto.md)
-- [safety](Software%20Engineering/dependability/safety.md)
+- 1
+	- [ ] [dependability](dependability.md)
+		Da non sapere come funziona il tollerance, removal e forcasting.
+	- [ ] [conformità](conformità.md)
+- 2
+	- [attributi](attributi.md)
+	- [design for reliability](design%20for%20reliability.md)
+	- [ ] [dependability](dependability.md)
+		Da non sapere come funziona il tollerance, removal e forcasting.
+	- [ ] [conformità](conformità.md)
+- 3
+	- [qualità](qualità.md)
+	- [misure](Software%20Engineering/dependability/misure.md)
+- 4
+	- [reliability block diagram](reliability%20block%20diagram.md)
+	- [previsione guasti](previsione%20guasti.md)
+- 5
+	- [rischio](rischio.md)
+	- [gestione del rischio](gestione%20del%20rischio.md)
+- 6
+	- [analisi del rischio](analisi%20del%20rischio.md)
+	- [FMEA](FMEA.md)
+- 7
+	- [FMECA](FMECA.md)
+	- [human reliability analysis](human%20reliability%20analysis.md)
+- 8
+	- [tasso di guasto](tasso%20di%20guasto.md)
+	- [safety](Software%20Engineering/dependability/safety.md)
+- 9
+	- [manutenibilità](manutenibilità.md)

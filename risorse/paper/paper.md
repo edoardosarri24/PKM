@@ -14,6 +14,7 @@
 - [model based approach for activity recognition](model%20based%20approach%20for%20activity%20recognition.pdf)
 - [model based approach for activity recognition 2](model%20based%20approach%20for%20activity%20recognition%202.pdf)
 - [berstain polynomial](Approximation%20of%20cumulative%20distribution%20functions%20by%20Bernstein%20phase-type%20distributions.pdf)
+- [bernstein polynomial 2](EPEW26_bernstein%20(1).pdf)
 # Dependability
 - [Basic Concepts and Taxonomy of Dependable and Secure Computing](Basic%20Concepts%20and%20Taxonomy%20of%20Dependable%20and%20Secure%20Computing.pdf)
 # Real time

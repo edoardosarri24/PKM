@@ -27,7 +27,7 @@ Sono composti da tre blocchi in serie:
 - Attuatore
 	Esegue fisicamente la funzione di sicurezza riportando il sistema in uno stato sicuro. Possiamo avere più sensori e attuatori che condividono una stessa logica.
 ##### Progettazione
-La progettazione non è banale:
+La progettazione si un SIS non è banale e seque della fasi:
 - Si deve scegliere la tecnologia, cioè quali sensori, attuatori e logiche saranno utilizzati.
 	Il problema dei componenti è che anche essi sono soggetti a guasti; questo solitamente viene mitigato utilizzando componenti ad alta affidabilità e con la ridondanza.
 	I guasti in questo scenario sono considerati essere guasti casuali e sono divisi in due categorie:
@@ -36,7 +36,36 @@ La progettazione non è banale:
 		Per trovare i guasti pericolosi si utilizza la FMEDA (Failure Modes, Effects and Diagnostic Analysis), una variante della [FMECA](FMECA.md): mentre questa si ferma all'effetto del guasto, la FMEDA aggiunge la Diagnostic Coverage (DC); è definita come il rapporto tra i guasti pericolosi detected e i guasti pericolosi totali e idealmente deve valere 1; da un'idea della diagnostica a bordo del sistema che identifica i guasti pericolosi.
 	- Sicuro
 		Un guasto è sicuro quando porta a un'esecuzione della SIS quando non necessario, detta intervento spurio.
-- Si deve progettare l'architettura, cioè quali componenti saranno ridondati in modo ricorsivo (i.e., scomponendo i vari componenti).
+- Si deve progettare l'architettura.
+	I componenti sono divisi in tipo A e tipo B: i primi sono quelli di cui si conosce tutti i modi di guasto, il comportamento in caso di guasto e possiamo calcolare il tasso di guasto (solitamente sensori e attuatore); sono tutti gli altri (solitamente le logiche).
+	Si parla di Safe Failure Fraction (SFF), definito come il rapporto tra la (somma dei tassi di guasto sicuri, pericolosi e rilevati) e il tasso di guasto totale (i.e., sicuri, pericolosi detected e pericolosi undetected); idealmente si vuole che sia pari a 1, cioè non voglio i guasti pericolosi undetected, che sono quelli che mi fanno funzionare male il SIS.
+	La norma definisce gli Architectural Constraints, cioè dei vincoli di queste architetture. Per scegliere questa architettura vincolata ci sono due approcci:
+	- Route1
+		L'idea è di di incrociati i dati del tipo di componente (i.e., A o B), il SFF e il SIL target. Il risultato è il HFT minimo, definito come il numero di guasti che il SIS può tollerare prima che esso perda le sue funzioni di protezione verso il sistema principale. Il più utilizzato, oltre a 0 e 1, è il koon: si possono guastare $k$ componenti su $n$.
+		In questo contesto considero anche il Common Cause Failures (CCF), cioè le cause d guasto comuni a due componenti ridondandi (e.g., incendio). Il CCF nasce da due fattori, la scintilla e il contest; si combatte con la [design diversity](ridondanza.md#Design%20diversity).
+	- Route2
+		È utilizzata quando i componenti sono ampiamente testati: invece di utilizzare calcoli teorici complessi come l'SFF  si tulizza la storia statistica del componente.
+		Questo permette di raggiungere un SIL elevato anche in assenza di ridondanza (i.e., con $HFT=0$) se i componenti si sono dimostrati sul campo molto affidabili.
+- Decidere la filosofia di testing.
+	Per capire se un SIS è guasto ci sono due approcci: con la diagnostica interna si vuole limitare i guasti pericolosi e undetected ed è il SIS stesso in maniera autonoma che si analizza per capire se è correttamente funzionante; con i Proof Test si vanno a eseguire direttamente le SIS trovando i dangerous undetected fault (che sono il nostro obiettivo e sono più complessi da trovare).
+	La PFD è una curva che [sale nel tempo](safety%20Proof%20Test.png), cioè più tempo passa dall'ultimo controllo più è probabile che il sistema si sia guastato a nostra insaputa. Visto che la PFD determina il valore del SIL richiesto, dovremmo tenerla bassa: la diagnosi ha il compito di abbassare il valore medio durante la salita della curva; il Proof Test riporta il componente in uno stato di as good as new. In generale però questi test sono da eseguire molto raramente (e.g., intervalli di almeno 6 mesi) perché costosi e perché richiedono di interrompere la disponibilità del sistema durante il test stesso.
+- Valutare la Safety
+	La SIS deve essere messa in parallelo (e.g., 1/2) o in serie (e.g., 2/2) a seconda dello scopo del componente: il parallelo è utilizzato nelle situazioni in cui la SIS ci fornisce un'apertura sicura, cioè permette il passaggio quanto il canale principale è bloccato; il sequenziale permette alla SIS di eseguire una chiusura sicura.
+	Vediamo adesso come possiamo comporre i tre blocchi (i.e., sensori, logica e attuatori): in generale la PFD è data dalla somma delle tre PFD visto che i tre blocchi sono in serie e solitamente il peso maggiore in questa somma è dato dagli attuatori (perché sono parti meccaniche) e poi dai sensori; usare una di queste architetture solitamente aumenta la sicurezza ma diminuisce la disponibilità.
+	Vediamo diversi tipi di ridondanza per ognuno dei tre blocchi
+	- 1oo1
+		Non abbiamo nulla di ridondato, cioè abbiamo un singolo canale (i.e., sensore, logica e attuatore): non abbiamo tolleranza ai guasti, ma eventualmente solo una diagnostica per migliorare la DC.
+		La formula è $PFD=(\lambda_{DU}+\lambda_{DD})t_{CE}$, dove: $\lambda_{DU}$ è il tasso dei guasti pericolosi non rilevati; $\lambda_{DD}$ è il tasso dei guasti pericolosi rilevati dalla diagnostica; non abbiamo i guasti sicuri perché ci interessano solo quelli pericolosi; $T_{CE}$​ è il tempo medio per cui il canale rimane scoperto (i.e., c'è un guasto latente) prima che un guasto venga scoperto e riparato.
+		La formula non è complessa, ma i dati sono difficili da reperire. Per migliorare la PFD possiamo migliorare il tempo tra due Proff test (da cui $t_{CE}$ dipende) oppure utilizzare componenti più affidabili.
+	- 1oo2
+		Abbiamo due canali che lavorano in parallelo e la SIS interviene se almeno uno dei due è in guasto.
+		È molto utilizzata perché la probabilità di guasti periocolosi è molto bassa. Il problema è che se la sicurezza raddoppia, la disponibilità dell'impianto dimezza: questo vuol dire che nel caso di interventi spuri (i.e., di guasti sicuri), che saranno il doppio vista la ridondanza, il sistema si blocca. I guasti sicuri sono accettabili dal punto di vista della sicurezza ma non da quello della disponibilità.
+	- 2oo2
+		Abbiamo due canali ma il sistema si blocca se entrambi hanno un guasto.
+		Il vantaggio non è tanto la sicurezza ma la disponibilità: la probabilità di guasto pericoloso (i.e., PFD) è circa il doppio rispetto all'architettura 1oo1. Possiamo dire che questa raddoppia la disponibilità ma dimezza la sicurezza.
+	- 2oo3
+		Tollera un guasto.
+		È costosa, ma aumenta sia la disponibilità che sicurezza.
 # Rischio
 In un sistema sappiamo che il [rischio](rischio.md) zero non può esistere. Quello che dobbiamo fare in questo tipo di sistemi è portare il rischio residuo (i.e., quello che affligge il sistema) sotto il rischio tollerabile (i.e., quello che le specifiche ci dicono essere consentito); questo permette di avere un margine di sicurezza che permette di gestire gli imprevisti che non abbiamo considerato.
 Il rischio residuo è definito come $residualRisk=O \times S \times PFD$, dove: la $O$ è la occurence, la $S$ è la severity e la $PFD$ è la Probability of Failure on Demand.

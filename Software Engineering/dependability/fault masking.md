@@ -1,11 +1,9 @@
 La [fault tollerance](fault%20tollerance.md) ci permette di far continuare l'esecuzione del sistema anche se sono presenti dei fault. Questo obiettivo spesso è raggiunto utilizzando la [ridondanza](ridondanza.md) in modo da isolare il componente che ha causato tale guasto.
-La fault masking è una forma di ridondanza statica: si vuole costruire un circuito di componenti che isoli in modo automatico quelli che non sono più correttamente funzionanti.
-Queste tecniche solitamente permettono a un sistema di essere tolleranti a un guasto; dal momento che questo occorre il sistema non può permettersi più un nuovo guasto.
+La fault masking è una forma di ridondanza statica: si vuole costruire un circuito (i.e., un insieme i cui elementi cooperano) di componenti che isoli in modo automatico quelli che non sono più correttamente funzionanti.
+Queste tecniche solitamente permettono a un sistema di essere tolleranti a uno o più guasti guasto; dal momento che questo occorre il sistema non può permettersi più un nuovo guasto.
 # N-modular ridundancy with voter
-È una tecnica in cui abbiamo un componente ridondato $N$ volte prima di un voter che fa passare l'ouput più rappresentato.
-##### Casi particolari
-- L'architettura più utilizzata è quella della Triple Modular Redundancy (TMR, i.e. 2-out-of-3), dove ci può essere al più un componente fallito.
-- Un'estensione è quella di avere $N$ copie dello stesso componente, dove solitamente $N$ è dispari per evitare situazioni di incertezza.
+È una tecnica in cui abbiamo un componente ridondato $N$ volte prima di un voter che fa passare l'ouput più rappresentato; solitamente si considera $N$ dispari per evitare situazioni di incertezza.
+Un caso particolare e molto usato è l'architettura della Triple Modular Redundancy (TMR, i.e. 2-out-of-3), dove ci può essere al più un componente fallito; questa permette a un sistema di essere tollerante a un guasto e dal momento che questo occorre il sistema non può permettersi più un nuovo guasto.
 ##### Costo
 Ci sono più aspetti negativi:
 - Soldi
@@ -19,9 +17,19 @@ Possiamo ridondare a due livelli:
 - Componente
 	Possiamo decomporre il sistema in più componenti e applicare la ridondanza a ognuno di questi componenti; avremmo alla fine tanti voter quanti sono i componenti.
 - Voter
-	Possiamo ridondardare il voter: l'ouput di ogni componente ridondato finisce un tanti voter quanti sono tali componenti ridondati; ogni voter prende poi un flusso isolato; alla fine l'output del sistema è deciso però da un singolo voter.
+	Possiamo ridondare anche il voter: l'ouput di ogni componente ridondato finisce un tanti voter quanti sono tali componenti ridondati; ogni voter prende poi un flusso isolato; alla fine l'output del sistema è deciso però da un singolo voter.
 ##### Reliability
 Il collo di bottiglia generale di questa architettura è il voter: se questo componente ha un'alta [reliability](attributi.md#Reliability) allora la reliability del sistema sarà buona, altrimenti avremo un sistema poco affidabile.
 Se $R_{V}$ è la reliability del voter allora la reliability massima del sistema sarà data da $R=\frac{1}{(3-2R_{V})R^\alpha}$, dove $\alpha=\frac{2R}{3-2R}$ è la reliability del singolo componente.
-##### Voter behaviour
-In un'architettura 2oo3 (i.e., 2 out of 3) dove i segnali sono digitali (i.e., gli input e gli ouput sono bit) il voter confronta bit a bit. Se arrivano i bit $a$, $b$ e $c$ allora l'ouput del voter è dato da $out=(ab)\cdot(ac)\cdot(bc)$.
+##### Segnali
+Il voter può dover elaborare due tipi di segnali:
+- Digitale
+	Sono sequenze di bit e il voter confronta bit a bit. Ad esempio se arrivano i bit $a$, $b$ e $c$ allora l'ouput del voter è dato da $out=(ab)\cdot(ac)\cdot(bc)$.
+- Analogica
+	Solitamente i segnali analogici sono tutti leggermente diversi anche in caso di sensori ultra affidabili e per questo trasfera il segnale in digitale e poi confrontare bit a bit può portare a incertezza da parte del voter.
+	Solitamente si confrontano i valori analogici: si può prendere la media o la mediana dei valori; si può sscare il più diverso e poi fare la media dei rimanenti.
+##### Sincronizzazzione
+In un sistema a voting la sincronizzazione è molto rilevante.
+Solitamente si può risolvere utilizzando un clock comune, anche se questo diventa un single point of failure del sistema.
+# Limiti
+Tecniche di questo tipo sono limitate a livello di circuiti: supponimao di avere un circuito NAND (i.e., AND sequito dalla negazione); se uno dei due input si blocca a 1, l'output è sempre forzato essere a 0.

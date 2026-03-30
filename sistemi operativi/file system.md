@@ -1,10 +1,10 @@
-in UNIX all is a file. All kind of file live in the file system.
+In UNIX all is a file. All kind of file live in the file system.
 # bin
 There are two folder:
 - bin
 	Contains the binary (i.e., the programs).
 - sbin
-	Contains the binary accessable only from the administrator of system. 
+	Contains the binary accessable only from the administrator of system.
 # boot
 Contains the boot loader. We must not change this folder.
 # dev
