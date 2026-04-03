@@ -1,5 +1,5 @@
-Nella [dependability](dependability.md) gli attributi sono le proprietà devono essere verificate per avere un'affidabilità del sistema. In sistemi diversi ogni attributo ha un peso diverso, eventualmente anche zero.
-Avendo essi una dimensione quantitativa, ci danno inoltre un modo per confrontare due sistemi. In questo scenario devono essere visti non come misure binarie, ma come probabilità.
+Nella [dependability](dependability.md) gli attributi sono le proprietà devono essere verificate per avere un sistema ffidabile.
+Avendo essi una dimensione quantitativa, ci danno inoltre un modo per confrontare due sistemi; in sistemi diversi ogni attributo ha un peso diverso, eventualmente anche zero.
 ##### Misure
 Oltre a quelle specifiche dei singoli attributi, altre misure che comprendo più attributi sono:
 - Degrado
@@ -7,30 +7,31 @@ Oltre a quelle specifiche dei singoli attributi, altre misure che comprendo più
 - Performability
 	È la misura del valore del servizio offerto.
 ##### Tempo
-L'affidabilità e in generale molte misure sono in funzione del tempo. È difficile dire se un valore è alto o basso, ma possiamo contestualizzarlo meglio se parliamo di quando abbiamo riscontrato quel valore.
+I parametri RAMS sono solitamente in funzione del tempo: non ci chiediamo quanto valga un attributo in generale, ma in un prociso istante di tempo.
 # Availability
 È intesa come la disponibilità, cioè la continuità di servizio durante tutto il tempo a disposizione; se il sistema ha bisogno di un'alta availability allora vogliamo che esso sia online la maggior parte del tempo.
 I sistemi con più alta avaibility al momento sono rete elettrica e i data center.
 ##### Misura
 La misura di availability $A(t)$ è definita come la probabilità che al tempo $t$ il sistema sia online.
-Può essere definita in modo adimensionale con un valore in $[0,1]$ come $A=\tfrac{MTBF}{MTBF+MTTR}$: più il [MTTR](manutenibilità.md#Time%20To%20Recovry) è basso più la disponibilità sarà vicino a 1.
+Può essere definita in modo adimensionale, una volta che il sistema si stabilizza, con un valore in $[0,1]$ come $A=\frac{MTBF}{MTBF+MTTR}$: più il [MTTR](manutenibilità.md#Time%20To%20Recovry) (to recovery) è basso più la disponibilità sarà vicino a 1.
 # Reliability
-È la capacità di un sistema di svolgere la sua funzione nel modo corretto per un determinato periodo di tempo e nelle condizioni definite dai requisiti. Se consideriamo solo i due stati del sistema di corretto ed errato funzionamento, allora la reliability è una misura del tempo consecutivo passato nello stato corretto 
+È la capacità di un sistema di svolgere la sua funzione nel modo corretto per un determinato periodo di tempo e nelle condizioni definite dai requisiti. Se consideriamo solo i due stati del sistema di corretto ed errato funzionamento, allora la reliability è una misura del tempo consecutivo passato nello stato corretto.
 Se il sistema ha bisogno di un'alta reliability (e.g., aerei) allora stiamo chiedendo che quando il sistema è online esso funzioni senza [fallimenti](fault%20error%20failure%20chain.md#Failure).
 ##### Misura
-La misura di realiability $R(t)$ è definita come la probabilità che, dato un sistema senza fallimenti in $t=0$ al tempo $t$ il sistema non abbia mai avuto un fallimento. Si misura con la legge fondamentale della reliability $R(t)=e^{-\int_{0}^{t}\lambda(t)dt}$: essa dipende quindi dal tempo ed è in funzione del [tasso di guasto](tasso%20di%20guasto.md) $\lambda$; è il massimo in $t=0$ dove vale 1 ed è una funzione monotona decrescente.
+La misura di realiability $R(t)$ è definita come la probabilità che, dato un sistema senza fallimenti in $t=0$, al tempo $t$ il sistema non abbia mai avuto un fallimento. Si misura con la legge fondamentale della reliability $R(t)=e^{-\int_{0}^{t}\lambda(t)dt}$: essa dipende quindi dal tempo ed è in funzione del [tasso di guasto](tasso%20di%20guasto.md) $\lambda$; ha massimo in $t=0$ dove vale 1 ed è una funzione monotona decrescente.
 - Supponendo un [tasso di guasto sempre costante](tasso%20di%20guasto.md#Costante) allora la reliability diventa $R(t)=e^{-\lambda t}$, e quindi [questa](reliability%20with%20constant%20fault%20rate.png) è la curva. Ovviamente in questo caso vogliamo un $\lambda$ più piccolo possibile.
 - Supponendo un tasso di guasto che segue la distribuzione di [Weibull](tasso%20di%20guasto.md#Weibull), possiamo notale l'[andamento](reliability%20with%20weibull.png) della reliability.
 ##### Software
 Nel software la realibilty è spesso molto [correlata](failure%20rate%20software.png) al testing e ai nuovi rilasci. Possiamo dire appena abbiamo un una nuova release i la reliability diminuisce (cresce il failure rate) e via via diminuisce quando si fa bub fixing.
 ##### Residual reliability
 Si parla di residual reliability quando si vuole calcolare la realiability per $t=MTTF$. Abbiamo che $R(t=MTTF)\to0$ ma non è mai 0.
+A seconda dall'architettura del sistema abbiamo:
 - Singolo elemento
-	Se consideriamo un singolo componente (cioè una configurazione in [serie](reliability%20block%20diagram.md#Serie) con $n=1$) con un tasso di guasto costante allora $R(t)=R(MTTF)=e^{-\lambda\cdot MTTF}=e^{-\lambda\tfrac{1}{\lambda}}=e^{-1}=0,36$: abbiamo quindi che il 37% dei sistemi sono ancora funzionanti.
+	Se consideriamo un singolo componente (cioè una configurazione in [serie](reliability%20block%20diagram.md#Serie) con $n=1$) con un tasso di guasto costante allora $R(t=MTTF)=e^{-\lambda\cdot MTTF}=e^{-\lambda\tfrac{1}{\lambda}}=e^{-1}=0,36$: se abbiamo più sistemi diversi che fanno la stessa cosa allora il 37% si essi sarà ancora funzionante.
 - Parallelo (2 elementi uguali)
-	Se applichiamo la regola per definire la reliability nel caso [parallelo](reliability%20block%20diagram.md#Parallelo) abbiamo che $R(t)=2e^{-\lambda t}-e^{-2\lambda t}$ e allora $R(MTTF)=0,397$: abbiamo aumentato la reliability e del $MMTF=\tfrac{3}{2\lambda}$.
+	Se applichiamo la regola per definire la reliability nel caso [parallelo](reliability%20block%20diagram.md#Parallelo) abbiamo che $R(t)=2e^{-\lambda t}-e^{-2\lambda t}$ e allora $R(MTTF)=0,397$. Abbiamo aumentato la reliability con un $MMTF=\tfrac{3}{2\lambda}$.
 - 2/3 (elementi uguali)
-	Abbiamo che $R(t)=2e^{-\lambda t}-e^{-2\lambda t}$ e quindi $R(MTTF)=0,402$ con $MMTF=\tfrac{5}{6\lambda}$.
+	Abbiamo che $R(t)=3e^{-2\lambda t}-2e^{-3\lambda t}$ e quindi $R(MTTF)=0,402$ con $MMTF=\tfrac{5}{6\lambda}$.
 # Safety
 La [safety](Software%20Engineering/dependability/safety.md) è un'estensione del concetto di [reliability](#Reliability): un sistema che rispetta la safety è un sistema che si trova in uno stato di corretto funzionamento oppure in uno stato di comportamento non allineato con le specifiche funzionali ma non dannoso per la salute delle persone.
 # Confidentiality

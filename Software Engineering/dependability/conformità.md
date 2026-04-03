@@ -1,4 +1,4 @@
-I [parametri RAMS](attributi.md) (Reliability, Availability, Mantenaibility e Safety) descrivono qualunque sistema e servono per garantire il suo comportamento e ciclo di vita. Si parla di conformità per indicare l'adesione di un sistema a tali parametri.
+I [parametri RAMS](attributi.md) (Reliability, Availability, Mantenaibility e Safety) descrivono qualunque sistema e servono per garantire il suo comportamento e ciclo di vita. Si parla di conformità per indicare l'adesione di un sistema a tali parametri, valutata teamite [misure sperimentali](Software%20Engineering/dependability/misure.md#Sperimentale).
 # Range in specifica
 ![conformità in specifica](conformità%20in%20specifica.png)
 La conformità di un sistema non è un concetto binario, ma il valore di ogni parametro della specifica deve essere definito da un range:

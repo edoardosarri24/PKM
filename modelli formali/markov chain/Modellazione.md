@@ -1,5 +1,5 @@
 Vediamo quali sono le principali caratteristiche quando si parla di modelli.
-Solitamente quando si fa un modello si parte dal [processo di arrivo di Poisson](processo%20di%20arrivo%20di%20Poisson.md) e poi si migliora introducendo complessità considerando ad esempio una [whitt approximation](whitt%20approximation.md) o una [continuos phase type distribution](continuos%20Phase%20Type%20(PH)%20distribution.md) oppure tramite [distribuzioni generali](general%20distribution.md).
+Solitamente quando si fa un modello si parte dal [processo di arrivo di Poisson](processo%20di%20arrivo%20di%20Poisson.md) e poi si migliora introducendo complessità considerando ad esempio una [whitt approximation](whitt%20approximation.md) o una [continuos phase type distribution](phase%20type%20distribution.md) oppure tramite [distribuzioni generali](general%20distribution.md).
 ##### Conseguenze
 - Vantaggi
 	- Spesso a inizio processo non abbiamo i dati, ma con i modelli si può esplorare lo spazio degli stati in una situazione in cui non abbiamo mai eseguito il sistema prima (perché non lo abbiamo).

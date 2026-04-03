@@ -1,30 +1,72 @@
 - 1
-	- [ ] [dependability](dependability.md)
+	- [x] [dependability](dependability.md)
 		Da non sapere come funziona il tollerance, removal e forcasting.
-	- [ ] [conformità](conformità.md)
+	- [x] [conformità](conformità.md)
 - 2
-	- [attributi](attributi.md)
-	- [design for reliability](design%20for%20reliability.md)
-	- [ ] [dependability](dependability.md)
-		Da non sapere come funziona il tollerance, removal e forcasting.
-	- [ ] [conformità](conformità.md)
+	- [x] [attributi](attributi.md)
+	- [x] [design for reliability](design%20for%20reliability.md)
+	- [x] [dependability](dependability.md)
+	- [x] [conformità](conformità.md)
 - 3
-	- [qualità](qualità.md)
-	- [misure](Software%20Engineering/dependability/misure.md)
+	- [x] [qualità](qualità.md)
+	- [x] [misure](Software%20Engineering/dependability/misure.md)
+	- [x] [attributi](attributi.md)
+	- [x] [design for reliability](design%20for%20reliability.md)
 - 4
-	- [reliability block diagram](reliability%20block%20diagram.md)
-	- [previsione guasti](previsione%20guasti.md)
+	- [x] [reliability block diagram](reliability%20block%20diagram.md)
+	- [x] [rischio](rischio.md)
+	- [x] [dependability](dependability.md)
+	- [x] [conformità](conformità.md)
+	- [x] [qualità](qualità.md)
+	- [x] [misure](Software%20Engineering/dependability/misure.md)
 - 5
-	- [rischio](rischio.md)
-	- [gestione del rischio](gestione%20del%20rischio.md)
+	- [x] [military handbook](military%20handbook.md)
+	- [x] [gestione del rischio](gestione%20del%20rischio.md)
+	- [x] [attributi](attributi.md)
+	- [x] [design for reliability](design%20for%20reliability.md)
+	- [x] [reliability block diagram](reliability%20block%20diagram.md)
+	- [x] [rischio](rischio.md)
 - 6
 	- [analisi del rischio](analisi%20del%20rischio.md)
 	- [FMEA](FMEA.md)
+	- [ ] [qualità](qualità.md)
+	- [ ] [misure](Software%20Engineering/dependability/misure.md)
+	- [ ] [military handbook](military%20handbook.md)
+	- [ ] [gestione del rischio](gestione%20del%20rischio.md)
 - 7
 	- [FMECA](FMECA.md)
 	- [human reliability analysis](human%20reliability%20analysis.md)
+	- [ ] [reliability block diagram](reliability%20block%20diagram.md)
+	- [ ] [rischio](rischio.md)
 - 8
+	- [logica fuzzy](logica%20fuzzy.md)
 	- [tasso di guasto](tasso%20di%20guasto.md)
 	- [safety](Software%20Engineering/dependability/safety.md)
+	- [ ] [military handbook](military%20handbook.md)
+	- [ ] [gestione del rischio](gestione%20del%20rischio.md)
 - 9
 	- [manutenibilità](manutenibilità.md)
+	- [ ] [dependability](dependability.md)
+		Da non sapere come funziona il tollerance, removal e forcasting.
+	- [ ] [conformità](conformità.md)
+- 10
+	- [ ] [attributi](attributi.md)
+	- [ ] [design for reliability](design%20for%20reliability.md)
+- 11
+	- [ ] [qualità](qualità.md)
+	- [ ] [misure](Software%20Engineering/dependability/misure.md)
+- 12
+	- [ ] [reliability block diagram](reliability%20block%20diagram.md)
+	- [ ] [rischio](rischio.md)
+- 13
+	- riguardare slides?
+	- [ ] [military handbook](military%20handbook.md)
+	- [ ] [gestione del rischio](gestione%20del%20rischio.md)
+- 14
+	ripetere tutto
+- 15
+	ripetere tutto
+- 16
+	ripetere tutto
+# Domande
+- Come il RBD si integra con la FMECA.

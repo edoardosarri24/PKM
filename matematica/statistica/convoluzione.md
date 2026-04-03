@@ -1,4 +1,4 @@
-La convoluzione è l'operatore matematico ($\star$) che si usa per sommare due [random variable](random%20variable.md) indipendenti.
+La convoluzione è l'operatore matematico ($\star$) che si usa per sommare due [random variable](random%20variable.md) indipendenti. È usata per trattare le [PDF](random%20variable.md#PDF) delle random variabile: non si possono coivolvere le CDF.
 # Calcolo
 Per capire mettiamoci nel caso discreto. Se abbiamo due variabili casuali $X$ e $Y$ con la lista dei tempi che possono assumere dove ognuno ha la sua probabilità, allora la probabilità che la variabile casuale $Z=X+Y$ assuma valore $k$ è data da $P(Z=k)=\displaystyle \sum_{i}P(X=i)P(Y=(k-i))$
 ##### Matematicamente

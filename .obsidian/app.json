@@ -136,7 +136,8 @@
     "Interferza",
     "stocasticamente",
     "safety",
-    "security"
+    "security",
+    "dependanbility"
   ],
   "promptDelete": false,
   "pdfExportSettings": {
