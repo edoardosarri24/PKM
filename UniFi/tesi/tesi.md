@@ -16,3 +16,11 @@
 È giusto dire quello che ho scritto sulla quantità $\bar{S}_{t}$ [qua](probabilistic%20responce%20time%20analysis.md#Carry-in%20(sezione%20$IV.A$))? quello tra parentesi è la definizione del paper.
 ##### Interferenza soft real-time
 Nella soft ci potrebbe far comodo non avere il caso pessimo di numero di job che fanno interferenza. vogliamo una distrubzione di questo numero di job. per trovarla facciamo le combinazioni e poi somma pesata: otteniamo una distribuzione del RT per ogni combinazione e poi le sommiamo in modo pesato.
+# 20260402
+abbiamo distribuzioni del tempo di esecvuzione del task e vogliamo fare convluzioni. questo fa rappiare un gradi e dobbiamo riportarli.
+- noi non facciamo le conv in forma numerica ma in forma anlitica. se ho i pol di bern che rappresentano le distri e faccio conv cosa succede?
+- la forma analitica è ad esempio un polinomio o un ex polinomio. il primo problema è che se ho una distr approssimata da un polinomio quale è il pol di bernstein che meglio approssima
+	- non è detto che pol di bern costruito con la formula sia la miglior approssimazione di quella funzione (sicuramente è un'approssimazione). questo deriva dalla non interpolaza.
+	- ci serve una libreria che permetta di fare esperimenti su questa cosa, cioè di trovare un modo per capire come passare nel modo migliore dal polinomio che rappresenta la ECDF in forma analitica al PB.
+		- una prima sol è usare lo stesso grado per PB con quello del polinomio che approssima la ECDF.
+		- una seconda cosa è usare un grado possibile.

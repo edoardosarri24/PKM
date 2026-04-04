@@ -27,15 +27,15 @@
 	- [x] [reliability block diagram](reliability%20block%20diagram.md)
 	- [x] [rischio](rischio.md)
 - 6
-	- [analisi del rischio](analisi%20del%20rischio.md)
-	- [FMEA](FMEA.md)
-	- [ ] [qualità](qualità.md)
-	- [ ] [misure](Software%20Engineering/dependability/misure.md)
+	- [x] [analisi del rischio](analisi%20del%20rischio.md)
+	- [x] [FMEA](FMEA.md)
+	- [x] [qualità](qualità.md)
+	- [x] [misure](Software%20Engineering/dependability/misure.md)
 	- [ ] [military handbook](military%20handbook.md)
-	- [ ] [gestione del rischio](gestione%20del%20rischio.md)
+	- [x] [gestione del rischio](gestione%20del%20rischio.md)
 - 7
 	- [FMECA](FMECA.md)
-	- [human reliability analysis](human%20reliability%20analysis.md)
+	- [FTA](FTA.md)
 	- [ ] [reliability block diagram](reliability%20block%20diagram.md)
 	- [ ] [rischio](rischio.md)
 - 8
@@ -46,6 +46,7 @@
 	- [ ] [gestione del rischio](gestione%20del%20rischio.md)
 - 9
 	- [manutenibilità](manutenibilità.md)
+	- [human reliability analysis](human%20reliability%20analysis.md)
 	- [ ] [dependability](dependability.md)
 		Da non sapere come funziona il tollerance, removal e forcasting.
 	- [ ] [conformità](conformità.md)

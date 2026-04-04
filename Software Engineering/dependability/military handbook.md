@@ -55,7 +55,7 @@ Si basa su tre metodi che sono selezionabili nel software:
 	Utilizza dati proveniente da test di laboratori e un modello basato su modelli bayesiani.
 - Metodo 2
 	Utilizza dati di campo ed è metodo più completo.
-##### -FIDES
+##### FIDES
 Nasce nel settore aerospaziale ed è una banca dati abbastanza complessa per cui è da usare solo nell'ambito in cui è nata. La stima è data da $\lambda=\lambda_{phisical}\Pi_{PM}\Pi_{process}$, dove: $\lambda_{phisical}=\sum_{phisical\ contribution}(\lambda_{0}\Pi_{acceleration})\Pi_{induced}$, dove $\Pi_{acceleration}$ rappresenta tutti i possibili stress e non solo quelli di Arrhenius (e.g., termici, elettrici, meccanici, di umidità, chimici), $\Pi_{induced}$ rappresenta i possibili stress che non sono stati inseriti nelle specifiche (cosa verificabile in un contesto aerospaziale); $\Pi_{PM}$ rappresenta la qualità del produttore e dei componenti; $\Pi_{process}$ rappresenta la gestione del processo di produzione.
 ##### NSWC
 È un modello per l'ambiente meccanico, che è più complesso perché i guasti possono verificarsi per tantissimi motivi e spesso esso dipende dalla manutenzione e usura.

@@ -6,7 +6,7 @@ Sia $f:[0,1]\to\mathbb{R}$. L'operatore di Bernstein di ordine $n$ è definito c
 	C'è una relazione tra il numero di coefficienti e il grado $n$ del polinomio: $\text{numero coefficienti}=n+1$.
 - Base
 	$b_{i,n}$ sono i polinomi di [base](#Base) di Bernstein.
-# Vantaggi
+# Conseguenze
 I vantaggi nell'utilizzo dei polinomi di Bernstein sono diversi.
 - Se $f$ è continua, l'errore tra $f$ e $B_{n}(f,x)$ tende a 0 uniformemente nel dominio della funzione se $n\to\infty$. La scelta del grado dipende dall'accuratezza che vogliamo ottenere e dalla fattibilità computazionale.
 - Preserva la forma della funzione che stiamo approssimando.
@@ -28,5 +28,5 @@ La base classica è definita dalla [distribuzione binomiale](distribuzione%20bin
 ##### Lineare
 Usano la base classica possiamo in realtà anche approssimare una funzione definita in un qualunque intervallo $[a,b]$, se $a,b$ valori finiti. Questo viene fatto mappando $x\to \frac{x-a}{b-a}$ e quindi la base diventa $b_{i,n}(map(x))$, dove $map(x)=\frac{x-a}{b-a}$.
 ##### Esponenziale
-L'obiettivo è riuscire a modellare una curva con un andamento esponenziale per rappresentare fenomeni che hanno un decadimento o un incremento non lineare. L'implementazione deriva da un cambio di variabile strettamente monotono: si mappa $xe^{-\lambda x}to$ (i.e., $x=\frac{−log(y)}{\lambda}$).
+L'obiettivo è riuscire a modellare una curva con un andamento esponenziale per rappresentare fenomeni che hanno un decadimento o un incremento non lineare. L'implementazione deriva da un cambio di variabile strettamente monotono: si mappa $x\to e^{-x}$ e quindi la base diventa $b_{i,n}(map(x))$, dove $map(x)=e^{-x}$.
 - Questo permette di poter rappresentare funzioni definite in $[0,∞)$, come le [CDF](random%20variable.md#CDF).
