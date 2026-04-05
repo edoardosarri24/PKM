@@ -26,7 +26,7 @@
 	- [x] [design for reliability](design%20for%20reliability.md)
 	- [x] [reliability block diagram](reliability%20block%20diagram.md)
 	- [x] [rischio](rischio.md)
-- 6
+- 6 - sabato (ultimo giorno fatto)
 	- [x] [analisi del rischio](analisi%20del%20rischio.md)
 	- [x] [FMEA](FMEA.md)
 	- [x] [qualità](qualità.md)
