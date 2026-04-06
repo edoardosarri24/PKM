@@ -11,10 +11,15 @@
             "id": "afa3702f8fab0d90",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UniFi/SRS/SRS.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "SRS"
             }
           }
         ]
@@ -133,22 +138,25 @@
   },
   "active": "afa3702f8fab0d90",
   "lastOpenFiles": [
+    "Software Engineering/dependability/tasso di guasto.md",
     "UniFi/SRS/SRS.md",
-    "Software Engineering/dependability/military handbook.md",
-    "Software Engineering/dependability/rischio/FMEA.md",
-    "Software Engineering/dependability/rischio/file/tabella effetti FMEA.png",
-    "Software Engineering/dependability/rischio/analisi del rischio.md",
     "Software Engineering/dependability/rischio/FTA.md",
-    "Software Engineering/dependability/human reliability analysis.md",
+    "Software Engineering/dependability/rischio/logica fuzzy.md",
     "Software Engineering/dependability/rischio/FMECA.md",
+    "Software Engineering/dependability/safety.md",
+    "Software Engineering/dependability/manutenibilità.md",
+    "Software Engineering/dependability/rischio/FMEA.md",
+    "Software Engineering/dependability/rischio/analisi del rischio.md",
     "Software Engineering/dependability/rischio/file/PHA tabel.png",
+    "Software Engineering/dependability/military handbook.md",
+    "Software Engineering/dependability/rischio/file/tabella effetti FMEA.png",
+    "Software Engineering/dependability/human reliability analysis.md",
     "Software Engineering/dependability/rischio/gestione del rischio.md",
     "Software Engineering/dependability/rischio/rischio.md",
     "Software Engineering/dependability/misure.md",
     "Software Engineering/dependability/qualità.md",
     "UniFi/tesi/tesi.md",
     "UniFi/tesi/20260402.md",
-    "Software Engineering/dependability/tasso di guasto.md",
     "risorse/paper/statistica/EPEW26_bernstein (1).pdf",
     "matematica/polinomi di Bernstein.md",
     "matematica/statistica/distribuzioni/phase type/bernstein phase type distributions.md",
@@ -161,7 +169,6 @@
     "Software Engineering/dependability/attributi.md",
     "Software Engineering/dependability/rischio/file/ALARP.png",
     "Software Engineering/dependability/rischio/file/curva del rischio.png",
-    "Software Engineering/dependability/rischio/logica fuzzy.md",
     "matematica/statistica/t-test student.md",
     "Software Engineering/dependability/rischio/file/gestione del rischio.png",
     "Software Engineering/dependability/rischio/file/parmesan cheese.png",
@@ -169,7 +176,6 @@
     "Software Engineering/dependability/file/RBD standby configuration.png",
     "Software Engineering/dependability/ridondanza.md",
     "Software Engineering/dependability/file/TMR reliability.png",
-    "Software Engineering/dependability/conformità.md",
     "matematica/statistica/distribuzioni/phase type",
     "matematica",
     "Software Engineering/system design/File/Not-Functional requirement.pdf",

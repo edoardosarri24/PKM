@@ -1,5 +1,5 @@
 L'analisi del rischio è la prima fase della pipeline per il processo di [gestione del rischio](gestione%20del%20rischio.md): studia l'utilizzo del sistema, le performance e si rappresentano i vari rischi.
-# Parametri
+# Tipi
 Il rischio deve essere rappresentato in due dimensioni.
 ##### Qualitativo
 È la dimensione che rappresenta l'effetto del [danno](rischio.md#Danno%20(harm)) rispetto al target, cioè a chi lo subisce: il danno a una persona è molto più rilevante rispetto a quello su un oggetto; il danno all'ambiente è più importante di quello subito da un oggetto e meno di quello su una persona.
@@ -11,7 +11,7 @@ Stiamo valutando i livelli di gravità e la loro probabilità secondo la norma I
 	La probabilità di accadimento di un evento non è un singolo valore, ma viene definita pesando due fattori: il primo rappresenta la probabilità che avvenga un guasto e questa si può stimare da valori statistici (i.e., da dati storici); la seconda è la probabilità che tale guasto porti al danno e questa è molto complessa da stimare perché dipende da variabili non controllabili.
 	In ordine abbiamo: frequente, $\ge 10^{-3}$; probabile, $10^{-3}\le x\le 10^{-4}$; grave, occasionale, $10^{-4}\le x\le 10^{-5}$; remoto, $10^{-5}\le x\le 10^{-6}$; improbabile, $\le 10^{-6}$. In realtà i valori soglia dipendono anche dal dominio: per sistemi elettronici/meccanici ci si ferma a circa $10^{-6}$ per farmaci circa a $10^{-10}$.
 	La probabilità non sempre è facile da capire; si utilizzano dati storici e l'esperienza di chi valuta.
-##### Valutazione
+# Valutazione
 Le due dimensioni sopra devono essere incrociate per ottenere una singola immagine del rischio. Ci sono tre tecniche per fare questo:
  - Indici di rischio
 	Sono dati medi rappresentati in forma tabellare.
