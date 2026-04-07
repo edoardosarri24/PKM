@@ -1,4 +1,4 @@
-La Fault Tree Analysis (FTA) è una tecnica di [analisi del rischio](analisi%20del%20rischio.md) deduttiva (parte dalle avarie) e previsionale descritta nella norma 61025.
+La Fault Tree Analysis (FTA) è una tecnica di [analisi del rischio](analisi%20del%20rischio.md) quantitativa, deduttiva (parte dalle avarie) e previsionale descritta nella norma 61025.
 L'obiettivo è partire da un guasto (i.e., una non conformità (NC)) possibilmente non ancora avvenuto, (i.e., la manifestazioni di una NC) e cercare le sue cause; rispetto alle altre tecniche, che suppongono guasti indipendenti, in questo si cercano le combinazioni di cause che hanno portato al guasto.
 # Grafica
 È una tecnica grafica: si individua il top event tramite [RBD](reliability%20block%20diagram.md) e [FMECA](FMECA.md) e si scompone usando determinate porte che mettono in relazione componenti.
@@ -33,8 +33,7 @@ I basic event (i.e., cerchi) si dividono i 5 categorie:
 	- OR: rappresenta bene il fallimento di una serie dell'RBD.
 	- AND/OR: la combinazione rappresenta una KooN.
 - Si usa in combinazione con altre tecniche. Solitamente si usa in fase avanzata di progettazione (richiede ad esempio il RBD e FMECA).
- 
 # Conseguenze
 - I cambiamenti del sistema richiedono variazioni piccole.
-- Non ha una struttura ad albero e quindi è meno restrittiva.
 - Richiede più conoscenze e quindi serve personale competente.
+- Buona per guasti con cause comuni, visto che uno stesso base event può comparire in rami diversi dell'albero.

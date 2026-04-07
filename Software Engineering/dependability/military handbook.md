@@ -34,7 +34,6 @@ Sono definiti 14 ambienti operativi di cui i più importanti sono i primi tre.
 A parte dalla MIL-HDBK-217 ci sono molte altre banche dati. Le banche dati differiscono per dominio di utilizzo e per modello di calcolo.
 ##### SAE
 È relativa al settore automotive.
-##### CNET
 ##### PRISM
 Definsice il modello di calcolo sulla base di modelli bayesiani. È l'unico che include fattori che rappresentano le condizioni non operative.
 ##### IRPH
@@ -43,11 +42,11 @@ Inoltre da informazioni sui possibili motivi di guasto.
 ##### SN 29500
 È la banca dati della Siemens, azienda importante nell'automazione industriale.
 ##### 217 PLUS
-È un'evoluzione della MIL-HDBK-217 e definisce il tasso di guasto in base di più fattori correttivi e questo permette di ottenere un tasso guasto meno conservativo.
-Un fattore considerato è il processo di costruzione. Altri contributi fisici sono dati dall'operatività, l'ambiente in cui viene utilizzato, la presenta si software.
+È un'evoluzione della MIL-HDBK e definisce il tasso di guasto in base di più fattori correttivi e questo permette di ottenere un tasso guasto meno conservativo.
+Uno dei fattori che sono stati aggiunti è ad esempio il processo di costruzione. Altri sono l'operatività, l'ambiente in cui viene utilizzato e la presenta si software.
 ##### Telcordia
-È un modello che viene usato sempre di più perché semplifica di molto quelli derivati dal MIL-HDBK. Questo è un vantaggio visto che il numero di fattori è ridotto, ma il risultato è un tasso di guasto più conservativo.
-Rispetto agli altri modelli ha una opzione che permette di settare un moltiplicatore per il primo anno in modo da considerare la mortalità infantile, tenendo conto della prima parte della curva vasca da bagno. Inltre non solo definisce il tasso di guasto, ma da anche indicazioni sull'intervallo di confidenza.
+È un modello sempre più usato che semplifica il MIL-HDBK riducendo il numero di fattori correttivi: è più semplice ma porta aun tasso di guasto iù conservativo.
+Rispetto agli altri modelli ha una opzione che permette di settare un moltiplicatore per il primo anno in modo da considerare la mortalità infantile, tenendo conto della prima parte della curva vasca da bagno. Inoltre non solo definisce il tasso di guasto, ma da anche indicazioni sull'intervallo di confidenza.
 Si basa su tre metodi che sono selezionabili nel software:
 - Part count
 	Non utilizza dati di campo.
@@ -58,10 +57,7 @@ Si basa su tre metodi che sono selezionabili nel software:
 ##### FIDES
 Nasce nel settore aerospaziale ed è una banca dati abbastanza complessa per cui è da usare solo nell'ambito in cui è nata. La stima è data da $\lambda=\lambda_{phisical}\Pi_{PM}\Pi_{process}$, dove: $\lambda_{phisical}=\sum_{phisical\ contribution}(\lambda_{0}\Pi_{acceleration})\Pi_{induced}$, dove $\Pi_{acceleration}$ rappresenta tutti i possibili stress e non solo quelli di Arrhenius (e.g., termici, elettrici, meccanici, di umidità, chimici), $\Pi_{induced}$ rappresenta i possibili stress che non sono stati inseriti nelle specifiche (cosa verificabile in un contesto aerospaziale); $\Pi_{PM}$ rappresenta la qualità del produttore e dei componenti; $\Pi_{process}$ rappresenta la gestione del processo di produzione.
 ##### NSWC
-È un modello per l'ambiente meccanico, che è più complesso perché i guasti possono verificarsi per tantissimi motivi e spesso esso dipende dalla manutenzione e usura.
-Ha un modello di calcolo specifico per ogni componente, visto che ognuno di essi dipende anche dalle proprie caratteristiche fisiche. In generale tutti comunque si basano su un tasso di guasto base con dei fattori correttivi (e.g., pressione, vistosità del fluido in cui sono usati). La particolarità da osservare è che [supporre](#Supposizione) un tasso di guasto costante nei componenti meccanici ridurre la finestra in cui il valore stimato è valido.
+È un modello per l'ambiente meccanico, che è il più complesso perché i guasti possono verificarsi per tantissimi motivi e spesso esso dipende dalla manutenzione e usura.
+Ha un modello di calcolo specifico per ogni componente, visto che ognuno di essi dipende anche dalle proprie caratteristiche fisiche. In generale tutti comunque si basano su un tasso di guasto base con dei fattori correttivi (e.g., pressione, vistosità del fluido in cui sono usati); la particolarità da osservare è che nei componenti meccanici possiamo [supporre](#Supposizione) un tasso di guasto costante solo se la finestra centrale della bath curve è molto bassa.
 ##### NPRD
-È un modello per l'ambiente meccanico, più complesso del precedente perché non mette a disposizione un modello di calcolo, ma mette a disposizione dati grezzi per eseguire analisi. È praticamente utilizzabile solo da esperti.
-##### OREDA
-Nasce per il settore Oil&Gas e si divide in applicazioni in superficie sott'acqua.
-La sua particolarità è che da informazioni sulli manutenzioni, indicando ad esempio quando sono state richieste e un range di time to repair.
+È un modello per l'ambiente meccanico, più complesso di NSWC perché non mette a disposizione un modello di calcolo, ma mette a disposizione dati grezzi per eseguire analisi e quindi utilizzabile solo da esperti.

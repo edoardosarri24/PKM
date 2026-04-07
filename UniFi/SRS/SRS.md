@@ -39,29 +39,35 @@
 	- [x] [analisi del rischio](analisi%20del%20rischio.md)
 	- [x] [FMEA](FMEA.md)
 - 8
-	- [logica fuzzy](logica%20fuzzy.md)
-	- [tasso di guasto](tasso%20di%20guasto.md)
-	- [FMECA](FMECA.md)
-	- [ ] [FTA](FTA.md)
-	- [ ] [military handbook](military%20handbook.md)
-	- [ ] [gestione del rischio](gestione%20del%20rischio.md)
+	- [x] [logica fuzzy](logica%20fuzzy.md)
+	- [x] [FMECA](FMECA.md)
+	- [x] [FTA](FTA.md)
+	- [x] [military handbook](military%20handbook.md)
+	- [x] [gestione del rischio](gestione%20del%20rischio.md)
 - 9
-	- [manutenibilità](manutenibilità.md)
+	- [tasso di guasto](tasso%20di%20guasto.md)
 	- [human reliability analysis](human%20reliability%20analysis.md)
-	- [safety](Software%20Engineering/dependability/safety.md)
-		On demand
-			(lo rivedremo parlando di Functional safety). La probabilità di guasto non è più l’inaffidabilità ma si parla di ‘guasto su richiesta’ (PFD, Probability of Failure on Demand).
 	- [ ] [dependability](dependability.md)
 	- [ ] [conformità](conformità.md)
 	- [ ] [analisi del rischio](analisi%20del%20rischio.md)
 	- [ ] [FMEA](FMEA.md)
+	- [ ] [logica fuzzy](logica%20fuzzy.md)
+	- [ ] [FMECA](FMECA.md)
+	- [ ] [military handbook](military%20handbook.md)
 - 10
+	- [manutenibilità](manutenibilità.md)
+	- [safety](Software%20Engineering/dependability/safety.md)
+		On demand
+			(lo rivedremo parlando di Functional safety). La probabilità di guasto non è più l’inaffidabilità ma si parla di ‘guasto su richiesta’ (PFD, Probability of Failure on Demand).
 	- [ ] [attributi](attributi.md)
 	- [ ] [design for reliability](design%20for%20reliability.md)
 	- [ ] [FTA](FTA.md)
 - 11
 	- [ ] [qualità](qualità.md)
 	- [ ] [misure](Software%20Engineering/dependability/misure.md)
+	- [ ] [logica fuzzy](logica%20fuzzy.md)
+	- [ ] [FMECA](FMECA.md)
+	- [ ] [military handbook](military%20handbook.md)
 - 12
 	- [ ] [reliability block diagram](reliability%20block%20diagram.md)
 	- [ ] [rischio](rischio.md)
