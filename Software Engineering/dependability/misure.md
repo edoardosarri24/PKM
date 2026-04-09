@@ -31,7 +31,7 @@ In base alla fase di sviluppo del sistema possiamo eseguire prove diverse:
 	Questo ci permette di confrontare dispositivi dello stesso tipo ma di produttori diversi e fare una scelta sulla base dei dati raccolti.
 - Affidabilità
 	Servono per testare la durata (i.e., il grado di usura) della vita del componente o del sistema sotto esame.
-	- Prove accelerate
+	- [Prove accelerate](tasso%20di%20guasto.md#Test%20distruttivi)
 		L'obiettivo è far guastare il sistema e osservare quando questo guasto occorre. Nel tempo i tassi di guasti sono sempre migliorati (i.e., con l'avanzare della tecnologia le cose funzionano meglio) e per questo la prova può anche concludersi perché è passato troppo tempo e non si è verificato nessun guasto. Possiamo in questo caso fare delle prove accelerate: si utilizza il componente con valori che superano i valori nominali per ridurre il tempo necessario a osservare l'effetto della sollecitazione; tali prove accelerate non devono modificare la causa o il meccanismo del guasto. Le prove più dure sono dette HAST (Highly Accelerated Stress Test), dove si alza il livello di temperatura e di umidità; in questo caso è importante che le prove non diventino distruttive.
 	- Modelli di analisi
 		Una volta arrivati al guasto vogliamo analizzare cause, tempi, cronologie dei guasti, pertinenza del guasto e possibili rimedi. Per arrivare a questi risultati si usano dei modelli fisico-matematici e si scelgono in base al fattore di stress usato.

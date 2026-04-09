@@ -29,4 +29,5 @@ La base classica è definita dalla [distribuzione binomiale](distribuzione%20bin
 Usano la base classica possiamo in realtà anche approssimare una funzione definita in un qualunque intervallo $[a,b]$, se $a,b$ valori finiti. Questo viene fatto mappando $x\to \frac{x-a}{b-a}$ e quindi la base diventa $b_{i,n}(map(x))$, dove $map(x)=\frac{x-a}{b-a}$.
 ##### Esponenziale
 L'obiettivo è riuscire a modellare una curva con un andamento esponenziale per rappresentare fenomeni che hanno un decadimento o un incremento non lineare. L'implementazione deriva da un cambio di variabile strettamente monotono: si mappa $x\to e^{-x}$ e quindi la base diventa $b_{i,n}(map(x))$, dove $map(x)=e^{-x}$.
+In questo caso i coefficienti diventano logaritmici: $BE_{n}(f,x)=\displaystyle \sum_{i=0}^n f\left( \log(\frac{n}{i}) \right)b_{i,n}(x)$.
 - Questo permette di poter rappresentare funzioni definite in $[0,∞)$, come le [CDF](random%20variable.md#CDF).

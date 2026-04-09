@@ -1,6 +1,5 @@
 Le banche dati sono dei documenti tecnici (non sono norme) nati in ambito militare che contengono un insieme di modelli matematici che permettono di fare [previsione](Software%20Engineering/dependability/misure.md#Analitico) dell'affidabilità, cioè di predire il tasso di guasto di un componente o di un sistema.
-Il Military Handbook è un modello nato in America nel 1965 che calcola il tasso di guasto di un componente come $\lambda=f(\lambda_{g},\pi_{i})$, cioè in funzione del tasso di guasto base $\lambda_{g}$ ottenuto da esperimenti, e alcuni valori correttivi $\pi_{i}$, che tengono conto delle condizioni di uso specifiche (e.g., qualità, temperatura di utilizzo, progettazione e ambiente di utilizzo $\pi_E$).
-È la prima banca dati realizzata: non riceve aggiornamenti del proprio [modello](#Modello) di calcolo dal '95; sono aggiornati i guasti base $\lambda_{g}$ dai produttori e quindi è ancora utilizzata.
+Il Military Handbook è la prima banca dati realizzata: non riceve aggiornamenti del proprio [modello](#Modello) di calcolo dal '95; sono aggiornati i guasti base $\lambda_{g}$ dai produttori e quindi è ancora utilizzata.
 ##### Supposizione
 Il military handbook si basa su delle ipotesi fondamentali:
 - Tasso di guasto costante.
@@ -10,6 +9,7 @@ Il military handbook si basa su delle ipotesi fondamentali:
 ##### Duty cycle
 Il modello considera un duty cycle del 100%: il sistema è considerato operativo 24/7. Siccome non sempre è vero si deve definire il tasso di guasto reale separando le fasi di operatività e di non operatività: $\lambda=\lambda_{operating}\cdot DT+\lambda(100-DT)$, dove $DT$ è il duty cycle reale.
 # Calcolo tasso di guasto
+un modello nato in America nel 1965 che calcola il tasso di guasto di un componente come $\lambda=f(\lambda_{g},\pi_{i})$, cioè in funzione del tasso di guasto base $\lambda_{g}$ ottenuto da esperimenti, e alcuni valori correttivi $\pi_{i}$, che tengono conto delle condizioni di uso specifiche (e.g., qualità, temperatura di utilizzo, progettazione e ambiente di utilizzo $\pi_E$).
 Ci sono due modi per eseguire il calcolo del tasso di guasto $\lambda$.
 ##### Part count
 Si usa in fase di progettazione per valutare l'utilizzo di un componente del sistema senza sapere come e quanto essi verranno stressati.
@@ -27,9 +27,6 @@ Sono definiti 14 ambienti operativi di cui i più importanti sono i primi tre.
 	È l'ambiente in cui sono presenti sollecitazione termiche e meccaniche più elevate.
 - Altri
 	Ci sono poi due ambiente navali (i.e., sopra e sotto coperta), due ambienti missilistici (i.e., in volo e in fase di lancio), un ambiente spaziale e un lancio da cannone.
-
-
-
 # Modelli derivati
 A parte dalla MIL-HDBK-217 ci sono molte altre banche dati. Le banche dati differiscono per dominio di utilizzo e per modello di calcolo.
 ##### SAE
@@ -43,9 +40,9 @@ Inoltre da informazioni sui possibili motivi di guasto.
 È la banca dati della Siemens, azienda importante nell'automazione industriale.
 ##### 217 PLUS
 È un'evoluzione della MIL-HDBK e definisce il tasso di guasto in base di più fattori correttivi e questo permette di ottenere un tasso guasto meno conservativo.
-Uno dei fattori che sono stati aggiunti è ad esempio il processo di costruzione. Altri sono l'operatività, l'ambiente in cui viene utilizzato e la presenta si software.
+Due dei fattori che sono stati aggiunti sono ad esempio il processo di costruzione e la presenta si software.
 ##### Telcordia
-È un modello sempre più usato che semplifica il MIL-HDBK riducendo il numero di fattori correttivi: è più semplice ma porta aun tasso di guasto iù conservativo.
+È un modello sempre più usato che semplifica il MIL-HDBK riducendo il numero di fattori correttivi: è più semplice ma porta un tasso di guasto iù conservativo.
 Rispetto agli altri modelli ha una opzione che permette di settare un moltiplicatore per il primo anno in modo da considerare la mortalità infantile, tenendo conto della prima parte della curva vasca da bagno. Inoltre non solo definisce il tasso di guasto, ma da anche indicazioni sull'intervallo di confidenza.
 Si basa su tre metodi che sono selezionabili nel software:
 - Part count

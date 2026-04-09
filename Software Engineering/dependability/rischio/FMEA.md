@@ -1,6 +1,6 @@
 La Failure Modes and Effects Analysis (FMEA) è una tecnica per l'[analisi del rischio](analisi%20del%20rischio.md) qualitativa e induttiva.
 Gli obiettivi principali sono:
-- Identificare le i guasti che possono avere effetti negativi su safety, reliability e availability.
+- Identificare i guasti che possono avere effetti negativi su safety, reliability e availability.
 - Identificare i miglioramenti che possiamo fare.
 - Migliorare la conoscenza del sistema.
 ##### Confronto

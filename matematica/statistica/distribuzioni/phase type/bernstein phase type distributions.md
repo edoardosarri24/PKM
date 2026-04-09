@@ -14,23 +14,23 @@ Quando si approssima una ECDF la scelta del numero di fasi $n$ (i.e., dell'ordin
 	In questo caso aumentare il grado $n$ del polinomio aumenta l'errore.
 ##### Soluzione
 Soluzioni empiriche ci mostrano come il grado ottimale per bilanciare l'errore bias-varianza sia $n=\frac{M}{\log(M)}$, dove $M$ è il numero di campioni della ECDF che vogliamo approssimare.
-
 # Approssimazione CDF
-Tramite un [polinomio di Bernstein](polinomi%20di%20Bernstein.md) di grado $n$ possiamo approssimare una data [CDF](random%20variable.md#CDF) (o solitamente ECDF) $F$.
+Tramite un [polinomio di Bernstein](polinomi%20di%20Bernstein.md) di grado $N$ possiamo approssimare una data ECDF (Empirical [CDF](random%20variable.md#CDF)) $F$.
+Definiamo $F_{M}(x)=\frac{1}{M}\sum_{i=1}^MI\{X_{i}\le x\}$, cioè la probabilità che un valore all'interno della distribuzione campionaria sia minore di $x$.
 ##### Intervallo $[0,1]$
-L'approssimazione è data dal semplice polinomio di Bernstein $B_{n}(F,x)=\displaystyle \sum_{i=0}^n F(\tfrac{i}{n})\binom{n}{i}x^i(1-x)^{n-i}$, con $x\in[0,1]$.
+L'approssimazione è data dal semplice polinomio di Bernstein $B_{N}(F_{M},x)=\displaystyle \sum_{n=0}^N F_{M}(\tfrac{n}{N})\binom{N}{n}x^n(1-x)^{N-n}$, con $x\in[0,1]$.
 ##### Intervallo $[a,b]$
-L'approssimazione è data dalla valutazione del polinomio in $\tfrac{x-a}{b-a}$, cioè usando la base [lineare](polinomi%20di%20Bernstein.md#Lineare) e allora abbiamo  $B_{n}(F,\tfrac{x-a}{b-a})=\displaystyle \sum_{i=0}^n F(a+\tfrac{i}{n}(b-a))\binom{n}{i}\tfrac{(x-a)^i(b-x)^{n-i}}{(b-a)^n}$, con $x\in[a,b]$.
+L'approssimazione è data dalla valutazione del polinomio in $\tfrac{x-a}{b-a}$, cioè usando la base [lineare](polinomi%20di%20Bernstein.md#Lineare) e allora abbiamo  $B_{N}(F_{M},\tfrac{x-a}{b-a})=\displaystyle \sum_{n=0}^N F_{M}(a+\tfrac{n}{N}(b-a))\binom{N}{n}\tfrac{(x-a)^n(b-x)^{N-n}}{(b-a)^N}$, con $x\in[a,b]$.
 ##### Intervallo $[0,+\infty)$
-Si deve valutare il polinomio di Bernstein con la [base sponenziale](polinomi%20di%20Bernstein.md#Esponenziale). Si ottiene così la Bernstein phase type $BPH_{n,\lambda}(F,x)=\displaystyle \sum_{i=0}^n F\left(\log(\tfrac{n}{i}) \right)\binom{n}{i}e^{-i x}(1-e^{- x})^{n-i}$, con $x\in[0,+\infty)$.
+Si deve valutare il polinomio di Bernstein con la [base sponenziale](polinomi%20di%20Bernstein.md#Esponenziale). Si ottiene così la Bernstein phase type $BPH_{N}(F_{M},x)=\displaystyle \sum_{n=0}^N F_{M}\left(\log(\tfrac{N}{n}) \right)\binom{N}{n}e^{-n x}(1-e^{-x})^{N-n}$, con $x\in[0,+\infty)$.
 # Approssimazione PDF
 Possiamo approssimare la PDF di una data [CDF](random%20variable.md#CDF) (o ECDF) tramite un [polinomio di Bernstein](polinomi%20di%20Bernstein.md) derivando l'approssimazione della CDF ottenuta con il polinomio di Bernstein.
 ##### Intervallo $[0,1]$
-L'approssimazione è data dalla derivata $B_{n}'(F,x)=\displaystyle \sum_{i=1}^n\left( F(\tfrac{i}{n})-F(\tfrac{i-1}{n})\right)n\binom{n}{i}x^{i-1}(1-x)^{n-i}$, con $x\in[0,1]$. In questo caso se abbiamo una rappresentazione discreta di $F$, cioè se $F(\tfrac{i}{n})$ è l'$i$-esimo valore campionato di $F$, allora $F(\tfrac{i}{n})$ d $F(\tfrac{i-1}{n})$ sono due campioni consecutivi. 
+L'approssimazione è data dalla derivata dell'approssimazione della CDF, cioè da $B_{N}'(F_{M},x)=\displaystyle \sum_{n=1}^N\left( F_{M}(\tfrac{n}{N})-F_{M}(\tfrac{n-1}{N})\right)n\binom{N}{n}x^{n-1}(1-x)^{N-n}$, con $x\in[0,1]$.
 ##### Intervallo $[a,b]$
-L'approssimazione è data dalla derivata del polinomio con un fattore definito dalla derivata della mappatura, cioè abbiamo $\displaystyle \tfrac{1}{b-a}B_{n}'(F,\tfrac{x-a}{b-a})$, con $x\in[a,b]$.
+L'approssimazione è data dalla derivata del polinomio con un fattore definito dalla derivata della mappatura, cioè abbiamo $\displaystyle \tfrac{1}{b-a}B_{N}'(F_{M},\tfrac{x-a}{b-a})$, con $x\in[a,b]$.
 ##### Intervallo $[0,+\infty]$
-L'approssimazione è data dalla derivata del polinomio con un fattore definito dalla derivata della mappatura, cioè abbiamo $BPH_{n}'(F,x)=\displaystyle \sum_{i=1}^n \left( F(\log(\tfrac{n}{i-1}))-F(\log(\tfrac{n}{i})\right)n\binom{n}{i}e^{-i x}(1-e^{- x})^{n-i}$, con $x\in[0,+\infty)$.
+L'approssimazione è data dalla derivata del polinomio con un fattore definito dalla derivata della mappatura, cioè abbiamo $BPH_{N}'(F_{M},x)=\displaystyle \sum_{n=1}^N \left( F_{M}(\log(\tfrac{N}{n-1}))-F_{M}(\log(\tfrac{N}{n})\right)n\binom{N}{n}e^{-n x}(1-e^{- x})^{N-n}$, con $x\in[0,+\infty)$.
 
 
 

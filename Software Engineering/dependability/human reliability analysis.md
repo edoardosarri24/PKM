@@ -1,4 +1,5 @@
-Nei sistemi complessi anche l'umano rientra nel ciclo di vita: più è complesso il sistema più la probabilità di errore dovuto all'uomo deve essere bassa. La human reliability fa parte del campo della [dependability](dependability.md) e si può definire come la probabilità che una persona esegua un'attività nel modo corretto (i.e., che rispetti i requisiti) in un certo istante di tempo senza eseguire attività estranee che possano danneggiare il sistema. L'obiettivo è quello di incrementare le performance e diminuire la probabilità d'errore: si devono creare delle procedure che limitino il numero di situazioni in cui l'umano può prendere decisioni in modo inconsapevole.
+Nei sistemi complessi anche l'umano entra nel ciclo di vita: più è complesso il sistema più la probabilità di errore dovuto all'uomo deve essere bassa. La human reliability fa parte del campo della [dependability](dependability.md) e si può definire come la probabilità che una persona esegua un'attività nel modo corretto (i.e., che rispetti i requisiti) in un certo istante di tempo senza eseguire attività estranee che possano danneggiare il sistema.
+L'obiettivo è quello di incrementare le performance e diminuire la probabilità d'errore: si devono creare delle procedure che limitino il numero di situazioni in cui l'umano può prendere decisioni in modo inconsapevole.
 # Errore umano
 ##### Tipi
 Ci sono vari tipi di errore umano:
@@ -19,14 +20,16 @@ Un errore può essere influenzato da:
 # Norma
 La norma di riferimento è la IEC 62508. Sono concetti molto generali che consentono solo di inquadrare il problema.
 # Tecniche
-Le tecniche si basano tutte sulla stessa pipeline: definizione del problema, analisi dei compiti del sistema, identificazione dell'errore, rappresentazione dell'errore, quantificazione tramite misure e gestione dell'errore.
-In generale queste tecniche sono molto soggettive e sono difficili da quantificare. In generale il loro funzionamento è sempre lo stesso: si definiscono situazioni generiche, gli si assegna una probabilità e poi questa viene pesata con dei fattori di correzione.
+In generale queste tecniche sono molto soggettive e sono difficili da quantificare, quindi sono più qualitative.
+In generale il loro funzionamento è sempre lo stesso: si definiscono situazioni generiche, gli si assegna una probabilità e poi questa viene pesata con dei fattori di correzione.
 ##### THERP
-La Technique for Human Error rate Prediction (THERP) è una delle tecniche più usate oggi e che ha ispirato anche le altre. L'idea è di decomporre il compito dell'umano in sotto compiti più semplici e a ciascuno di essi si assegna una probabilità di errore umano; si crea un albero binario dove la radice è l'evento e i figli sono etichettati con la probabilità di succcesso e di fallimento. A queste probabilità viene poi dato un peso dalla norma tramite un Performance Shaping factor, i.e. 7 valori divisi in tre categorie.
+La Technique for Human Error Rate Prediction (THERP) è una delle tecniche più usate oggi e che ha ispirato anche le altre.
+L'idea è di decomporre il compito dell'umano in sotto compiti più semplici e a ciascuno di essi si assegna una probabilità di errore umano; si crea un albero binario dove la radice è tale evento e i figli sono etichettati con la probabilità di successo e/o di fallimento. A queste probabilità viene poi dato un peso dalla norma tramite un Performance Shaping factor, i.e. 7 valori divisi in tre categorie.
 ##### TESEO
-La Tecnica Empirica per la Stima degli Errori degli Operatori (TESEO) si basa (come la [THERP](#THERP)) sulla scomposizione dei compiti degli umani in sotto compiti più semplici. A ognuno viene assegnata una probabilità di fallimento e di successo sulla base di cinque fattori: tipo di attività; fattore di stress per svolgere l'attività; tipo di operatore che svolge l'attività; ansia relativa alla situazione lavorativa del lavoratore; condizioni ambientali.
+La Tecnica Empirica per la Stima degli Errori degli Operatori (TESEO) si basa (come la [THERP](#THERP)) sulla scomposizione dei compiti degli umani in sotto compiti più semplici.
+A ognuno viene assegnata una probabilità di fallimento e di successo sulla base di cinque fattori: tipo di attività; fattore di stress per svolgere l'attività; tipo di operatore che svolge l'attività; ansia relativa alla situazione lavorativa del lavoratore; condizioni ambientali.
 ##### HCR
-La Human Cognitive Reliability (HCR) correla la probabilità di errore con il tempo: l'errore non dipende solo da azioni errate ma anche da attività svolte troppo lentamente quanto l'attività viene portata a termine.
+La Human Cognitive Reliability (HCR) correla la probabilità di errore con il tempo: l'errore non dipende solo da azioni errate ma anche da attività svolte troppo lentamente. L'idea è che se ci mettiamo troppo a fare un cosa allora qualcosa non è andato bene.
 Stima il tempo che ci vuole a svolgere un'attività e poi stima la probabilità che sia stato commesso un errore in base al tempo che l'umano ci ha messo.
 ##### CREAM
 Nella Cognitive Reliability and Error Analysis Method (CREAM) la probabilità di errore viene stimata sulla base di fattori come il tempo a disposizione dell'umano (più lungo è meno probabilità d'errore ci sarà), se le azioni sono state pianificate, la competenza del personale e se l'operatore non ha controllo su un'azione da compiere. Questa stima viene corretta con 9 valori detti Common Performance Conditions, simili ai PSF della [THERP](#THERP).

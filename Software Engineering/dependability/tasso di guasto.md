@@ -1,41 +1,37 @@
 È definito come il numero guasti su unità di tempo.
-A parte per il caso [costante](#Costante), il tasso di guasto può essere rappresentato tramite più [distribuzioni](failure%20rate%20distribution.png); l'idea è rappresentare le varie zone (o l'intera) della bath curve tramite.
-
-Ognuna di essa può essere rappresentata da funzioni diverse: PDF, CDF, reliability associata e tasso di guasto. È importante notare come esse siano tutte correlate e che quindi basta conoscerne una per poterle rappresentare tutte.
+A parte per il caso [costante](#Costante), il tasso di guasto può essere rappresentato tramite più [distribuzioni](failure%20rate%20distribution.png); l'idea è rappresentare le varie zone (o l'intera) della bath curve tramite curve diverse.
 ##### Bath curve
 In generale il tasso di guasto un andamento che segue la [bath curve](bath%20curve.png):
 - La prima zona è relativa ai difetti di fabbrica e alla mortalità infantile.Abbassare il tasso di guasto in questa zona vuol dire diminuire il numero di prodotti restituiti che sono ancora in garanzia e quindi diminuire i costi per l'azienda. Una tecnica è quella dello [stress screening](Software%20Engineering/dependability/misure.md#Classi).
 - La zona di mezzo è quella dove il prodotto si è stabilizzato.
 - L'ultima zona è relativa all'usura.
 # Costante
-Una semplificazione del tasso di guasto è quella di considerarlo costante durante tutto il ciclo di vita del sistema. Questa è una semplificazione che nella realtà, soprattutto in sistemi dove è presente l'usura, non è così.
+Una semplificazione del tasso di guasto è quella di considerarlo costante durante tutto il ciclo di vita del sistema. Questa è una semplificazione che non corrisponde alla realtà, soprattutto in sistemi dove è presente l'usura come quelli meccanici.
 ##### A regime
-Il tasso di guasto non sempre è costante, ma c'è una situazione dove anche nella realtà possiamo fare questa assunzione senza troppi problemi: nella fase centrale della [bath curve](bath%20curve.png), quando il sistema si è stabilizzato.
+Nella realtà il tasso di guasto non sempre è costante, ma c'è una situazione dove possiamo fare questa assunzione senza troppi problemi: nella fase centrale della [bath curve](bath%20curve.png), quando il sistema si è stabilizzato.
 Questa fase per i componenti elettronici questa durata è più lunga rispetto ai componenti meccanici.
 # Esponenziale
-In questo caso $\lambda$ non dipende dal tempo (i.e., $\lambda(t)=\lambda$) e quindi le formule si semplificano molto:
+Supponendo che $\lambda$ non dipenda dal tempo (i.e., $\lambda(t)=\lambda$), le formule si semplificano molto:
 - La reliability è data da $R(t)=e^{-\lambda t}$.
 - La CDF è data da $F(t)=1-e^{-\lambda t}$.
 - La PDF è data da $f(t)=\lambda e^{-\lambda t}$.
-	Questo è molto come il valore della [reliability](attributi.md#Reliability) nel caso di tasso costante con un fattore $\lambda$.
 - Il MTTF in questo caso è $MTTF=\frac{1}{\lambda}$.
 ##### Svantaggi
 Il problema principale è la prorprietà di [memoryless](distribuzione%20esponenziale.md#Memoryless) della distribuzione esponenziale: un componente con tasso di guasto esponenziale non sa da quanto sta lavorando. In pratica non stiamo considerando l'invecchiamento del componente: questo va solitamente bene per componenti elettronici, ma non per componenti meccanici soggetti a usura.
 # Weibull
-È la distribuzione che approssima meglio il tasso di guasto nella maggior parte dei casi grazie alla presenza di parametri che possiamo settare.
+È la distribuzione che approssima meglio il tasso di guasto nella maggior parte dei casi grazie alla presenza di parametri che possiamo settare ottenendo comportamenti diversi.
 ##### Parametri
 I parametri sono:
-- Scale $\eta$
-	È un parametro dimensionale con unità di tempo le ore.
-	- Deve essere $\eta>0$. Solitamente è nell'ordine di $10^3$.
-	- Tenendolo fisso tutte le curve al variare di $\beta$ partono dallo stesso punto, detto characteristic life point.
-	- Tenendo fisso $\beta$, il [comportamento](weibull%20distribution%20eta.png) di $\eta$ fa:
-		- Variare l'ampiezza della campana nel caso di $\beta>1$.
-		- Alzare l'inizio dell'esponenziale se $\beta<1$.
 - Shape $\beta$
 	Deve essere $\beta>0$. Il [comportamento](weibull%20distribution%20beta.png) dipende da:
 	- Con un $\beta$ basso (i.e., $\beta \to 0$) si ha una distribuzione più simile a un'esponenziale.
 	- Con un beta alta (i.e. $\beta>1$) ci avviciniamo a una normale.
+- Scale $\eta$
+	È un parametro dimensionale con unità di tempo le ore.
+	- Deve essere $\eta>0$. Solitamente è nell'ordine di $10^3$.
+	- Tenendo fisso $\beta$, il [comportamento](weibull%20distribution%20eta.png) di $\eta$ fa:
+		- Variare l'ampiezza della campana nel caso di $\beta>1$: più 
+		- Alzare l'inizio dell'esponenziale se $\beta<1$.
 - Posizione $\gamma$
 	Permette di [spostarsi](weibull%20gamma.png) sull'asse temporale delle ascisse e introduce una soglia entro cui i guasti non possono sicuramente accedere.
 	- Solitamente $\gamma<0$ indica il tasso di guasto dopo una manutenzione: il componente non è nuovo e quindi al tempo zero il tasso di guasto non sarà 0.
@@ -49,7 +45,7 @@ La [distribuzione gaussiana](distribuzione%20gaussiana.md) è utilizzata in ques
 Si tratta della random variable relativa al logaritmo del tasso di guasto e non del semplice tasso di guasto.
 È rappresenta dalla normale dove alla dimensione tempo abbiamo applicato il logaritmo e quindi abbiamo che la distribuzione è più schiacciata verso i valori più piccoli, il che la rende ottima per [rappresentare](tasso%20di%20guasto%20lognormale.png) la prima parte della vasca da bagno.
 # Test distruttivi
-Per decidere quale distribuzione utilizzare ci servono dei dati sul tempo di guasto. I test che ci portano a questi risultati sono i test distruttivi: sono test accelerati, cioè prove dove si superano i valori nominali dei componenti per ridurre il tempo necessario a osservare l'effetto della sollecitazione, che solitamente portano il sistema a guastarsi.
+Per decidere quale distribuzione utilizzare ci servono dei [dati campionari](Software%20Engineering/dependability/misure.md) sul tempo di guasto. I test che ci portano a questi risultati sono i test distruttivi: sono test accelerati, cioè prove dove si superano i valori nominali dei componenti per ridurre il tempo necessario a osservare l'effetto della sollecitazione, che solitamente portano il sistema a guastarsi.
 ##### Classificazione
 Ci sono diversi modi in cui portare avanti questi test e quindi diversi dati che posso ottenere:
 - Tempi di guasto
@@ -60,7 +56,7 @@ Ci sono diversi modi in cui portare avanti questi test e quindi diversi dati che
 	Se faccio andare avanti l'esperimento fino a un certo tempo $t$ allora avrò un dataset censurato, dove solo alcuni componenti hanno il relativo tempo di guasto.
 	- Censura destra di tipo 1
 		Fisso la durata del test e alla fine avrò dei componenti guasti e altri ancora sani.
-		Ho il vabtaggio di sapere quanto ci vuole per il test; lo svantaggio è che questo potrebbe risultare non coclusivo perché si sono guastiti pochi componenti.
+		Ho il vantaggio di sapere quanto ci vuole per il test; lo svantaggio è che questo potrebbe risultare non conclusivo perché si sono guastati pochi componenti.
 	- Censura destra di tipo 2
 		Fisso il numero di guasti che voglio raggiungere.
 		Ho lo svantaggio di non sapere quanto dura il test; ho il vantaggio che alla fine avrò un risultato conclusivo.
