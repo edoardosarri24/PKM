@@ -34,10 +34,6 @@ A seconda dall'architettura del sistema abbiamo:
 	Abbiamo che $R(t)=3e^{-2\lambda t}-2e^{-3\lambda t}$ e quindi $R(MTTF)=0,402$ con $MMTF=\tfrac{5}{6\lambda}$.
 # Safety
 La [safety](Software%20Engineering/dependability/safety.md) è un'estensione del concetto di [reliability](#Reliability): un sistema che rispetta la safety è un sistema che si trova in uno stato di corretto funzionamento oppure in uno stato di comportamento non allineato con le specifiche funzionali ma non dannoso per la salute delle persone.
-# Confidentiality
-Il servizio non deve divulgare dati senza autorizzazione.
-# Integrity
-Il sistema non deve essere alterato in modo non corretto.
 # Maintenability
 La [manutenibilità](manutenibilità.md) è l'abilità di riparare il sistema dopo un problema, cioè di portare il sistema nuovamente nello stato di corretto funzionamento. È fondamentale perché il [tasso di guasto](tasso%20di%20guasto.md) non è mai zero e il [l'errore umano](human%20reliability%20analysis.md) è sempre possibile.
 - Ciò che fa diminuire la manutenibilità è la complessità, l'età del sistema e la povertà di documentazione.

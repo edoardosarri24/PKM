@@ -1,3 +1,4 @@
+# Studio
 - 1
 	- [x] [dependability](dependability.md)
 		Da non sapere come funziona il tollerance, removal e forcasting.
@@ -54,42 +55,77 @@
 	- [x] [logica fuzzy](logica%20fuzzy.md)
 	- [x] [FMECA](FMECA.md)
 	- [x] [military handbook](military%20handbook.md)
-- 10
-	- [ ] [manutenibilità](manutenibilità.md)
-	- [ ] [safety](Software%20Engineering/dependability/safety.md)
-		On demand
-			(lo rivedremo parlando di Functional safety). La probabilità di guasto non è più l’inaffidabilità ma si parla di ‘guasto su richiesta’ (PFD, Probability of Failure on Demand).
+- 10 aprile
+	- [x] [manutenibilità](manutenibilità.md)
+	- [x] [safety](Software%20Engineering/dependability/safety.md)
+	- [x] [attributi](attributi.md)
+	- [x] [design for reliability](design%20for%20reliability.md)
+	- [x] [FTA](FTA.md)
+	- [x] [tasso di guasto](tasso%20di%20guasto.md)
+	- [x] [human reliability analysis](human%20reliability%20analysis.md)
+	- [x] [military handbook](military%20handbook.md)
+# Ripetere
+##### Tutto
+- [ ] [dependability](dependability.md)
+- [ ] [conformità](conformità.md)
+- [ ] [attributi](attributi.md)
+- [ ] [design for reliability](design%20for%20reliability.md)
+- [ ] [qualità](qualità.md)
+- [ ] [misure](Software%20Engineering/dependability/misure.md)
+- [ ] [reliability block diagram](reliability%20block%20diagram.md)
+- [ ] [rischio](rischio.md)
+- [ ] [military handbook](military%20handbook.md)
+- [ ] [gestione del rischio](gestione%20del%20rischio.md)
+- [ ] [analisi del rischio](analisi%20del%20rischio.md)
+- [ ] [FMEA](FMEA.md)
+- [ ] [FTA](FTA.md)
+- [ ] [tasso di guasto](tasso%20di%20guasto.md)
+- [ ] [human reliability analysis](human%20reliability%20analysis.md)
+- [ ] [logica fuzzy](logica%20fuzzy.md)
+- [ ] [FMECA](FMECA.md)
+- [ ] [manutenibilità](manutenibilità.md)
+- [ ] [safety](Software%20Engineering/dependability/safety.md)
+##### Giorni
+- 12 aprile
+	- [x] [safety](Software%20Engineering/dependability/safety.md)
+	- [x] [FMEA](FMEA.md)
+	- [x] [FMECA](FMECA.md)
+	- [x] [reliability block diagram](reliability%20block%20diagram.md)
+- 13 aprile
+	- [x] [safety](Software%20Engineering/dependability/safety.md)
+	- [x] [FMEA](FMEA.md)
+	- [x] [FMECA](FMECA.md)
+	- [ ] [reliability block diagram](reliability%20block%20diagram.md)
+	- [ ] [design for reliability](design%20for%20reliability.md)
+	- [x] [misure](Software%20Engineering/dependability/misure.md)
+	- [x] [military handbook](military%20handbook.md)
+	- [x] [gestione del rischio](gestione%20del%20rischio.md)
+	- [ ] [analisi del rischio](analisi%20del%20rischio.md)
+	- [x] [tasso di guasto](tasso%20di%20guasto.md)
+	- [ ] [logica fuzzy](logica%20fuzzy.md)
+		- [ ] [Fuzzy aritmico](FMECA.md#Fuzzy%20aritmico)
+	- [x] [manutenibilità](manutenibilità.md)
+	- [x] [human reliability analysis](human%20reliability%20analysis.md)
+	- [x] [FTA](FTA.md)
+- 14 aprile
+	- [ ] [dependability](dependability.md)
+	- [ ] [conformità](conformità.md)
 	- [ ] [attributi](attributi.md)
 	- [ ] [design for reliability](design%20for%20reliability.md)
-	- [ ] [FTA](FTA.md)
-	- [ ] [tasso di guasto](tasso%20di%20guasto.md)
-	- [ ] [human reliability analysis](human%20reliability%20analysis.md)
-	- [ ] [military handbook](military%20handbook.md)
-- 11
 	- [ ] [qualità](qualità.md)
 	- [ ] [misure](Software%20Engineering/dependability/misure.md)
-	- [ ] [logica fuzzy](logica%20fuzzy.md)
-	- [ ] [FMECA](FMECA.md)
-	- [ ] [military handbook](military%20handbook.md)
-	- [ ] [manutenibilità](manutenibilità.md)
-	- [ ] [safety](Software%20Engineering/dependability/safety.md)
-- 12
 	- [ ] [reliability block diagram](reliability%20block%20diagram.md)
 	- [ ] [rischio](rischio.md)
-	- [ ] [tasso di guasto](tasso%20di%20guasto.md)
-	- [ ] [human reliability analysis](human%20reliability%20analysis.md)
-	- [ ] [manutenibilità](manutenibilità.md)
-	- [ ] [safety](Software%20Engineering/dependability/safety.md)
-- 13
-	- riguardare slides?
 	- [ ] [military handbook](military%20handbook.md)
 	- [ ] [gestione del rischio](gestione%20del%20rischio.md)
-- 14
-	ripetere tutto
 	- [ ] [analisi del rischio](analisi%20del%20rischio.md)
 	- [ ] [FMEA](FMEA.md)
-- 15
-	ripetere tutto
 	- [ ] [FTA](FTA.md)
+	- [ ] [tasso di guasto](tasso%20di%20guasto.md)
+	- [ ] [human reliability analysis](human%20reliability%20analysis.md)
+	- [ ] [logica fuzzy](logica%20fuzzy.md)
+	- [ ] [FMECA](FMECA.md)
+	- [ ] [manutenibilità](manutenibilità.md)
+	- [ ] [safety](Software%20Engineering/dependability/safety.md)
 # Domande
 - Come il RBD si integra con la FMECA.

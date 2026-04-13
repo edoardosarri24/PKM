@@ -1,8 +1,8 @@
 In matematica i polinomi di Bernstein sono utilizzati per approssimare funzioni continue definite in $[0,1]$.
 # Definizione
-Sia $f:[0,1]\to\mathbb{R}$. L'operatore di Bernstein di ordine $n$ è definito come $B_{n}(f,x)=\displaystyle \sum_{i=0}^n f\left( \frac{i}{n} \right)b_{i,n}(x)$, dove:
+Sia $f:[0,1]\to\mathbb{R}$. L'operatore di Bernstein di ordine $n$ è definito come $B_{n}(f,x)=\displaystyle \sum_{i=0}^n f_{i,n}b_{i,n}(x)$, dove:
 - Coefficienti
-	$f\left( \frac{i}{n} \right)$ sono i coefficienti e rappresentano il peso associato al relativo elemento della base: sono i valori campionati dalla funzione $f$ che stiamo approssimando.
+	$f_{i,n}$ sono i coefficienti e rappresentano il peso associato al relativo elemento della base.
 	C'è una relazione tra il numero di coefficienti e il grado $n$ del polinomio: $\text{numero coefficienti}=n+1$.
 - Base
 	$b_{i,n}$ sono i polinomi di [base](#Base) di Bernstein.

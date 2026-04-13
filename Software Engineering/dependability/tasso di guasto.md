@@ -30,7 +30,7 @@ I parametri sono:
 	È un parametro dimensionale con unità di tempo le ore.
 	- Deve essere $\eta>0$. Solitamente è nell'ordine di $10^3$.
 	- Tenendo fisso $\beta$, il [comportamento](weibull%20distribution%20eta.png) di $\eta$ fa:
-		- Variare l'ampiezza della campana nel caso di $\beta>1$: più 
+		- Variare l'ampiezza della campana nel caso di $\beta>1$.
 		- Alzare l'inizio dell'esponenziale se $\beta<1$.
 - Posizione $\gamma$
 	Permette di [spostarsi](weibull%20gamma.png) sull'asse temporale delle ascisse e introduce una soglia entro cui i guasti non possono sicuramente accedere.

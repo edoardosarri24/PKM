@@ -13,7 +13,7 @@ L'idea della curva del rischio è che tutto quello che sta sotto è accettabile 
 Per questo motivo su usa spesso la matrice dei rischi: le celle che rappresentano punti sotto la curva sono verdi, sopra sono rossi, le celle che rappresentano i punti sulla curva sono gialli e rappresentano la zona di incertezza. Se siamo in uno di questi punti allora dobbiamo fare delle considerazioni con più attenzione per decidere se farli diventare versi oppure rossi.
 Non esiste una rappresentazione univoca (i.e., potremmo usare anche 4 colori), per cui è sempre bene dettagliare matrice o curva con una precisa descrizione.
 # Controllo del rischio
-È la fase che comprende tutte le azioni che possiamo fare per mitigare i rischi non accettabili. L'obiettivo è portare il rischio a un livello di tollerabilità, il quale dipende dal dominio.
+È la fase che comprende tutte le azioni che possiamo fare per mitigare i rischi e renderli [accettabili](rischio.md#Rischio%20accettabile). L'obiettivo è portare il rischio a un livello di tollerabilità, il quale dipende dal dominio.
 ##### Approcci
 Ci sono due approcci che posso seguire:
 - Prevenzione

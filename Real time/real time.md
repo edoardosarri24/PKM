@@ -1,10 +1,13 @@
-A system is defined as real-time if, in addition to the functional requirements, it has also a timing requirements.
+A system is defined as real-time if, in addition to the functional requirements, it has also a timing requirements: a [task](Real%20time/task.md) must be completed within its deadline.
 # Tipologie
 I sistemi real-time si differenziano in base al livello di garanzie che devono fornire. Non sono classi vincolate, ma posisamo avere uno spettro all'interno dei due estremi.
 ##### Soft
 Mancare una deadline causa un decadimento della qualità del servizio.
+##### Firm
+Mancare una deadline non è accettabile ma non causa eventi catastrofici.
 ##### Hard
 Mancare una deadline causa il fallimento del sistema e può provocare la morte di persone.
+Più ci spostiamo in questo scenario più la [ridondanza](ridondanza.md) è fondamentale per avere abbastanza risorse per svolgere tutti i task in un tempo ragionevole.
 # Determinismo
 Più i requisiti di tempo sono stringenti più il sistema deve gestire i [task](Real%20time/task.md) in modo deterministico. Questo porta a ridurre la concorrenza (i.e., risorse allocate dinamicamente), porta ad allocare allocare le risorse in fase di progettazione e quindi ad usarle in modo molto [conservativo](timing%20analysis.md#Consevatività).
 ##### Problemi
