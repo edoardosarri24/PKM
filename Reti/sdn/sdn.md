@@ -1,3 +1,11 @@
+Le normali [reti](Reti%20di%20telecomunicazioni.md) dove gira il classico [routing](routing.md) sono sempre più messe in crisi dall'avanzare delle richieste tecnologiche:
+- IoT
+	Moltissimi dispositivi connessi in rete.
+- Big data
+	Gestione di data estremamente grandi che richiedono una bassa latenza e grandi capacità di storage.
+- Cloud
+	Si tratta di un modello di calcolo on-demand che garatisce l'accesso a un pool di risorse (i.e., rete, computing, storage) teoricamente infinito.
+- Traffico mobile
 # PRE SDN
 Internet è costituito da una rete di router, i quali hanno l'obiettivo di collegare ogni coppia di host in modo global connectivity best effort, cioè senza nessuna garanzia di banda e di affidabilità.
 Nel 1983 si è imposto che qualunque nodo volesse partecipare allo scambio di informazioni doveva implementare a livello kernel TCP/IP; questo permise di liberalizzare internet, il quale divenne uno strumento libero a livello commerciale.
@@ -23,7 +31,7 @@ Il data plane gestisce solo il traffico dati: gli Switch non si scambiano mai pa
 I dispositivi che eseguono questo compito sono gli Switch. Questi dispositivi sono molto semplici e tutti uguali perchè il loro unico compito è quello di commutare i pacchetti da una porta di ingresso a una di uscita; non ci sono più le specializzazioni come prima (es: router, NAT e gateway). Espongono delle API e possono essere quindi programmabili: possiamo cambiare il loro comportamenti di routing in base alle necessità.
 Nel data plane si rivede il concetto di switching: non si parla più di packet switching ma di flow switching; un flusso è un insieme di pacchetti che hanno in comune almeno un campo dell'header (es: tutti i pacchetti che provengono dalla stessa sorgente; tutti i pacchetti che hanno la stessa porta).
 ##### Control plane
-Il controllo non è più distribuito tra i componenti della rete (router), ma viene centralizzato logicamente (fisicamente poi possono essere anche più dispositivi che lo gestiscono). Questo controllo è in mano a un processo detto [coontroller](SDN.md#CONTROLLER).
+Il controllo non è più distribuito tra i componenti della rete (router), ma viene centralizzato logicamente (fisicamente poi possono essere anche più dispositivi che lo gestiscono). Questo controllo è in mano a un processo detto [coontroller](sdn.md#CONTROLLER).
 # VANTAGGI
 - Avere un controllo centralizzato permette di avere una viste globale dell'intera rete in un unico punto.
 - Si può bilanciare il carico a livello dei singoli Switch.

@@ -24,9 +24,6 @@ I basic event (i.e., cerchi) si dividono i 5 categorie:
 	Se l'unità è riparabile allora $q_{i}(t)=\lambda_{i}\cdot MTTR_{i}$.
 - Testata periodicamente
 	Si suppone che dopo il test l'unità sia come nuova, ma ovviamente avrà un po' di usura. La probabilità di inaffidabilità è data da $q_{i}(t)\approx \tfrac{\lambda_{i}\tau_{i}}{2}$, dove $\tau_{i}$ è l'intervallo di test.
-- Frequenza
-- On demand
-	(lo rivedremo parlando di Functional safety). La probabilità di guasto non è più l’inaffidabilità ma si parla di ‘guasto su richiesta’ (PFD, Probability of Failure on Demand).
 # Utilizzi
 - Permette di mappare molto bene un [reliability block diagram](reliability%20block%20diagram.md) e usarlo per l'analisi del rischio:
 	- AND: rappresenta bene il fallimento di un parallelo dell'RBD.

@@ -16,7 +16,7 @@ I 4 più alti sono detti "livelli utente" o "livelli applicativi" e sono:
 ### Media layer
 I 3 più bassi sono detti “livelli di rete” e sono:
 - Network
-	Deve gestire il percorso tra gli utenti, cercando e scegliendo i collegamenti da usare. È responsabile del [Routing](Routing.md), cioè dell’interpretazione degli indirizzo logici.
+	Deve gestire il percorso tra gli utenti, cercando e scegliendo i collegamenti da usare. È responsabile del [Routing](Reti/Routing.md), cioè dell’interpretazione degli indirizzo logici.
 - Data link
 	Si divide in livello LLC (Link logical control) e MAC (Medium access control). Ha due compiti:
 	- Garantire l’integrità della trasmissione dei dati, correggendo eventuali errori introdotti dalla trasmissione.
@@ -26,7 +26,7 @@ I 3 più bassi sono detti “livelli di rete” e sono:
 ## NODI DI TRANSITO
 I livelli utente comunicano virtualmente solo con i pari livello della destinazione finale; si dice che operano su base E2E (End2End). I livelli di rete sono attivi in tutti i nodi del percorso, compresi i nodi di transito; si dice che operano su base L2L (Link2Link). I compiti svolti dai nodi intermedi ([Figura4.5](Figura4.5.png)) sono quindi solo quelli di:
 - Network
-	Esegue il [Routing](Routing.md) e individua percorsi alternativi a quello scelto in partenza nel caso ci siano guasti sulla rete.
+	Esegue il [Routing](Reti/Routing.md) e individua percorsi alternativi a quello scelto in partenza nel caso ci siano guasti sulla rete.
 - Data link
 	Esegue controlli di affidabilità sui dati ricevuti in modo da non trasmettere un flusso di dati affetto da errori in modo irreparabile.
 - Physical

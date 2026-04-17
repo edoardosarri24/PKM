@@ -24,7 +24,7 @@
 - [AIIoT](AIIoT.md)
 - [IoT application Layer](IoT%20application%20Layer.md)
 - [[IoT computing]]
-- [[SDN]]/[NFV](NFV.md)
+- [[sdn]]/[NFV](NFV.md)
 - [5G](5G.md)
 - [RFID](RFID.md)
 - [Bluetooth Low Energy (BLE)](Bluetooth%20Low%20Energy%20(BLE).md)

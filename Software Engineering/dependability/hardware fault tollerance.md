@@ -31,5 +31,12 @@ Il voter può dover elaborare due tipi di segnali:
 ##### Sincronizzazzione
 In un sistema a voting la sincronizzazione è molto rilevante.
 Solitamente si può risolvere utilizzando un clock comune, anche se questo diventa un single point of failure del sistema.
-# Limiti
-Tecniche di questo tipo sono limitate a livello di circuiti: supponimao di avere un circuito NAND (i.e., AND sequito dalla negazione); se uno dei due input si blocca a 1, l'output è sempre forzato essere a 0.
+# Ridondanza dinamica
+Con la ridondanza dinamica si vuole che il sistema risponda attivamente ai fallimenti riconfigurandosi: quando un guasto si manifesta esso non viene solo mascherato dalla ridondanza (e.g., con il voter) ma si prevede un intervento per isolare o sostituire la fault unit danneggiata.
+##### Ridondanza
+Mentre con la configurazione statica si permette solo di rilevare i disaccordo (e.g., voter), con la ridondanza dinamica si può anche determinare quale dei moduli è guasto (e.g., tramite diagnostica). In questo modo possiamo isolare il componente guasto e continuare a lavorare senza ridondanza
+##### N Modular Redundancy
+Se non confiniamo i componenti guasti, il loro voto potrebbe diventare quello di maggioranza e quindi superare i componenti correttamente funzionanti.
+- Possiamo avere dei componenti in stand-by che sostituisce un modulo quando questo si guasta.
+- Possiamo modificare il peso che il voter da a ogni componente.
+- Possiamo partire con tutti i componenti collegati e poi scollegare i componenti guasti.

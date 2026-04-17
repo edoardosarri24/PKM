@@ -9,7 +9,7 @@ Voto: 30
 [TCP IP](TCP%20IP.md)
 [[IEEE 802 - LAN]]
 [Reti geografiche](Reti%20geografiche.md)
-[[Routing]]
+[[Reti/Routing]]
 [[Congestione reti]]
 ## DEFINIZIONI
 ##### Telecomunicazioni

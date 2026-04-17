@@ -20,7 +20,7 @@ Operando su base E2E ha il compito di rendere disponibili al livello application
 Il livello internet non distingue la tipologia del dato che trasporta, ma si limita a consegnare le informazioni. Il livello di trasporto deve invece interpretare queste informazioni; questo concetto si traduce con il numero di porta, che identifica a livello astratto un processo SW nella macchina host.
 Siccome TCP/IP elimina il livello sessione di ISO/OSI, alcune delle sue funzionalità sono state implementate in qusto livello.
 ##### Internet (IP) - [IPv4](IPv4.md) - [IPv6](IPv6.md)
-Ha il compito di consentire lo scambio di informazioni tra nodi di rete ([router](Dispositivi%20di%20interconnesione.md#ROUTER)) che sono connessi tramite diversi tipi di rete (Canale di comunicazione), cioè dell'[instradamento](Routing.md) dei pacchetti.
+Ha il compito di consentire lo scambio di informazioni tra nodi di rete ([router](Dispositivi%20di%20interconnesione.md#ROUTER)) che sono connessi tramite diversi tipi di rete (Canale di comunicazione), cioè dell'[instradamento](Reti/Routing.md) dei pacchetti.
 Trasporta i dati in pacchetti che hanno una dimensione multiplo di 8 byte, chiamati datagram e composti da header e payload. Si usa la [commutazione di pacchetto a datagramma](Trasmissione.md#Datagramma): questo implica che il livello IP offra nativamente solo un servizio [inaffidabile](Architettura%20a%20livelli.md#SERVIZIO) e [connectionless](Architettura%20a%20livelli.md#SERVIZIO).
 ##### Host to network
 Raggruppa tutti i livelli collegamento (data link) e fisico della pila protocollare [ISO/OSI](ISO%20OSI.md). A volte si dice che TCP/IP ha 5 livelli perchè questi due si separano.

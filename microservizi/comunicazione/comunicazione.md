@@ -1,4 +1,11 @@
 In un'applicazione a [microservizi](microservizi.md) spesso più microservizi interagiscono tra loro per arrivare al risultato di una singola richiesta di un client. Per questo motivo serve definire un meccanismo di IPC (Inter Process Comunication).
+# Paradigmi
+Solitamente si parla di tre tipi di paradigmi:
+- IPC
+	Solitamente si intende lo scambio di informazioni in locale.
+- RPC
+	È il tipo di comunicazione utilizzato per lo stile request-responce: l'upstream microservice mi aspetta una risposta dal downstream microservice.
+- QM
 # Stili
 Gli stili di comunicazione sono indipendenti dalla tecnologia che usiamo per implementare questo stile.
 ![stili](stili.png)

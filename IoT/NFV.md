@@ -1,6 +1,6 @@
 Solitamente le funzioni di rete (es. routing, firewall, NAT, bilanciamento del carico) sono installate sui dispositivi di rete proprietari (prodotti da una data azienda), che quindi integrano hw e sw in un solo dispositivo.
 I problemi di questa soluzione sono: ogni dispositivo e ogni azienda espone le proprie API e richiede quindi competenze specifiche; questi dispositivi seguono standard proprietari e quindi l'integrazione è complessa.
-[SDN](SDN.md) risolve questo problema, ma solo fino al livello 4 (di TCP/IP); opera solo sull'instradamento, ma non interviene in alcun modo sulla computazione e sullo storage.
+[sdn](sdn.md) risolve questo problema, ma solo fino al livello 4 (di TCP/IP); opera solo sull'instradamento, ma non interviene in alcun modo sulla computazione e sullo storage.
 ### Principi
 I principi che stanno alla base di Network Function Virtualization (NFV) sono:
 - Le Network Function (NF) complesse vengono decomposte in funzioni più piccole e riutilizzabili, cioè vengono gestite a livello sw.

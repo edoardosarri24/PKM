@@ -1,4 +1,4 @@
-Mentre la [fault masking](fault%20masking.md) utilizza la [ridondanza](ridondanza.md) statica per implementare la [fault tollerance](fault%20tollerance.md), la dinamic fault masking tende a riconfigurare un sistema quando si rileva un errore per evitare che l'errore in un componente si propaghi all'esterno.
+Mentre la [hardware fault tollerance](hardware%20fault%20tollerance.md) utilizza la [ridondanza](ridondanza.md) statica per implementare la [fault tollerance](fault%20tollerance.md), la dinamic fault masking tende a riconfigurare un sistema quando si rileva un errore per evitare che l'errore in un componente si propaghi all'esterno.
 # NMR
 Ci sono due possibilità.
 ##### Reconfigurable Duplication

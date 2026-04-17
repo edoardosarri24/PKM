@@ -28,7 +28,7 @@ L’header TCP ([Figura 4.18](Figura%204.18.png)) non ha dimensione ma fissa, ma
 	- FIN
 		Indica la chiusura del collegamento in corso.
 - Finestra
-	Aiuta il protocollo a gestire operazioni di riordino e controllo della [congestione](Congestione%20reti.md): è il numero di byte che il ricevente può accettare senza che ci sia congestione.
+	Aiuta il protocollo a gestire operazioni di riordino e controllo della [congestione](congestione%20di%20rete.md): è il numero di byte che il ricevente può accettare senza che ci sia congestione.
 - Checksum
 	È usato per controllare la correttezza dell'header; a differenza dello stesso campo dell'header [UDP](UDP.md#HEADER) è utile per implementare l’[affidabilità](Architettura%20a%20livelli.md#SERVIZIO) del servizio.
 - Puntatore urgente

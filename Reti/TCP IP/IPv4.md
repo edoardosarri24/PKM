@@ -29,7 +29,7 @@ L’header IPv4 ([Figura4.9](Figura4.9.png)) ha una dimensione minima di 20 byte
 - Source/Destination address
 	Sono gli indirizzi IP del mittente e del destinatario. La loro dimensione di 32 bit rappresenta il motivo per cui senza l'[IPv6](IPv6.md) si sarebbe raggiunta la saturazione della rete.
 - Options
-	Può avere vari usi: implementare servizi di sicurezza; capire quale è la migliore strada da percorrere per arrivare alla destinazione tramite la tecnica di instradamento dalla sorgente; capire la [congestione](Congestione%20reti.md) della rete attraverso il tempo che un datagram fittizio impiega per arrivare in un determinato punto.
+	Può avere vari usi: implementare servizi di sicurezza; capire quale è la migliore strada da percorrere per arrivare alla destinazione tramite la tecnica di instradamento dalla sorgente; capire la [congestione di rete](congestione%20di%20rete.md) della rete attraverso il tempo che un datagram fittizio impiega per arrivare in un determinato punto.
 - Padding
 	Sono bit fittizi usati in due casi: se la riga non è composta da 4 byte; se il datagram non ha dimensioni multiple di 8 byte.
 ## FRAMMENTAZIONE

@@ -4,7 +4,7 @@ In questo contesto il termine probabilistic non si riferisce alle tecniche usate
 Quando i tempi di esecuzione diventano variabili aleatorie e sono modellate dalla [pWCET](probabilistic%20timing%20analysis.md#pWCET) per definire la pWCRT ci sono solitamente due famiglie tecniche: analitiche e non analitiche.
 ##### Non analitiche
 Queste tecniche vogliono calcolare la pWCRT a partire dalle pWCET in modo diretto.
-Il problema di questi approcci è dato dal numero di job rilasciati all'interno dell'intervallo di tempo considerato, che solitamente è molto grande; questo porta ad avere una complessità di calcolo in termini di tempo e spazio, che se crescendo in modo esponenziale se risolto tramite la classica [convoluzione](matematica/statistica/convoluzione.md), diventa intrattabile.
+Il problema di questi approcci è dato dal numero di job rilasciati all'interno dell'intervallo di tempo considerato, che solitamente è molto grande; questo porta ad avere una complessità di calcolo in termini di tempo e spazio, che se crescendo in modo esponenziale se risolto tramite la classica [convoluzione](matematica/polinomi/convoluzione.md), diventa intrattabile.
 Per utilizzare queste tecniche facendo in modo che siano trattabili si utilizzano tecniche come il Down-sampling, le simulazioni Monte Carlo e le di [stochastic TPN](stochastic%20TPN.md).
 ##### Analitiche
 Queste tecniche voglio usare teoremi matematici e disuguaglianze per stimare delle forme chiuse dei bound del tempo di esecuzioneò.

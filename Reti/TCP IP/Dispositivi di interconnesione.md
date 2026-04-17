@@ -12,7 +12,7 @@ I bridge operano su base [Store&Forward](Reti%20di%20telecomunicazioni.md#Store&
 Se un bridge si danneggia le [LAN](IEEE%20802%20-%20LAN.md) collegate ad esso si scollegano; per risolvere questo problema si creano dei percorsi ridondanti. Questo porta però alla possibilità che i pacchetti entrino in percorsi ciclici; la soluzione è data dallo spanning tree: i bridge hanno un albero senza cicli sulla base del quale decidono quale percorso far seguire ad un pacchetto che deve arrivare ad una certa destinazione.
 # ROUTER
 - Operano sul livello di rete dello standard [ISO/OSI](ISO%20OSI.md) e sul livello IP del protocollo [TCP/IP](TCP%20IP.md).
-- Il loro computo è il [Routing](Routing.md), ovvero decidere quale percorso prenderà il pacchetto, e il forwarding, cioè l'inoltro del pacchetto lungo il percorso scelto.
+- Il loro computo è il [Routing](Reti/Routing.md), ovvero decidere quale percorso prenderà il pacchetto, e il forwarding, cioè l'inoltro del pacchetto lungo il percorso scelto.
 # GATEWAY
 - Agisce come ponte tra reti che utilizzano protocolli diversi. Opera sia sul livello di rete che sui livelli superiori di [ISO/OSI](ISO%20OSI.md) e IP di [TCP/IP](TCP%20IP.md).
 - Le operazioni principali sono quelle di traduzione del protocollo e controllo e filtraggio di pacchetti.

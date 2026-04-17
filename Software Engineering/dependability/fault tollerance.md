@@ -1,5 +1,6 @@
 In un sistema la probabilità di attivare un [fault](fault%20error%20failure%20chain.md#Fault%20(guasto/difetto)), se il sistema gira all'infinito, è 1.
-L'idea della fault tollerance è permettere al sistema di non deviare dal corretto funzionamento anche quando un guasto si attiva. L'implementazione avviene solitamente con scelte architetturali fornite dalla [fault masking](fault%20masking.md) e con [riconfigurazioni dinamiche](dinamic%20fault%20masking.md) si basano sulla ridondanza e in particolare sulla [design diversity](ridondanza.md#Design%20diversity).
+L'idea della fault tollerance è permettere al sistema di non deviare dal corretto funzionamento anche quando un guasto si attiva. L'implementazione avviene solitamente con scelte architetturali fornite dalla [hardware fault tollerance](hardware%20fault%20tollerance.md) e con [riconfigurazioni dinamiche](dinamic%20fault%20masking.md) si basano sulla ridondanza e in particolare sulla [design diversity](ridondanza.md#Design%20diversity).
+Un caso particolare è quello della [software fault tollerance](software%20fault%20tollerance.md).
 ![Screenshot 2026-03-12 alle 09.47.44](fault%20tollerance%20tesps.png)
 ##### Tassonomia
 Non è possibile gestire tutti i fualt e tutti gli errori: c'è una tassonomia che ci permette di scegliere quali classi vogliamo gestire.
@@ -76,7 +77,7 @@ Si elimina l'errore presente nel sistema, cioè lo stato errato che è presente.
 	Si ripristina lo stato corretto usando la ridondanza: se abbiamo più copie (almeno 3) della stessa variabile allora possiamo stabilire quale sia il valore corretto.
 - Rollforward
 	Sappiamo che lo stato è sbagliato ma andiamo avanti con la computazione. Solitamente queste si traduce quando si rileva un errore e si esegue poi un execption handler.
-##### Fault handling
+##### Fault revoval
 Oltre a correggere l'errore dobbiamo identificare il guasto che lo ha provocato in modo che non succeda ancora.
 La pipeline è la seguente:
 - Diagnosi: Si deve capire quale è il fault che ha portato all'errore.
