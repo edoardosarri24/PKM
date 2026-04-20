@@ -8,7 +8,7 @@ Le modalità con cui l’autorizzazione viene concessa sono:
 	È una tecnica centralizzata: il master invia l'autorizzazione ad un client alla volta seguendo una lista; quando il client ha finito di usare la rete restituisce l'autorizzazione al master.
 	Lo svantaggio di questa soluzione è il tempo utilizzato per gestire l’accesso, cioè per inviare e ricevere l’autorizzazione da parte del nodo master; questo si nota particolarmente nel caso pessimo, in cui nessun client vuole usare la rete.
 - Hub-Polling
-	È una tecnica di tipo distribuito usata per reti con topologia a [bus](Topologia.md#BUS) o a [ring](Topologia.md#RING). Il master invia l’autorizzazione al client a lui più lontano; questo, una volta terminato l’uso della rete, la rilascia e la concede al nodo più vicino a lui in direzione del master; questo processo continua finché non si raggiunge il master e tutti i client hanno avuto la possibilità di usare la rete.
+	È una tecnica di tipo distribuito usata per reti con topologia a [bus](topologia.md#BUS) o a [ring](topologia.md#RING). Il master invia l’autorizzazione al client a lui più lontano; questo, una volta terminato l’uso della rete, la rilascia e la concede al nodo più vicino a lui in direzione del master; questo processo continua finché non si raggiunge il master e tutti i client hanno avuto la possibilità di usare la rete.
 	In questo modo si riesce a risolvere il problema introdotto dalla tecnica roll-call.
 ##### Tempo di accesso
 Le tecniche usate per gestire il tempo di accesso alla rete sono:

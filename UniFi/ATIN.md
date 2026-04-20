@@ -2,4 +2,9 @@
 - [tipi di traffico](tipi%20di%20traffico.md)
 - [congestione di rete](congestione%20di%20rete.md)
 - [routing](routing.md)
-	Solo protocolli
+	No classificazione
+- [sdn](sdn.md)
+- [data plane](data%20plane.md)
+- [control plane](control%20plane.md)
+- [OpenFlow](OpenFlow.md)
+- [network configuration protocol](network%20configuration%20protocol.md)

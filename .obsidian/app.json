@@ -137,7 +137,11 @@
     "stocasticamente",
     "safety",
     "security",
-    "dependanbility"
+    "dependanbility",
+    "plane",
+    "controller",
+    "forwarding",
+    "entry"
   ],
   "promptDelete": false,
   "pdfExportSettings": {

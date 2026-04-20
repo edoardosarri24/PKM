@@ -1,4 +1,4 @@
-L'algoritmo di scheduling Deadline Monotonic (DM) è un [algoritmo di scheduling di task periodici](Scheduling%20di%20task%20periodici.md) che assegna la priorità ai task in modo inverso rispetto alla loro deadline relativa, come in questo [esempio](DM%20example.png).
+L'algoritmo di scheduling Deadline Monotonic (DM) è un algoritmo di [scheduling](scheduling.md) per task periodici che assegna la priorità ai task in modo inverso rispetto alla loro deadline relativa, come in questo [esempio](DM%20example.png).
 # Caratteristiche
 - Preemptive
 - Statico

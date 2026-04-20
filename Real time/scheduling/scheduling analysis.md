@@ -1,0 +1,6 @@
+Se la [timing analysis](timing%20analysis.md) è l'analisi dei vincoli temporali di un taskset, la scheduling analysis si occupa di capire la [feasibility](scheduling.md#Feasibility) di un taskset (e.g., numero di deadline miss). Si tratta in ogni caso di due concetti molto vicini.
+# Utilizzo CPU
+Si tratta di una tecnica che non dipende dall'algoritmo di scheduling scelto. Si definisce l'utilization factor del sistema come $U=\sum_{i=1}^n\tfrac{C_i}{T_i}$. Come si vede da questa [dimostrazione](utilization%20factor%20feasibility%20proof.pdf), se il fattore di utilizzo di un task set $\Gamma$ è maggiore di 1 allora $\Gamma$ non è feasible.
+##### Upper bound analysis
+L'upper bound del fattore di utilizzo $U_{ub}(\Gamma, A)$, dato il task set $\Gamma$ e l'algoritmo di scheduling $A$, è il valore massimo di $U$ sotto il quale $\Gamma$ è feasible e sopra il quale non lo è più. Se $U=U_{ub}$ allora si dice che $\Gamma$ utilizza interamente il processore.
+Il least upper bound $U_{lub}(A)$ di $U$ dato l'algoritmo di scheduling $A$ è $U_{lub}(A)=min_{\Gamma}U_{ub}(\Gamma,A)$. Attraverso il least uppur bound si può rispondere alla domanda se un task set è schedulabile dall'algoritmo $A$: se $U\le U_{lub}$ allora si; se $U>1$ allora no; se $U_{lub}<U<1$ non si può sapere a priori (si deve provare).
