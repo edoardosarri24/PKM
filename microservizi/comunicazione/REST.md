@@ -1,17 +1,18 @@
-REpresentational State Transfer (REST) è uno stile architetturale basato su [HTTP](HTTP.md) definito nel 2000 che ha l'obiettivo di scalare in termini di numero di client interattivi ed evoluzione del sistema.
-È una delle possibilità per implementare un [SOA](Service%20Oriented%20Architecture%20(SOA).md#Implementazioni).
-# RESTful
-Un'applicazione RESTful segue determinati principi:
- - Si basa sul concetto di risorsa, cioè di informazioni e dati. Le risorse sono trasferite dal provider all'utente tramite una specifica sintassi dell'URL del servizio. I formati usati spesso sono i file JSON.
-- Manipolazione delle risorse tramite la loro rappresentazione.
-- Espone i propri servizi tramite le REST API, che i client possono chiamare e usare tramite richieste HTTP.
-- Messaggi auto descrittivi.
-	Nell'architettura REST è fondamentale che le richieste siano stateless, cioè sia il client che il server non devono memorizzare alcuna informazioni l'uno dell'altro.
-	Ogni messaggio deve essere quindi auto descrittivo, cioè deve contenere tutte le informazioni necessarie per la sua elaborazione senza che il server sia a conoscenza del contesto (stato del client).
-- HATEOAS (Hypermedia As The Engine Of Application State)
-	Il web può essere modellato come un FSM (Finite State Machine). L'idea è che il client non sia a conoscenza della struttura delle API del server, ma possa comunque navigare nell'applicazione in modo dinamico tramite hypermedia.
-	Il concetto è che il server (cioè il backend) includa nelle repose delle informazioni aggiuntive con le URI per i servizi offerti da quel momento.
-	Un vantaggio è che il backend può cambiare le URI dinamicamente senza rompere il frontend.
+REpresentational State Transfer (REST) è uno stile architetturale di [comunicazione](microservizi/comunicazione/comunicazione.md) basato su [HTTP](HTTP.md) che ha l'obiettivo di scalare in termini di numero client gestiti e futura evoluzione del sistema.
+# Vincoli
+In pratica il paradigma rest defiisce dei vincoli ce le API devono rispettare:
+##### Client server
+La comunicazione deve seguire un paradigma [request-responce](microservizi/comunicazione/comunicazione.md#Stili) asincrono.
+##### Stateless
+Il mssaggio deve contenere tutte le informazioni necessarie per la sua elaborazione. Qusto permette di disaccopiare client e server.
+##### Cache
+Il server può memorizzare la risposta per aumentare la località temporale: se un altro o lo stesso client chiede nuovamente quei dati allora non devono essere ritrovati ma sono già disponibili.
+##### Risorsa
+I dati sono modellati come [risorse](#Risorse) trasferite da server a client tramite solitamente JSON.
+##### HATEOAS (Hypermedia As The Engine Of Application State)
+Il web può essere modellato come un FSM (Finite State Machine). L'idea è che il client non sia a conoscenza della struttura delle API del server, ma possa comunque navigare nell'applicazione in modo dinamico tramite hypermedia.
+Il concetto è che il server (cioè il backend) includa nelle repose delle informazioni aggiuntive con le URI per i servizi offerti da quel momento.
+Un vantaggio è che il backend può cambiare le URI dinamicamente senza rompere il frontend.
 # Risorse
 Una risorsa è un'astrazione dell'informazione. Non mappa uno a uno un'entità del [domain model](domain%20model.md), ma può incorporare più o meno informazioni.
 Le risorse e le operazioni possibili su di esse sono gestite da nodi detti [endpoint](Endpoint%20Java.md). Un endpoint rende fruibile un servizio in modo univoco e stabilisce i livelli di protezione di una risorsa.

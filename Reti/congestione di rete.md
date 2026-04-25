@@ -28,7 +28,6 @@ Hanno come finalità quella di prevenire la congestione prima che si manifesti.
 	Nella soluzione leaky bucket si perdono le possibilità di inoltro quando il buffer è vuoto; con questa soluzione si permette di conservare queste autorizzazioni in un buffer; la quantità di autorizzazioni conservate è limitata in modo da impedire la monopolizzare della rete da parte di un nodo.
 ##### Controllo rattivo (Sliding window)
 Hanno come obiettivo quello di eliminare la congestione appena questa si presenta.
-
 Questo metodo richiede la definizione di un parametro, detto ampiezza di finestra, che rappresenta il numero di pacchetti che possono essere trasmessi in sequenza affinché il primo riceva il messaggio di ACK, cioè riceva la conferma di ricezione da parte del destinatario. Nel momento in cui non arriva il riscontro si cerca di gestire la congestione; lo si fa chiudendo la finestra, cioè non inviando più pacchetti.
 Questo meccanismo non garantisce all’utente un numero minimo di pacchetti inviabili per unità di tempo.
 Un caso pratico di questa tecnica è il modo in cui si gestisce la congestione nel protocollo [TCP](TCP.md): si da la possibilità ad un nodo di regolare in modo autonomo l’ampiezza della finestra (Self-clocking). Ci sono tre tecniche:

@@ -47,7 +47,7 @@ Non sempre è necessario raggiungere il livello massimo, ma si dovrebbero esporr
 - 2
 	Si usano corretamente i verbi HTTP.
 - 3
-	Si implementa i controlli ipermediali, cioè si implementa [HATEOAS](REST.md#RESTful).
+	Si implementa i controlli ipermediali, cioè si implementa [HATEOAS (Hypermedia As The Engine Of Application State)](REST.md#HATEOAS%20(Hypermedia%20As%20The%20Engine%20Of%20Application%20State)).
 # Versioni HTTP
 Ci sono due versioni HTTP.
 ![HTTP 1 vs 2](HTTP%201%20vs%202.png)

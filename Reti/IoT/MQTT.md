@@ -1,4 +1,4 @@
-È il Message Queque Telemetry Transport (MQTT), un protocollo leggero, open source, basato su TCP e sul modello [publish/subscribe](publish-subscribe.md#PUBLISHER-SUBSCRIBER) per ambienti con vincoli (device/network constrained environment). Implementa l'application layer.
+È il Message Queque Telemetry Transport (MQTT), un protocollo leggero, open source, basato su TCP e sul modello [publish/subscribe](Publish-subscribe.md#PUBLISHER-SUBSCRIBER) per ambienti con vincoli (device/network constrained environment). Implementa l'application layer.
 # TOPIC
 I messaggi del publisher sono inviati al broker e sono filtrati tramite topic (una URI, cioè una risorsa).
 I topic, inseriti nel campo $path$ delle URI, hanno una forma gerarchia separata dallo slash: $topic/subtopic/subsubtopic$. Un subscriber si può iscrivere a un topic specifico, iscrivendosi a tutta la gerarchia, oppure usare le wildcard:

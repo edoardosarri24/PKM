@@ -1,4 +1,5 @@
 A system is defined as real-time if, in addition to the functional requirements, it has also a timing requirements: a [task](Real%20time/task.md) must be completed within its deadline.
+I sistemi real-time sono TimeTriggered: i segnali di controllo sono basati sul concetto globale del tempo. L'opposto sono i sistemi EventBased, dove i segnali di controllo derivano dall'accadere degli eventi.
 # Tipologie
 I sistemi real-time si differenziano in base al livello di garanzie che devono fornire. Non sono classi vincolate, ma posisamo avere uno spettro all'interno dei due estremi.
 ##### Soft

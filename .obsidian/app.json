@@ -141,7 +141,8 @@
     "plane",
     "controller",
     "forwarding",
-    "entry"
+    "entry",
+    "handshake"
   ],
   "promptDelete": false,
   "pdfExportSettings": {

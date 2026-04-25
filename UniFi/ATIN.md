@@ -1,10 +1,18 @@
 - [misure](Reti/misure.md)
 - [tipi di traffico](tipi%20di%20traffico.md)
 - [congestione di rete](congestione%20di%20rete.md)
+	Non le tecniche
 - [routing](routing.md)
 	No classificazione
 - [sdn](sdn.md)
 - [data plane](data%20plane.md)
 - [control plane](control%20plane.md)
+- [control plane distribuito](control%20plane%20distribuito.md)
 - [OpenFlow](OpenFlow.md)
 - [network configuration protocol](network%20configuration%20protocol.md)
+- [border gateway protocol](border%20gateway%20protocol.md)
+- [OpenDaylight](OpenDaylight.md)
+- [ONOS](ONOS.md)
+- [REST](REST.md)
+	No risorse
+- [application plane](application%20plane.md)

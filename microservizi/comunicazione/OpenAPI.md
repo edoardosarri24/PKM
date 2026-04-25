@@ -1,4 +1,4 @@
-Prima noto come Swagger, OpenAPI è un specifica standard open per descrivere API [RESTfull](REST.md) tramite un docuemnto JSON o YAML.
+Prima noto come Swagger, OpenAPI è un specifica standard open per descrivere API [REST](REST.md) tramite un docuemnto JSON o YAML.
 # Contenuto
 Nel documento sono descritti endpoint disponibili, parametri richiesti, formati di input output e sicurezza.
 # Utilità

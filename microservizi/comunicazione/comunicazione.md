@@ -36,4 +36,4 @@ Hanno le conseguenze opposte.
 
 Tralasciando la tipologia SOAP, che non è più utilizzata, ci sono due famiglie principali di tipi di comunicazione:
 - La più famosa nota e conosciuta è la classica sincrona request/response, implementata esponendo servizi [REST](REST.md) e utilizzando un qualche protocollo o framework (e.g. [graphQL](https://graphql.org)).
-- La modalità più complessa è quella relativa all'event-based comunicazione. Si basa sul modello [publish-subscribe](publish-subscribe.md) e permette una sincronizzazione asincrona sia tra coppie di micro servizio che tra gruppi. In questo ambito c'è il framework [rRPC](https://grpc.io) di Google che permette di gestire anche stream di dati infiniti.
+- La modalità più complessa è quella relativa all'event-based comunicazione. Si basa sul modello [Publish-subscribe](Publish-subscribe.md) e permette una sincronizzazione asincrona sia tra coppie di micro servizio che tra gruppi. In questo ambito c'è il framework [rRPC](https://grpc.io) di Google che permette di gestire anche stream di dati infiniti.

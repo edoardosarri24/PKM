@@ -62,7 +62,7 @@ I livelli dello stack che un server fog deve implementare sono:
 - Broker
 	Nel contesto del publish/subscriber l'IoT Hub ha anche la funzione di broker.
 ##### Conseguenze
--  Quando abbiamo detto che il [collo di bottiglia](publish-subscribe.md#Svantaggi) nel sistema publish/subscriber era il broker, ci rifacevamo all'IoT Hub. Inoltre è anche un single point of failuer perché se crolla questo le reti IoT diventano non raggiungibili e perdono la possibilità di fare analisi in real time.
+-  Quando abbiamo detto che il [collo di bottiglia](Publish-subscribe.md#Svantaggi) nel sistema publish/subscriber era il broker, ci rifacevamo all'IoT Hub. Inoltre è anche un single point of failuer perché se crolla questo le reti IoT diventano non raggiungibili e perdono la possibilità di fare analisi in real time.
 - I vari IoT Hub possono essere replicati garantendo che ogni replica abbia le stesse funzionalità. In questo modo si permette l'accesso fisico a più hub, ma logicamente questo è uno solo. Si riesce così a distribuire il carico su tutte le repliche, garantendo disponibilità di accesso alle risorse. In questa situazione per far comunicare i vari IoT hub si utilizza un metodo di comunicazione suplisher/subscriber (come [MQTT](MQTT.md)).
 ##### Esempi
 - [observing resource](observing%20resource%20fog%20example.jpeg).
@@ -75,7 +75,7 @@ Nella realtà è troppo stringente perché i dispositivi IoT sono semplici e non
 Come implementazioni del livello applicazione dei vari dispositivi IoT possiamo avere diverse soluzioni:
 - La prima alternativa che possiamo considerare è quella diutilizzare il modello client/server dove l'application layer è HTTP. In questo modo non si ha successo per la verbosità e la pesantezza di HTTP.
 - Una soluzione successiva che è stata considerata, sempre basata sul modello clinet/server, è quella di utilizzare [CoAP](CoAP.md). In questo modo si ottengono tutti i vantaggi di CoAP, ma siamo ancora in un modello che impone la presenza di un server per compiere elaborazioni pesanti.
-- L'ultima alternativa considerata è quella di utilizzare il modello [publisher/subscriber](publish-subscribe.md#PUBLISHER-SUBSCRIBER) e una delle sue implementazioni come [MQTT](MQTT.md).
+- L'ultima alternativa considerata è quella di utilizzare il modello [publisher/subscriber](Publish-subscribe.md#PUBLISHER-SUBSCRIBER) e una delle sue implementazioni come [MQTT](MQTT.md).
 ##### Comunicazione con l'esterno
 Le singole reti IoT per eseguire calcoli più complessi devono entrare in relazioni sia con livelli più astratti (fog e cloud) sia con altre reti.
 Il primo dispositivo che mette in cumunicazione la rete IoT con l'esterno è detto boarding router.

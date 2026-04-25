@@ -41,7 +41,8 @@ Le tabelle contengono le regole di inoltro che devono essere applicate ai pacche
 - Meter tables
 	È una tabella che permette di implementare la [QoS](Reti/misure.md#QoS) tenendo conto di alcune metriche (e.g., throughtput). L'idea è di raccogliere informazioni sulle performance dello switch, e di comportaresi di conseguenza per evitare che la velocità di inoltre diminuisca di un certo valore soglia.
 ##### Entry filed
-Le tabelle sono comporte da regole dette entry. Ogni entry ha dei cambi che dicono allo switch come essa deve essere gestita.
+Le tabelle sono composte da regole dette entry. Ogni entry ha dei campi che la definiscono.
+- Campi per il maching.
 - Piority
 	Se un pacchetto fa matching con più regole si seleziona quella a priorità più alta.
 - Timeouts
@@ -49,12 +50,14 @@ Le tabelle sono comporte da regole dette entry. Ogni entry ha dei cambi che dico
 - Cookie
 	È un'etichetta che il controller associa alle regole per ritrovarle velocemente.
 - Counters
-	Sono indicatori statistici usati solitamente dal controller.
+	Sono indicatori statistici usati dal controller.
+- Istruzione
+	L'istruzione da eseguire se il matching è verificato.
 # Pipeline
 Quando entra un pacchetto si segue una pipeline ben precisa:
 - Il pacchetto inizia a cercare un match nella tabella 0.
 - Matching
-	Il matching avviene su campi specifici (OpenFlow può vedere tutti i livello dello stack [TCP/IP](TCP%20IP.md)): porta di ingresso, indirizzo MAC, indirizzo IP e porte TCP o UDP. 
+	Il matching avviene su campi specifici (OpenFlow può vedere tutti i livello dello stack [TCP/IP](TCP%20IP.md)): porta di ingresso, indirizzo MAC (e.g., solitamente ethernet) sorgente e destinazione, indirizzo IP sorgente e destinazione e porte TCP o UDP.
 	Se un match viene trovato allora: si incrementano i contatori associati all'entry; si eseguono le azioni relative a tale entry (e.g., aggiornare i metadati).
 - Non matching
 	Se non abbiamo un match e non abbiamo una default entry allora il pacchetto viene scartato.

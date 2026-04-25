@@ -1,16 +1,17 @@
 Il routing è il compito principale del livello di rete (i.e. livello 2 di [TCP/IP](TCP%20IP.md)) e il suo scopo è quello di decidere il percorso tra sorgente e destinazione.
-# Pilastri
-Tale funzionamento si basa su due pilastri:
+# Distribuito
+Il routing classico è un routing di tipo distribuito, dove l'informazione di ogni dispositivo di rete è solo locale.
 - Packet switching
 	I router decidono il prossimo nodo a cui trasmettere il pacchetto tramite un algoritmo. Tale algoritmo è definito all'interno del dispositivo di rete e non può essere modificato senza la sostituzione del dispositivo; al massimo può essere leggermente configurato tramite parametri.
 - Distributed control
 	La conoscenza della rete è distribuita e non centralizzata e quindi ogni router ha bisogno di tempo perché la propria tabella di conoscenza della rete converga.
 # Protocolli
-Una volta definito un Autonomous System (AS), ci sono due protocolli pricipali. Esso è un'organizzazione o un dominio i cui router condividono il prefisso dell'indirizzo IP.
+Una volta definito un [Autonomous System](Internet.md#Concetti%20base) (AS), ci sono due protocolli principali.
 ##### Interior Router Protocol
-L'IRP opera all'interno di un singolo AS. Solitamente gli algoritmi utilizzati sono [distance vector](algoritmi%20con%20tabella.md#Distace%20vector) e [link state](algoritmi%20con%20tabella.md#Link%20state).
+L'IRP è un protocollo  opera all'interno di un singolo AS e il suo obiettivo è quello di conoscere in dettaglio la topoloigia della rete per trovare il percorso ottimo.
+Solitamente gli algoritmi di routing usati sono [distance vector](algoritmi%20con%20tabella.md#Distace%20vector), [link state](algoritmi%20con%20tabella.md#Link%20state) e [OSPF](algoritmi%20con%20tabella.md#OSPF%20(Open%20Shortest%20Path%20First)).
 ##### Exterior Router Protocol
-Gestiscono l'instradamento tra diversi AS.
+Sono protocolli (e.g., [BGP](border%20gateway%20protocol.md)) che gestiscono l'instradamento tra diversi AS. Non devono sapere la topologia esatta, ma solo se una rete esterna è raggiungibile e da dove.
 # Classificazione
 - Statici
 	Si basano su decisioni predefinite. Non sono algoritmi reattivi a guasti della rete o al cambiamento delle condizioni di traffico.
