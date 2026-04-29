@@ -142,7 +142,9 @@
     "controller",
     "forwarding",
     "entry",
-    "handshake"
+    "handshake",
+    "clock",
+    "monomiale"
   ],
   "promptDelete": false,
   "pdfExportSettings": {
