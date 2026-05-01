@@ -14,7 +14,7 @@ Dato un valore soglia $MinPts$, i punti di suddividono in tre gruppi:
 - Si pone un arco tra tutti i core points che hanno una distanza al più $\epsilon$ tra loro.
 - Si assegna ogni border point al core point più più vicino tramite un arco.
 # Vantaggi
-Costruendo il grafo solo tramite i core point, anche se un border point ha un po di rumore questo non influenzerà l'unione di due componenti connesse.
+Costruendo il grafo solo tramite i core point, anche se un border point ha un po' di rumore questo non influenzerà l'unione di due componenti connesse.
 # Confronto con [K-means](K-means.md)
 - Sono entrambi partizionanti: un elemento appartiene a un solo cluster.
 - K-means è completo, cioè assegna ogni elemento a un cluster; DBSCAN scarta gli outliers.

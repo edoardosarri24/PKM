@@ -27,12 +27,12 @@ I layer principali sono:
 	È il framework NFV per la virtualizzazione delle funioni di rete.
 ##### Motivazioni
 Prima di SDN Google usava euristiche che definivano il percorso in base al costo (e.g., distanza in hop). Questo comportava che c'erano pochi cavi dove passava quasi tutto il traffico: erano maggiormente soggetti a usura.
-Adesso tramite il TE, l'obiettivo è quello di avere un utilizzo molto più equo dei cavi: in pratica Google definisce i suoi SLA per il TE come il fattore di utilizzo dei cavi e l'obiettivo è averlo uguale su tutti questi.
+Adesso tramite il TE, l'obiettivo è quello di avere un utilizzo molto più equo dei cavi: in pratica Google definisce i suoi SLA per il TE come il fattore di utilizzo dei cavi e l'obiettivo è averlo uguale su tutti questi. Questo permette inoltre di inviare uno stesso flusso in modo partizionato (i.e., partizionando i pacchetti di un flusso) tramite percorsi diversi.
 Inoltre questo è stato un motivo per cambiare fornitore di Switch: prima prendeva i router da Cisco e altri; adesso se li produce in casa e sono solo Switch SDN.
 ##### Pipeline
 La pipeline per l'implementazione è la seuqente:
 - Ogni cluster ha circa 100K nodi. questi sono gestiti da switch SDN.
 - Gli switch del cluster sono partizionati e ogni partizione è assegnata a un controller. Siamo quindi in un contesto di [control plane distribuito](control%20plane%20distribuito.md), dove si utilizza un [algoritmo del consenso](legge%20del%20consenso.md) (e.g., Paxos) per avere la stessa informazione.
-- Per quanto riguarda la comunicazione Google fa all'opposto: l'interfaccia eat/west è implementata tramite chiamate [REST](REST.md); l'interfaccia nord è implementata con [BGP](border%20gateway%20protocol.md). 
+- Per quanto riguarda la comunicazione Google fa all'opposto: l'interfaccia eat/west è wrappata e implementata tramite chiamate [REST](REST.md); l'interfaccia nord è implementata con [BGP](border%20gateway%20protocol.md).
 - L'applicazione di TE gira in un server; questa viene raggiunta passando da un gateway, che ha il compito di parlare con un controller per cluster (tanto l'informazione è condivisa) e inviare i dati al server.
 - A questo punto il server TE ha tutte le informazioni per prendere le decisioni.
