@@ -9,7 +9,7 @@ Permette sia di utilizzare il protocollo [REST](REST.md) se l'application layer 
 Il SAL è l'elemento che offre l'astrazione del [data plane](data%20plane.md), permettendo alle funzionalità di control plane di operare senza conoscere l'implementare dell'[interfaccia sud](control%20plane.md#Sud).
 Quello che fa è mappare una richiesta di servizio (e.g., crea un flusso) in messaggio che utilizza il protocollo usato dallo switch verso cui è diretto il messaggio.
 # Base Network Functions
-ODL include delle funzionalità base con cui gestire la rete:
+ODL include delle funzionalità base con cui gestire la rete. Oltre alle funzionalità di base sotto, ci sono anche altre funzionalità che lavorano come moduli (e.g., [Defense4All](monitoring.md#Defense4All)): si possono attivare a richiesta.
 - Topology Manager
 	Si occupa dell'apprendimento e manutenzione del [NIB](control%20plane.md#Grafo%20di%20rete).
 - Switch Manager

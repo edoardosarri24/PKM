@@ -44,7 +44,6 @@ Se il grado è lo stesso allora si sommano o sottragono i coefficienti.
 Se i due gradi sono diversi allora dobbiamo prima matchare i gradi aumentando il grado del polinomio con grado minore.
 ##### Moltiplicazione
 Se $f(t)$ ha grado $m$ e coefficienti $a_{0},\cdots,a_{m}$ e $g(t)$ ha grado $n$ e coefficienti $b_{0},\cdots,b_{n}$ allora il polinomio risultante dal loro prodotto ha coefficienti $c_{k}=\sum_{j=max(0,k-n)}^{min(m,k)}\frac{\binom{m}{j}\binom{n}{k-j}}{\binom{m+n}{k}}a_{j}b_{k-j}$, con $k=0,\dots,m+n$.
-Questa operazione può essere utilizzata per fare una [convoluzione](matematica/polinomi/convoluzione.md) discreta dei due polinomi.
 ##### Divisione
 Vedi [articolo](the_Bernstein_polynomial_basis_a_centennial_retrospective.pdf) alla proprietà 14.
 ##### Convoluzione
