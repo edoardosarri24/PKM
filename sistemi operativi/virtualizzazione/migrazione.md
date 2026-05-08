@@ -1,0 +1,2 @@
+Se i server sono gestiti tramite [virtualizzazione](virtualizzazione.md) allora la migrazione di un server (virtuale) diventa molto semplice.
+Ogni [virtual machine](virtualizzazione.md#Virtual%20machine) o [container](virtualizzazione.md#Container) è definito da un file system e quindi basta spostare questi file sul nuovo server e tirare su la nuova macchian virtuale sul nuovo server fisico.

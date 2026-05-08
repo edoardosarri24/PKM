@@ -1,0 +1,8 @@
+L'Information Comunication Network, implementato da CNN, è una proposta opposta a intenet address-based
+# Address-based
+Internet come lo conosciamo noi è address-bases: host è identificato da un indirizzo IP rappresentato con il meccanismo [CIDR](IPv4.md) di IPv4. Un ISP (Internet Service Provider) compra un insieme di prefessi, che definiscono una sottorete, e si occupa di assegnare un indirizzo IP a ogni host all'interno della sottorete.
+Quando richiede l'accesso a una risorsa, detenuta da un determinato server, si passa in input l'URI della risorsa al server DNS e questo ci restituisce l'IP del server che la possiede.
+# Problema
+In una rete piccola, magari di IoT, non ci serve in realtà avere un server DNS il quale introduce solo un overhead. In questo caso possiamo basare la comunicazione in modo che sia information-based, cioè basato su URL e non su IP.
+# Idea
+Un subscriber, connesso alla rete tramite livello 2, manifesta l'interesse per un topic/interest (espresso da un URL). L'interesse si propaga tra i partecipanti della rete e quando un partecipante riceve un interest lo memorizza in una tabella dove ogni interst può essere pendente o risolto. Se l'interest è risolto vuol dire che lui aveva questo URL e lo invia al mittente (o ai mittenti) di quel interest e tornando indietro si raggiunge il destinatario; se è pendente allora lo propaga ad altri con l'idea che se la tete è piccola allora prima o poi si raggiunge la destinazione. La risposta dipende dal tipo di interest ($subscribe$ o $get$): se è $subscribe$ allora la risposta è sincrona; se è $get$ allora la risposta deve esserci subito.

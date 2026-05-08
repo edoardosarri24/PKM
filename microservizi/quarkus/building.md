@@ -11,7 +11,7 @@ Quarkus utilizza Mandrel come distribuzione di GraalVM; questo tool è in grado 
 Il comando da utilizzare è $\texttt{quarkus build --native}$.
 # Containerization
 Se non siamo su una macchina Linux o vogliamo poi distribuire il nostro codice allora dobbiamo passare dai [container](container.md).
-Quarkus permette di costruire un'[immagine docker](images.md) e di fare il push su un [registry](images.md#Registry) (Docker Hub di deafult) in modo molto semplice.
+Quarkus permette di costruire un'[immagine docker](immagine.md) e di fare il push su un [registry](immagine.md#Registry) (Docker Hub di deafult) in modo molto semplice.
 ##### Tool
 Per eseguire la build e fare il pushing si utilizza uno dei seguenti tool (con le relative estensioni). Tra uno e l'altro possono cambiare i concetti sottostanti, ma la loro manipolazione è la stessa.
 - Jib

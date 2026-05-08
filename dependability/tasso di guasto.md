@@ -2,7 +2,7 @@
 A parte per il caso [costante](#Costante), il tasso di guasto può essere rappresentato tramite più [distribuzioni](failure%20rate%20distribution.png); l'idea è rappresentare le varie zone (o l'intera) della bath curve tramite curve diverse.
 ##### Bath curve
 In generale il tasso di guasto un andamento che segue la [bath curve](bath%20curve.png):
-- La prima zona è relativa ai difetti di fabbrica e alla mortalità infantile.Abbassare il tasso di guasto in questa zona vuol dire diminuire il numero di prodotti restituiti che sono ancora in garanzia e quindi diminuire i costi per l'azienda. Una tecnica è quella dello [stress screening](Software%20Engineering/dependability/misure.md#Classi).
+- La prima zona è relativa ai difetti di fabbrica e alla mortalità infantile.Abbassare il tasso di guasto in questa zona vuol dire diminuire il numero di prodotti restituiti che sono ancora in garanzia e quindi diminuire i costi per l'azienda. Una tecnica è quella dello [stress screening](dependability/misure.md#Classi).
 - La zona di mezzo è quella dove il prodotto si è stabilizzato.
 - L'ultima zona è relativa all'usura.
 # Costante
@@ -45,7 +45,7 @@ La [distribuzione gaussiana](distribuzione%20gaussiana.md) è utilizzata in ques
 Si tratta della random variable relativa al logaritmo del tasso di guasto e non del semplice tasso di guasto.
 È rappresenta dalla normale dove alla dimensione tempo abbiamo applicato il logaritmo e quindi abbiamo che la distribuzione è più schiacciata verso i valori più piccoli, il che la rende ottima per [rappresentare](tasso%20di%20guasto%20lognormale.png) la prima parte della vasca da bagno.
 # Test distruttivi
-Per decidere quale distribuzione utilizzare ci servono dei [dati campionari](Software%20Engineering/dependability/misure.md) sul tempo di guasto. I test che ci portano a questi risultati sono i test distruttivi: sono test accelerati, cioè prove dove si superano i valori nominali dei componenti per ridurre il tempo necessario a osservare l'effetto della sollecitazione, che solitamente portano il sistema a guastarsi.
+Per decidere quale distribuzione utilizzare ci servono dei [dati campionari](dependability/misure.md) sul tempo di guasto. I test che ci portano a questi risultati sono i test distruttivi: sono test accelerati, cioè prove dove si superano i valori nominali dei componenti per ridurre il tempo necessario a osservare l'effetto della sollecitazione, che solitamente portano il sistema a guastarsi.
 ##### Classificazione
 Ci sono diversi modi in cui portare avanti questi test e quindi diversi dati che posso ottenere:
 - Tempi di guasto

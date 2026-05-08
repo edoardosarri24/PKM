@@ -5,7 +5,7 @@ I problemi di questa soluzione sono: ogni dispositivo e ogni azienda espone le p
 I principi che stanno alla base di Network Function Virtualization (NFV) sono:
 - Le Network Function (NF) complesse vengono decomposte in funzioni più piccole e riutilizzabili, cioè vengono gestite a livello sw.
 - La gestione e l'organizzazione avviene tramite un orchestratore.
-### Vanaatggi
+### Vantaggi
 - Minimizza il tempo di attivazione di un nuovo servizio.
 - Minimizza i costi per l'attivazione e la gestione di un nuovo servizio.
 - Permette di utilizzare una singola rete per più applicazioni.

@@ -1,0 +1,2 @@
+Un [container](container.md) in [docker](docker.md) è per natura effimero: quando viene eliminato tutto quello che era al suo interno viene perso. Questo è un serio problema per le applicazioni reali e viene risolto tramite i volumi.
+Quando un container viene montato possiamo dire a Docker di memorizzare tutti i file in un volume. Teoricamente questo volume è come se fosse un hard disk esterno, in pratica è una cartella nella macchina host. In questo modo il ciclo di vita del volume diventa indipendente da quello del relativo container.

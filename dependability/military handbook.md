@@ -1,4 +1,4 @@
-Le banche dati sono dei documenti tecnici (non sono norme) nati in ambito militare che contengono un insieme di modelli matematici che permettono di fare [previsione](Software%20Engineering/dependability/misure.md#Analitico) dell'affidabilità, cioè di predire il tasso di guasto di un componente o di un sistema.
+Le banche dati sono dei documenti tecnici (non sono norme) nati in ambito militare che contengono un insieme di modelli matematici che permettono di fare [previsione](dependability/misure.md#Analitico) dell'affidabilità, cioè di predire il tasso di guasto di un componente o di un sistema.
 Il Military Handbook è la prima banca dati realizzata: non riceve aggiornamenti del proprio [modello](#Modello) di calcolo dal '95; sono aggiornati i guasti base $\lambda_{g}$ dai produttori e quindi è ancora utilizzata.
 ##### Supposizione
 Il military handbook si basa su delle ipotesi fondamentali:
