@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1f77f346bb62dbe6",
+        "id": "b28603d221035600",
         "type": "tabs",
         "children": [
           {
-            "id": "b6bf1bad0673ee9e",
+            "id": "0fab3881a50f5de9",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "analytical approximations in probabilistic analysis of real time systems"
-            }
-          },
-          {
-            "id": "6c49b4633a571bf6",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "critical instant for Probabilistic timing uarantees refuted and revisited.pdf"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -61,7 +47,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 214.5,
+    "collapsed": true
   },
   "right": {
     "id": "7dd79967413147f7",
@@ -145,36 +132,37 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "b6bf1bad0673ee9e",
+  "active": "0fab3881a50f5de9",
   "lastOpenFiles": [
-    "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
+    "Reti/network function virtualizzation.md",
+    "Reti/sdn/sdn.md",
+    "UniFi/ATIN.md",
+    "Reti/cloud computing.md",
+    "Reti/routing/routing.md",
+    "Reti/IoT/NFV.md",
+    "microservizi/SOA/sistemi distribuiti.md",
+    "Software Engineering/Pattern/Architectural pattern/Master-Slaves architecture.md",
+    "coding/Java/concorrenza.md",
+    "UniFi/Concorrenza Java.md",
+    "UniFi/Concorrenza (Java) SISTEMARE.md",
+    "coding/Java/Teoria.md",
+    "coding/Dinamic programming.md",
+    "matematica/Algebra lineare.md",
+    "coding/Tipi di linguaggi.md",
+    "coding/Tipizzazione.md",
+    "coding/sanitizer.md",
+    "coding/profiling.md",
+    "coding/object-oriented programming.md",
+    "coding/Java/Java 17.md",
+    "coding/Java/Java Platform.md",
+    "coding/Java/Java.md",
+    "data center.md",
+    "Senza nome.md",
+    "matematica/statistica/bande di confidenza.md",
     "UniFi/tesi/tesi.md",
+    "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
     "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
-    "dependability/rischio/analisi del rischio.md",
-    "explainable AI/Interpretability/Rule-based system.md",
-    "machine laerning/Machine learning.md",
-    "machine laerning/Metriche.md",
-    "machine laerning/Funzioni di loss.md",
-    "machine laerning/Regolarizzazione.md",
-    "machine laerning/Ensamble.md",
-    "machine laerning/Decision tree.md",
-    "machine laerning/Apprendimento supervisionato.md",
-    "machine laerning/Deep learning/CNN/Convolutional neural network (CNN).md",
-    "machine laerning/Deep learning/CNN/AlexNet.md",
-    "machine laerning/Deep learning/Deep learning.md",
-    "machine laerning/Deep learning/Continual learning.md",
-    "microservizi/ricevimento/risorse.md",
-    "microservizi/ricevimento/ingredienti.md",
-    "microservizi/ricevimento/assegnamento.md",
-    "microservizi/CAP theorem.md",
-    "microservizi/problemi reali.md",
-    "microservizi/teniche di decomposizione.md",
-    "microservizi/microservizi.md",
-    "microservizi/fallimenti.md",
-    "microservizi/carico.md",
-    "data center.md",
-    "dependability/rischio/gestione del rischio.md",
     "sistemi operativi/virtualizzazione/file/hypervisor type.png",
     "sistemi operativi/virtualizzazione/docker",
     "Reti/sdn/application plane/file/defence4all architecture.png",
@@ -188,7 +176,6 @@
     "matematica/polinomi/file",
     "risorse/paper/matematica/bernstein/approximation of cumulative distribution functions by bernstein phase-type distributions.pdf",
     "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
-    "risorse/paper/matematica/bernstein",
     "Reti/IoT/file/ETSI atchitecture NFV.png",
     "Real time/file/periodic task implementation.png",
     "Real time/timing analysis/file/pWCET.png",

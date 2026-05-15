@@ -2,7 +2,7 @@ Java è una piattaforma che ha lo scopo di rendere indipendente l’esecuzione d
 
 - Java è un linguaggio con [tipizzazione statica](Tipizzazione.md).
 - Esegue chiamate per [riferimento](Chiamata%20funioni%20(OOP).md). Viene passato il valore della locazione di memoria dove si trova l’oggetto.
-- [Teoria](Teoria%20Java.md)
+- [Teoria](Teoria.md)
 ## LIBRERIE STANDAND
 Forniscono i componenti essenziali, cioè le API, per sviluppare applicazioni.
 Le librerie sono organizzate in package; ogni package contiene un insieme di altri pacchetti, interfacce e classi correlate che forniscono funzionalità specifiche. Da specificare che i pacchetti non sono nested: pacchetti con prefissi uguali non sono correlati.

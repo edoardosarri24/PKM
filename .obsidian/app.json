@@ -144,7 +144,8 @@
     "entry",
     "handshake",
     "clock",
-    "monomiale"
+    "monomiale",
+    "middlebox"
   ],
   "promptDelete": false,
   "pdfExportSettings": {

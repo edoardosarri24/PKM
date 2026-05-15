@@ -9,9 +9,9 @@ Il laplanciano $L$ di un grafo è definito sulla [matrice dei gradi](grafi%20ind
 	Questo vuol dire che, dato un vettore stato (dove $x_i$ è lo stato dell'$i$-esimo nodo) $x\in\mathbb{R}^N$ con $N$ nodi, la forma quadratica mi fornisce una misura di disaccordo (i.e., $x_i-x_j$) tra i nodi del grafo.
 	Vedi dimostrazione slides 3 pagina 26-27.
 # Spettro
-Definiamo lo spettro del laplanciano come $\{\lambda_1,\cdots,\lambda_N\}$, con $\lambda_i$ $i$-esimo [autovalore](algebra%20lineare.md#Autovalori).
+Definiamo lo spettro del laplanciano come $\{\lambda_1,\cdots,\lambda_N\}$, con $\lambda_i$ $i$-esimo [autovalore](Algebra%20lineare.md#Autovalori).
 ##### Proprietà
-- Dalle proprietà degli [autovalori](algebra%20lineare.md#Autovalori), siccome il laplanciano è simmetrico e semidefinito positivo, abbiamo che $0\le\lambda_1\le\cdots\lambda_N$ con $\lambda_i\in\mathbb{R}$.
+- Dalle proprietà degli [autovalori](Algebra%20lineare.md#Autovalori), siccome il laplanciano è simmetrico e semidefinito positivo, abbiamo che $0\le\lambda_1\le\cdots\lambda_N$ con $\lambda_i\in\mathbb{R}$.
 - Il più piccolo autovalore dello spettro del laplanciano è $\lambda_1=0$ e il relativo autovettore è $v_1=\tfrac{1}{\sqrt{N}}\mathbb{1}$. Si sceglie questo autovettore perché è prassi scegliere gli autovalori di norma unitaria; si può fare perche in generale se $v$ è un autovalore allora anche $\alpha v$ è un autovalore.
 	Vedi dimostrazione slides 3 pagina 33.
 - Il più grande autovalore dello spettro del laplanciano è $\lambda_N\le2d_{max}$, dove $d_{max}$ è il massimo grado di un nodo.

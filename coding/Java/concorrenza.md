@@ -1,8 +1,3 @@
----
-Professore: Michele Boreale
-Esame: 2023-01-23
-Voto: 20
----
 ## VARIABILI
 - Rendendo una variabile $volatile$ essa deve essere sempre letta e scritta dalla RAM e non dalla cache del processore. Questo impedisce il caching dei processori (Ottimizzazione per cui ogni processore ha una propria cache dove tiene i dati che sua prima di metterli nella RAM).
 - Usare comandi atomici LCR (Che fanno al più un accesso alla memoria globale, cioè quella condivisa) serve per mantenere l'atomicità a livello assembly. Si fa usando variabili locali.
@@ -57,3 +52,6 @@ Voto: 20
 	- Asimmetrico e sincrono
 	- Con canali sincroni: il canale su cui il server deve rispondere è inviato insieme al messaggio.
 	- Con Socket di $java-net$.
+# VARIE
+- Statico
+	Se un metodo statico deve essere eseguito in mutua eslcusione si possono usare tutti i modi normali. In questo caso il lock o il semaforo deve essere statici (perché non ci saranno istanze); se si usa il meccanismo nativo _Synchronized_ allora il lock diventa quello di classe _Class_ (A runTime sarà di tipo _MyClass.Class_).

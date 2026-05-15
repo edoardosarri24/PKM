@@ -1,7 +1,7 @@
 xxMolti degli algoritmi per imparare [alberi decisionali](Decision%20tree.md) sono greedy: a ogni livello viene presa la miglior decisione senza basarci sui livelli superiori o inferiori. In questo modo non c'è garanzia di ottimalità sulla profondità.
 In generale trovare un albero di decisione ottimo è un problema np-hard. Usare alberi ottimi permetti di avere i vantaggi di [interpretabilità](Interpretability.md) degli alberi di decisione e di avere un'ottimalità nella dimensione.
 ##### Idea
-L'idea degli optimal decsione tree è quella di definire l'albero ottimo tramite metodi di [Dinamic programming](varie/Dinamic%20programming.md).
+L'idea degli optimal decsione tree è quella di definire l'albero ottimo tramite metodi di [Dinamic programming](coding/Dinamic%20programming.md).
 L'albero è definito come $tree^*=\displaystyle\min_{tree}\sum_{i=1}^nL(x_i,y_i,tree)+\lambda(\#leave(tree))$ tale che $depth(tree)\le D$.
 - Il primo termine della sommatoria definisce la loss della classificazione, cioè quanto bene $tree$ classifica il train set.
 - Vincolo sotf
