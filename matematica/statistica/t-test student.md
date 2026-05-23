@@ -1,4 +1,4 @@
-Il test di Student (t-test) è un test statistico parametrico (basato su un parametro di una distribuzione, come media o varianza) usato per valutare se la media si discosta significativamente da un valore di riferimento.
+Il test di Student (t-test) è un test statistico parametrico (i.e., basato su un parametro di una distribuzione, come media o varianza) usato per valutare se la media si discosta significativamente da un valore di riferimento.
 # Stima della varianza
 Il suo utilizzo principale è quello di stimare la varianza (o la deviazione standard) di dati di cui non abbiamo tutte le statistiche esatte. Un esempio è quello di dati campionari ottenuti da una distribuzione non nota, cioè ottenuti da esperimenti.
 La varianza della distribuzione viene stimata tramite lo stimatore della varianza campionario $s^2=\displaystyle\tfrac{\sum_{i=1}^n(x_i-\bar{x})}{n-1}$, dove $n$ è il numero di campioni e $\bar{x}$ è la media campionaria.

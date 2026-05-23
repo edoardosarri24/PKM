@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b28603d221035600",
+        "id": "e6d19606512a8b84",
         "type": "tabs",
         "children": [
           {
-            "id": "0fab3881a50f5de9",
+            "id": "cf8cc54621402c9a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UniFi/tesi/per laurearsi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "per laurearsi"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -136,10 +131,13 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "0fab3881a50f5de9",
+  "active": "cf8cc54621402c9a",
   "lastOpenFiles": [
-    "UniFi/tesi/MODULO_INIZIO_TESI_LM.pdf",
+    "matematica/statistica/z test.md",
+    "matematica/statistica/t-test student.md",
+    "microservizi/MicroProfile/metriche/MicroMeter.md",
     "UniFi/tesi/per laurearsi.md",
+    "UniFi/tesi/MODULO_INIZIO_TESI_LM.pdf",
     "dependability/safety.md",
     "Reti/network function virtualizzation.md",
     "Reti/sdn/sdn.md",
@@ -162,8 +160,6 @@
     "coding/object-oriented programming.md",
     "coding/Java/Java 17.md",
     "coding/Java/Java Platform.md",
-    "coding/Java/Java.md",
-    "data center.md",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
     "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
@@ -179,7 +175,6 @@
     "matematica/polinomi/file/bernstein basis.png",
     "matematica/polinomi/file",
     "risorse/paper/matematica/bernstein/approximation of cumulative distribution functions by bernstein phase-type distributions.pdf",
-    "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
     "Reti/IoT/file/ETSI atchitecture NFV.png",
     "Real time/file/periodic task implementation.png",
     "Real time/timing analysis/file/pWCET.png",
