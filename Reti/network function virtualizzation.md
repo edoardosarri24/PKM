@@ -1,7 +1,8 @@
 Le funzioni di rete sono solitamente installate in dispositivi di rete (e.g., ), detti dispositivi middlebox i quali implementano una sola funzionalità.
-Con le Networ Function Virtualizzation (NFV) vogliamo virtualizzare tutte le funzioni di rete con l'idea di disaccoppiarle dall'hardware su cui eseguono; questa idea è già introdotta da [sdn](sdn.md), il quale però a livello teorico opera fino al livello 4 di [TCP/IP](TCP%20IP.md) e quindi si occupa dell'instradamento.
+Con le Networ Function Virtualizzation (NFV) vogliamo virtualizzare tutte le funzioni di rete con l'idea di disaccoppiarle dall'hardware su cui eseguono; questa idea è già introdotta da [sdn](sdn.md), il quale però a livello teorico opera fino al livello 4 di [TCP/IP](TCP%20IP.md) e quindi si occupa solo dell'instradamento.
 # Funzioni di rete
 Le funzioni di rete virtuali (Virtual Network Functions, VNF) sono servizi costruiti per la rete e che senza di lei non avrebbero senso: elaborano quindi informazioni che sono in transito su di essa e non che sono ferme in un server.
+Le VNF sono [virtuali](virtualizzazione.md), cioè eseguite su Virtual Machine o Docker: una volta definita una funzione di rete si può eseguire su più nodi.
 ##### Dimensioni
 Ogni funzione di rete può essere scomposta in tre dimensioni:
 - Rete
@@ -19,6 +20,50 @@ Ogni funzione di rete può essere scomposta in tre dimensioni:
 	È una funzione che inoltra un pacchetto a un server in modo da massimizzare una qualche metrica.
 - Anonimizzatore
 	Funzione che anonimizza l'IP di un host. È simile al NA ma il suo compito è focalizzato sull'uscamento, mentre il NAT è quello di permettere la comunicazione tra più host in una rete con l'esterno.
+# Network service
+Dal punto di vista concettuale un servizio di rete è ciò che viene fornito all'utente. Da un punto di vista tecnico un servizio di rete è un grafo di funzioni di rete connesse da un'infrastruttura.
+##### Network Fucntion Forwarding Graph
+Una funzione di rete (VNF) è un insieme di VNFc (VNF component), attività più semplici che sono connesse tra loro e orchestrate.
+L'ordine con cui sono eseguite le funzioni e gli end point che le usano sono definite dal Network Fucntion Forwarding Graph (NF-FG). I collegami in un NF-FG sono le interfacce logiche (vedi architettura).
+Un NF-FG permette di astratte completamente dal livello fisico, senza preoccuparsi quindi di come i dati vengono scambiati dalla rete, e dove la funzione di rete è effettivamente eseguita. Inoltre possiamo creare NF-FG che sono astrazioni di altri grafi, dove quindi un nodo è a sua volta un sottografo.
+##### Architettura
+L'architettura su cui si basano i servizi è composta da:
+- End point
+	Sono i device dei clienti. L'operatore non ha nessuna influenza su questi.
+- Network Function
+	Sono le funzioni di rete che implementano servizi per l'utente.
+- Infrastruttura fisica
+	Sono i nodi su cui le funzioni di rete virtuali eseguono realmente e le connessioni tra loro. Una funzione di rete virtuale può eseguire su più nodi e uno stesso nodo può gestire più funzioni di rete.
+- Interfacce logiche
+	Le funzioni di rete e gli end point comunicano tra loro con canali virtuali: vuol dire che possono parlare ma i dati effettiva passano dall'infrastruttura fisica.
+# Architettura
+L'architettura del framework NFV è composta da varie parti: NFVI, VNF e NFV-MANO. La prima e la più importante referenza a questo è lo standard ETSI.
+![NFV architeccture](NFV%20architeccture.png)
+##### NFVI
+Si tratta della NFV Infrastructure, un insieme di computing, storage e rete.
+Sopra il livello fisico abbiamo un layer di virtualizzazione; chi interagisce con l'infrastruttura non ha conoscenza delle vere risorse fisiche e il livello di virtualizzazione.
+- Le risorse di computing sono general purpose, dove ogni funzione può eseguire in ogni nodo.
+- Le risorse di rete servono per trasportare i dati tra i vari nodi.
+##### NFV-MANO
+Il MANO è il MAnagement and Orchestration layer che ha visione sia delle NFV e dell'NFVI e si occupa orchetsrare il ciclo di vita dell VFN.
+È composto da tre blocchi:
+- VIM
+	È il Virtualized Infrastructure Manager. Gestisce le risorse fisiche e la loro virtualizzazione.
+	In ambienti complessi ci possono essere più VIM, ognuno dei quali gestisce una partizione di nodi.
+- VFNM
+	È il Virtual Network Function Manager. Gestisce il ciclo di vita delle funzioni di rete, visto che ognuna di quest epuò essere composta da una o più VNFc.
+	In pratica si occupa di: istanziare nuove VNF; modifica e aggiornamento del codice di una VNF; scalilabilità delle VNF; raccolta dei dati a runtime; terminazione delle VNF
+- NFVO
+	È l'NFV Orchestrator che orchestra due ambiti:
+	- Risorse
+		Gestisce (i.e., autorizza e impegna) le risorse di rete, assegnandole ai vari VIM.
+	- Servizi
+		Crea su base E2E i servizi di rete, gestendo quindi l'interazione dell VNF per la creazione di tale servizio.
+##### VNF
+In questo livello sono presenti:
+- Le NF effettive.
+- EM
+	È l'Element Manager, un componente che si occupa di gestire i falli, le configurazioni, le performance e la sicurezza di una NF.
 # Conseguenze
 I problemi che ci sono nell'eseguire le funzioni di rete in middlebox, e che sono risolti da NFV, sono principalmente:
 - Il costo iniziale. Spesso sono il 50% dei dispositivi di rete totali.
@@ -29,40 +74,5 @@ I problemi che ci sono nell'eseguire le funzioni di rete in middlebox, e che son
 - Si disaccoppia hardware e software.
 - Possiamo scalare le funzioni in quantità e posizione.
 - Posisamo comprare le funzioni di rete da diversi furnitori software.
-- Funzioni complesse (VNF) possono essere scomposte in attività più semplici (VNF component, VFNc) e poi connesse e orchestrate.
-
 ##### Svantaggi
 - Le prestazioni diminuiscono perché l'implementazione passa da essere hardware (i.e., eseguite in un dispositivo specializzato) a essere software.
-
-
-
-
-
-
-### Principi
-I principi che stanno alla base di Network Function Virtualization (NFV) sono:
-- Le Network Function (NF) complesse vengono decomposte in funzioni più piccole e riutilizzabili, cioè vengono gestite a livello sw.
-- La gestione e l'organizzazione avviene tramite un orchestratore.
-### Vantaggi
-- Minimizza il tempo di attivazione di un nuovo servizio.
-- Minimizza i costi per l'attivazione e la gestione di un nuovo servizio.
-- Permette di utilizzare una singola rete per più applicazioni.
-# ARCHITETTURA
-La prima architettura NFV, e quella più importante, è [l'architettura di European Telecomunication Stardand Institude (ETSI)](ETSI%20atchitecture%20NFV.png).
-### Network Functions Virtualization Infrastructure (NFVI)
-È l'hw generico dove sono in esecuzione in modo virtualizzato molte e diverse NF. Non si parla di hw localizzato, ma che segue il principio del cloud: è ditribuito su una serie di nodi (server).
-I componenti hw che appartengono a questo livello sono la potenza computazionale, la memoria e la rete.
-### Funzioni VNF/VNFC
-È la parte sw, eseguita come Saas nei cloud.
-Il vari sw possono essere eseguiti o in una Virtual Machine (VM) o in un container: nel primo caso prendono il nome di Virtualized Network Function (VNF), mentre nel secondo di Virtualized Network Function Component (VNFC).
-### Orchestratore MANO
-Il MAnagement and Netowrk Orchestration (MANO) è la parte fondamentale dell'architettura NFV. Si divide in tre parti, ognuna delle quali opera a un livello diverso.
-##### Orchestratore
-Il suo compito è l'installazione di un nuovo servizio, gestendone l'intero ciclo di vita. Opera ad alto livello, disaccoppiando le VNF/VNFC dall'infrastruttura NFVI, cioè le funzioni dalle risorse del sistema.
-##### VNF Manager
-Gestisce il ciclo di vita di ogni istanza VNF/VNFC: configurazione, creazione, allocazione delle risorse e loro monitoraggio, migrazione e terminazione.
-##### Virtualized Inrastructure Manager (VIM)
-Gestisce l'interazione tra le VNF e le risorse di elaborazione, memorizzazione e rete e la loro virtualizzazione.
-Gestisce la visibilità delle risorse e indica la loro disponibilità a chi ne fa richiesta.
-Esegue la raccolta e l'analisi dei dati sulle prestazioni delle risorse, esegue il loro monitoraggio e l'ottimizazione.
-- Per controllare la connessione di queste risorse di include nell'architettura NFV il controller SDN, che conoscendo la rete nel suo insieme può gestire al meglio i vari collegamenti.

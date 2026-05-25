@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e6d19606512a8b84",
+        "id": "f2be66570a17a8a1",
         "type": "tabs",
         "children": [
           {
-            "id": "cf8cc54621402c9a",
+            "id": "503bb542b9e7c27e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Reti/network function virtualizzation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "network function virtualizzation"
             }
           }
         ]
@@ -131,17 +136,24 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "cf8cc54621402c9a",
+  "active": "503bb542b9e7c27e",
   "lastOpenFiles": [
+    "sistemi operativi/virtualizzazione/virtualizzazione.md",
+    "sistemi operativi/virtualizzazione/virtual machine.md",
+    "Reti/network function virtualizzation.md",
+    "Reti/File/NFV architeccture.png",
+    "Reti/File/Figura 3.8.png",
+    "Reti/IoT/file/ETSI atchitecture NFV.png",
+    "UniFi/ATIN.md",
+    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
+    "UniFi/tesi/tesi.md",
     "matematica/statistica/z test.md",
     "matematica/statistica/t-test student.md",
     "microservizi/MicroProfile/metriche/MicroMeter.md",
     "UniFi/tesi/per laurearsi.md",
     "UniFi/tesi/MODULO_INIZIO_TESI_LM.pdf",
     "dependability/safety.md",
-    "Reti/network function virtualizzation.md",
     "Reti/sdn/sdn.md",
-    "UniFi/ATIN.md",
     "Reti/cloud computing.md",
     "Reti/routing/routing.md",
     "Reti/IoT/NFV.md",
@@ -157,11 +169,7 @@
     "coding/Tipizzazione.md",
     "coding/sanitizer.md",
     "coding/profiling.md",
-    "coding/object-oriented programming.md",
-    "coding/Java/Java 17.md",
-    "coding/Java/Java Platform.md",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
-    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
     "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
     "sistemi operativi/virtualizzazione/file/hypervisor type.png",
     "sistemi operativi/virtualizzazione/docker",
@@ -175,10 +183,7 @@
     "matematica/polinomi/file/bernstein basis.png",
     "matematica/polinomi/file",
     "risorse/paper/matematica/bernstein/approximation of cumulative distribution functions by bernstein phase-type distributions.pdf",
-    "Reti/IoT/file/ETSI atchitecture NFV.png",
     "Real time/file/periodic task implementation.png",
-    "Real time/timing analysis/file/pWCET.png",
-    "modelli formali/file/MIL-STD-498 and V-model.png",
     "Senza nome.canvas"
   ]
 }
