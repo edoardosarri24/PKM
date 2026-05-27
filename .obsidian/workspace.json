@@ -4,22 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f2be66570a17a8a1",
+        "id": "f3f46833332448f0",
         "type": "tabs",
         "children": [
           {
-            "id": "503bb542b9e7c27e",
+            "id": "0ebed818c1be072f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Reti/network function virtualizzation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf"
               },
-              "icon": "lucide-file",
-              "title": "network function virtualizzation"
+              "icon": "lucide-file-text",
+              "title": "analytical approximations in probabilistic analysis of real time systems"
             }
           }
         ]
@@ -136,39 +133,38 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "503bb542b9e7c27e",
+  "active": "0ebed818c1be072f",
   "lastOpenFiles": [
+    "UniFi/tesi/tesi.md",
+    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
+    "coding/C++/STL/random.md",
+    "coding/C++/funzioni.md",
+    "coding/C++/functor.md",
+    "coding/C++/costruttore.md",
+    "coding/C++/eccezioni.md",
+    "coding/C++/ereditarietà.md",
+    "coding/C++/classi.md",
+    "coding/C++/costanza.md",
+    "reinforcement learning/model-free policy evaluation.md",
+    "reinforcement learning/markov decision process.md",
+    "reinforcement learning/equazione di Bellman.md",
+    "reinforcement learning/Q-learning/Q-table approximation.md",
+    "reinforcement learning/Q-learning/Q-learning.md",
+    "reinforcement learning/Q-learning/action-value function.md",
+    "reinforcement learning/reiforcement learning.md",
+    "Reti/network function virtualizzation.md",
     "sistemi operativi/virtualizzazione/virtualizzazione.md",
     "sistemi operativi/virtualizzazione/virtual machine.md",
-    "Reti/network function virtualizzation.md",
     "Reti/File/NFV architeccture.png",
     "Reti/File/Figura 3.8.png",
     "Reti/IoT/file/ETSI atchitecture NFV.png",
     "UniFi/ATIN.md",
-    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "UniFi/tesi/tesi.md",
     "matematica/statistica/z test.md",
     "matematica/statistica/t-test student.md",
     "microservizi/MicroProfile/metriche/MicroMeter.md",
     "UniFi/tesi/per laurearsi.md",
     "UniFi/tesi/MODULO_INIZIO_TESI_LM.pdf",
     "dependability/safety.md",
-    "Reti/sdn/sdn.md",
-    "Reti/cloud computing.md",
-    "Reti/routing/routing.md",
-    "Reti/IoT/NFV.md",
-    "microservizi/SOA/sistemi distribuiti.md",
-    "Software Engineering/Pattern/Architectural pattern/Master-Slaves architecture.md",
-    "coding/Java/concorrenza.md",
-    "UniFi/Concorrenza Java.md",
-    "UniFi/Concorrenza (Java) SISTEMARE.md",
-    "coding/Java/Teoria.md",
-    "coding/Dinamic programming.md",
-    "matematica/Algebra lineare.md",
-    "coding/Tipi di linguaggi.md",
-    "coding/Tipizzazione.md",
-    "coding/sanitizer.md",
-    "coding/profiling.md",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
     "sistemi operativi/virtualizzazione/file/hypervisor type.png",

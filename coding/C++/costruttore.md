@@ -1,17 +1,18 @@
 Un costruttore è un metodo con lo stesso nome della [classe](classi.md) che non ha valore di ritorno. Serve per creare un oggetto senza chiamare direttamente $\texttt{malloc}$, ma usando l'astrazione del [C++](C++.md).
 ##### Sintassi
 La sintassi è:
-- $\texttt{Classe nome\_oggetto(param)}$ se per il costruttore con parametri.
+- $\texttt{Classe nome\_oggetto(param)}$ per il costruttore con parametri.
 - $\texttt{Classe nome\_oggetto()}$ o $\texttt{Classe nome\_oggetto}$ per il costruttore senza parametri, cioè il costruttore di default.
 ##### Default
 Se nessun costruttore è definito in una classe è il compilatore che ne crea uno senza argomenti e con un corpo vuoto.
 # Inizializzazione
 Lo scopo del costruttore è [inizializzare](istanziare%20oggetti.md#Pipeline) i campi degli oggetti. Questo in C++ si può fare in tre modi:
 - Assegnazione
-	Il classico modo usato anche in Java con l'operatore $\texttt{=}$.
+	Dentro il corpo del costruttore si usa l'operatore $\texttt{=}$ come in Java.
 - Lista di attributi
-	I campi in questa lista devono seguire l'ordine della loro dichiarazione.
-	La sintassi è $\texttt{Classe(tipo\_param nome\_param,...) : nome\_campo(nome\_param)}$.
+	Il corpo del costruttore si occupa di ulteriori operazioni che devono essere eseguite dopo la costruzione dell'oggetto.
+	I vantaggi sono: l'ordine di inizializzazione dei campi è quello dichiarati nel file $\texttt{.hpp}$; i campi vengono allocati e inizializzati nello stesso momento.
+	Quando si implementa il costruttore facciamo $\texttt{Classe(tipo\_param nome\_param,...) : nome\_campo(nome\_param)}$.
 - Inizializzazione uniforme
 	Si inizializzano i campi con un valore di defualt direttamente nella loro dichiarazione. Questo è lo stile preferito rispetto a mettere il valore di default nella lista di attributi (cosa fattibile) perché
 	La sintassi è $\texttt{tipo\_campo nome\_campo \{valore\_campo\}}$. Si usano quindi il valore di default all'interno di parentesi quadre.
