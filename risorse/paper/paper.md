@@ -1,4 +1,3 @@
-
 # Software understandability
 - [cognitive complexity - Sonar](cognitive%20complexity%20-%20Sonar.pdf)
 - [a complexity measure](a%20complexity%20measure.pdf)

@@ -15,4 +15,7 @@ La sintassi è $\texttt{tipo\_ritorno nome(param) const}$.
 # Espressione costante
 In C++ c'è la keyword $\texttt{constexpr}$ che può essere applicata a variabili (globali e locali) e funzioni.
 Il suo scopo è indicare al compilatore di inferire il suo valore durante la compilazione e non a run-time, aumentando di fatto le prestazioni a run-time.
-Quando ci sono delle variabili globali, ad esempio quelle usate per le configurazioni, allora è il modo giusto di dichiararle. Quello che succede in questi casi è che il compilatore le forzerà a essere $inline$, come se fossero delle [define](C.md#Costanti) del C, cioè le sostituisce effettivamente nel codice che le usa.
+Quando ci sono delle variabili globali, ad esempio quelle usate per le configurazioni nei file $\texttt{.hpp}$, allora è il modo giusto di dichiararle.
+##### Inline
+Senza $\texttt{inline}$ il compilatore dichiarerà le costanti come statiche: ogni file che importa l'header avrà la sua copia.
+Inline ha lo scopo di rendere unica in memoria (i.e., una sola copia con un solo indirizzo) l'oggetto a cui si riferisce (anche funzioni).

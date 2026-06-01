@@ -18,7 +18,6 @@ Lo scopo del costruttore è [inizializzare](istanziare%20oggetti.md#Pipeline) i 
 	La sintassi è $\texttt{tipo\_campo nome\_campo \{valore\_campo\}}$. Si usano quindi il valore di default all'interno di parentesi quadre.
 # Costruttore esplicito
 Per evitare di introdurre bug difficili da trovare a causa di comode conversioni esplicite che il compilatore esegue, si deve rendere un costruttore con un solo parametro esplicito.
-##### Sintassi
 La sintassi è $\texttt{explicit Classe(tipo\_param nome\_param)}$.
 ##### Problema risolto
 In C++ quando il compilatore vede un costruttore con un singolo argomento lo vede come una funzione di conversione: prende in input un tipo e deve restituire un oggetto. Può capitare che il compilatore esegua una conversione automatica ma sbagliata e che non dovrebbe essere fatta: se abbiamo un metodo che prende un oggetto $\texttt{ContoCorrente}$ con un solo campo $\texttt{int saldo}$ potrebbe essere che il compilatore crea al volo un oggetto $\texttt{ContoCorrente}$ convertendo il nostro interno.

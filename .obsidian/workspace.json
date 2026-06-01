@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf"
+                "file": "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf"
               },
               "icon": "lucide-file-text",
-              "title": "analytical approximations in probabilistic analysis of real time systems"
+              "title": "EPEW26_bernstein (1)"
             }
           }
         ]
@@ -135,16 +135,25 @@
   },
   "active": "0ebed818c1be072f",
   "lastOpenFiles": [
-    "UniFi/tesi/tesi.md",
-    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "coding/C++/STL/random.md",
-    "coding/C++/funzioni.md",
+    "risorse/paper/paper.md",
+    "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
+    "Reti/address resolution procol (ARP).md",
+    "Reti/network function virtualizzation.md",
+    "Reti/Security/Network security.md",
+    "coding/C++/classi.md",
     "coding/C++/functor.md",
+    "coding/C++/funzioni.md",
+    "coding/C++/file/Diamond_Inheritance_Problem.jpg",
+    "coding/C++/STL/bit.md",
     "coding/C++/costruttore.md",
+    "coding/C++/costanza.md",
+    "coding/C/C.md",
+    "coding/C++/staticità.md",
+    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
+    "UniFi/tesi/tesi.md",
+    "coding/C++/STL/random.md",
     "coding/C++/eccezioni.md",
     "coding/C++/ereditarietà.md",
-    "coding/C++/classi.md",
-    "coding/C++/costanza.md",
     "reinforcement learning/model-free policy evaluation.md",
     "reinforcement learning/markov decision process.md",
     "reinforcement learning/equazione di Bellman.md",
@@ -152,19 +161,12 @@
     "reinforcement learning/Q-learning/Q-learning.md",
     "reinforcement learning/Q-learning/action-value function.md",
     "reinforcement learning/reiforcement learning.md",
-    "Reti/network function virtualizzation.md",
     "sistemi operativi/virtualizzazione/virtualizzazione.md",
     "sistemi operativi/virtualizzazione/virtual machine.md",
     "Reti/File/NFV architeccture.png",
     "Reti/File/Figura 3.8.png",
     "Reti/IoT/file/ETSI atchitecture NFV.png",
-    "UniFi/ATIN.md",
-    "matematica/statistica/z test.md",
-    "matematica/statistica/t-test student.md",
-    "microservizi/MicroProfile/metriche/MicroMeter.md",
-    "UniFi/tesi/per laurearsi.md",
     "UniFi/tesi/MODULO_INIZIO_TESI_LM.pdf",
-    "dependability/safety.md",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
     "sistemi operativi/virtualizzazione/file/hypervisor type.png",
@@ -178,8 +180,6 @@
     "risorse/paper/matematica/bernstein/the_Bernstein_polynomial_basis_a_centennial_retrospective.pdf",
     "matematica/polinomi/file/bernstein basis.png",
     "matematica/polinomi/file",
-    "risorse/paper/matematica/bernstein/approximation of cumulative distribution functions by bernstein phase-type distributions.pdf",
-    "Real time/file/periodic task implementation.png",
     "Senza nome.canvas"
   ]
 }

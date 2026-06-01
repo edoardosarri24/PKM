@@ -1,5 +1,5 @@
 Le funzioni di rete sono solitamente installate in dispositivi di rete (e.g., ), detti dispositivi middlebox i quali implementano una sola funzionalità.
-Con le Networ Function Virtualizzation (NFV) vogliamo virtualizzare tutte le funzioni di rete con l'idea di disaccoppiarle dall'hardware su cui eseguono; questa idea è già introdotta da [sdn](sdn.md), il quale però a livello teorico opera fino al livello 4 di [TCP/IP](TCP%20IP.md) e quindi si occupa solo dell'instradamento.
+Con le Networ Function Virtualizzation (NFV) vogliamo virtualizzare tutte le funzioni di rete con l'idea di disaccoppiarle dall'hardware su cui eseguono (Point of Presence): possiamo quindi rappresentare funzioni di rete come un call graph di componenti che interagiscono. Questa idea è già introdotta da [sdn](sdn.md), il quale però a livello teorico opera fino al livello 4 di [TCP/IP](TCP%20IP.md) e quindi si occupa solo dell'instradamento.
 # Funzioni di rete
 Le funzioni di rete virtuali (Virtual Network Functions, VNF) sono servizi costruiti per la rete e che senza di lei non avrebbero senso: elaborano quindi informazioni che sono in transito su di essa e non che sono ferme in un server.
 Le VNF sono [virtuali](virtualizzazione.md), cioè eseguite su Virtual Machine o Docker: una volta definita una funzione di rete si può eseguire su più nodi.
