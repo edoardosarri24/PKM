@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf"
+                "file": "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "EPEW26_bernstein (1)"
+              "title": "analytical approximations in probabilistic analysis of real time systems"
             }
           }
         ]
@@ -135,8 +135,9 @@
   },
   "active": "0ebed818c1be072f",
   "lastOpenFiles": [
-    "risorse/paper/paper.md",
+    "UniFi/tesi/tesi.md",
     "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
+    "risorse/paper/paper.md",
     "Reti/address resolution procol (ARP).md",
     "Reti/network function virtualizzation.md",
     "Reti/Security/Network security.md",
@@ -150,7 +151,6 @@
     "coding/C/C.md",
     "coding/C++/staticità.md",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "UniFi/tesi/tesi.md",
     "coding/C++/STL/random.md",
     "coding/C++/eccezioni.md",
     "coding/C++/ereditarietà.md",
