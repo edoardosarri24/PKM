@@ -14,4 +14,3 @@ Oltre al classico comportamento di BGP, questa estensione permette di traferire,
 	Conoscendo anche il costo dei percorsi, si passa da un approccio basato sul numero di salti a un approccio basato sulle performance e sul [QoS](Reti/misure.md#QoS).
 - Capacità
 	Versioni dei software utilizzati e del tipo di serivizio che può passare dalla rete (e.g., VPN si o no).
-##### Wrapper

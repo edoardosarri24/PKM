@@ -4,19 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "f3f46833332448f0",
+        "id": "b733270f0322405c",
         "type": "tabs",
         "children": [
           {
-            "id": "0ebed818c1be072f",
+            "id": "95bb262080e7d88c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf"
+                "file": "Reti/sdn/control plane.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
-              "title": "analytical approximations in probabilistic analysis of real time systems"
+              "icon": "lucide-file",
+              "title": "control plane"
             }
           }
         ]
@@ -89,6 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Reti/TCP IP/TCP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti"
+              "title": "Riferimenti a TCP"
             }
           },
           {
@@ -133,36 +137,37 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "0ebed818c1be072f",
+  "active": "95bb262080e7d88c",
   "lastOpenFiles": [
-    "UniFi/tesi/tesi.md",
-    "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
-    "risorse/paper/paper.md",
-    "Reti/address resolution procol (ARP).md",
+    "Reti/Protocolli/border gateway protocol.md",
+    "Reti/sdn/control plane distribuito.md",
+    "Reti/sdn/control plane.md",
+    "Reti/sdn/network configuration protocol.md",
+    "Reti/sdn/OpenDaylight.md",
+    "Reti/routing/algoritmi con tabella.md",
     "Reti/network function virtualizzation.md",
-    "Reti/Security/Network security.md",
-    "coding/C++/classi.md",
-    "coding/C++/functor.md",
-    "coding/C++/funzioni.md",
-    "coding/C++/file/Diamond_Inheritance_Problem.jpg",
-    "coding/C++/STL/bit.md",
-    "coding/C++/costruttore.md",
-    "coding/C++/costanza.md",
-    "coding/C/C.md",
-    "coding/C++/staticità.md",
-    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "coding/C++/STL/random.md",
-    "coding/C++/eccezioni.md",
-    "coding/C++/ereditarietà.md",
-    "reinforcement learning/model-free policy evaluation.md",
-    "reinforcement learning/markov decision process.md",
-    "reinforcement learning/equazione di Bellman.md",
-    "reinforcement learning/Q-learning/Q-table approximation.md",
+    "Reti/sdn/OpenFlow.md",
+    "opneflow.md",
+    "matematica/polinomi/polinomi di Bernstein.md",
     "reinforcement learning/Q-learning/Q-learning.md",
     "reinforcement learning/Q-learning/action-value function.md",
+    "reinforcement learning/Q-learning/Q-table approximation.md",
+    "reinforcement learning/value iteration.md",
+    "NLP/document analysis/OCR.md",
+    "NLP/document analysis/multi-modal model.md",
+    "NLP/document analysis/layout analysis.md",
+    "NLP/document analysis/document pre-processing.md",
+    "NLP/document analysis/document analysis.md",
+    "reinforcement learning/model-free policy evaluation.md",
+    "data center.md",
+    "reinforcement learning/policy.md",
+    "reinforcement learning/policy iteration.md",
     "reinforcement learning/reiforcement learning.md",
-    "sistemi operativi/virtualizzazione/virtualizzazione.md",
-    "sistemi operativi/virtualizzazione/virtual machine.md",
+    "reinforcement learning/value function.md",
+    "multiagent system/multi objective MAS/coverage.md",
+    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
+    "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
+    "coding/C++/file/Diamond_Inheritance_Problem.jpg",
     "Reti/File/NFV architeccture.png",
     "Reti/File/Figura 3.8.png",
     "Reti/IoT/file/ETSI atchitecture NFV.png",

@@ -22,3 +22,15 @@
 - [information comunication network](information%20comunication%20network.md)
 - [data center](data%20center.md)
 - [network function virtualizzation](network%20function%20virtualizzation.md)
+# Esame
+Come si fa:
+- Capire che servizio di rete si deve implementare.
+	Questo si può guardare dal punto di vista di un client: cosa ottiene con la nostra implementazione?
+- Flussi
+	Capire quali sono i flussi che il servizio deve fornire: un flusso è un passaggio di dati.
+	Ad esempio in un NAT abbiamo un flusso di registrazione, uno di richiesta e uno di risposta.
+- Capire dove i flussi transitano, cioè capire dove mettere gli switch sdn.
+- Definire il control plane.
+	Può essere centralizzato o distributo.
+- Capire come il controllore controlla il data plane tramite openflow table e openflow rules.
+	Mettere qualche tabella o qualche regola: ogni regola avrà un match e un action; si possono usare i contatore, i timer.

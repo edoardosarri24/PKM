@@ -27,19 +27,19 @@ Le tabelle contengono le regole di inoltro che devono essere applicate ai pacche
 - Flow tables
 	Uno switch può avere più tabelle (si parte dalla tabella 0). Questo permette di realizzare il [Single responsability principle](Single%20responsability%20principle.md): ogni tabella gestisce il controllo di una sola parte. Inoltre si evita di avere regole molto complesse con molte combinazioni logiche.
 - Group tables
-	Sono tabelle che permettono di definire dei gruppi, dove ogni gruppo è composto da più bucket, dove un busket è una lista di azioni.
-	A seconda del tipo di gruppo la selezione dell'azione è diversa:
+	Un gruppo è un insieme di bucket, dove un bucket è un insieme di azioni; se un pacchetto viene assegnato a un gruppo (tramite l'action in sequito a un match su una flow table) allora viene scelto uno o più (se più il pacchetto viene duplicato) buckets a cui assegnare il pacchetto. Il tipo di gruppo permette di definire come scegliere il bucket:
 	 - ALL
-		Si eseguono tutti i bucket.
+		Il pacchetto viene duplicato su tutti i bucket.
 	 - SELECT
 		Lo switch deve decidere un solo bucket.
+		Possiamo stabilire un peso con cui scegliere il bucket (e.g., 50% da una parte e 50% dall'altra).
 	 - FAST FAILOVER
-		Si seleziona un bucket; se questo non è disponibile allora si passa al successivo. Richiede almeno due bucket.
-		Si seleziona l'azione secondo priorità; se la prima azione non può essere eseguita allora si passa a quella dopo.
+		Ogni bucket ha una priorità; si parte da quella con priorità più alta; se questa non è disposibile allora si passa a quella dopo. Richiede quindi almeno due bucket.
 	 - INDIRECT
 		È un'astrazione per regole che hanno comportamenti comuni. In questo modo se vogliamo modificare il comportamento di tutte queste regole dobbiamo toccare un solo punto.
 - Meter tables
-	È una tabella che permette di implementare la [QoS](Reti/misure.md#QoS) tenendo conto di alcune metriche (e.g., throughtput). L'idea è di raccogliere informazioni sulle performance dello switch, e di comportaresi di conseguenza per evitare che la velocità di inoltre diminuisca di un certo valore soglia.
+	È una tabella che permette di implementare la [QoS](Reti/misure.md#QoS) tenendo conto di alcune metriche (e.g., throughtput con pacchetti/secondo). L'idea è di raccogliere informazioni sulle performance dello switch, e di comportaresi di conseguenza per evitare che la velocità di inoltre diminuisca di un certo valore soglia.
+	Un possibile uso è implementare degli $\texttt{if-then}$ basati sulle performance: se il pacchetto fa eccedere la soglia della banda allora si modifica un campo dell'header IPv4 (i.e., parte del campo [type of service](IPv4.md#HEADER)); a questo punto si può mandare il pacchetto ad un'altra tabella che fa il match su questo campo cambiato e quindi inviare il pacchetto al controller per poi prendere decisioni.
 ##### Entry filed
 Le tabelle sono composte da regole dette entry. Ogni entry ha dei campi che la definiscono.
 - Campi per il maching.

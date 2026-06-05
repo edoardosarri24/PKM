@@ -6,9 +6,10 @@ Il control plane dialoga con il [data plane](data%20plane.md) e l'[application p
 L'interfaccia nord è il punto di contatto tra control plane e [application plane](application%20plane.md). Non esistono protocolli standard come per la sud, ma solitamente il control plane espone delle API [REST](REST.md).
 Ci sono diversi livelli di granularità che tali API pososno esporre: il livello più basso tocca le primitive del controller con cui gli sviluppatori possono costruire i servizi di rete di base; il livello applicativo può usare servizi di rete già pronti (e.g., routing o [QoS](Reti/misure.md#QoS)); usare non solo servizi di rete ma altre applicazioni.
 ##### Sud
-Permette la comunicazione e la riprogrammazione dei dispositivi di rete. Utilizza il protocollo TLS su TCP; la gestione degli switch è fatta con [NETCONF](network%20configuration%20protocol.md) e [OpenFlow](OpenFlow.md).
+Permette la comunicazione e la riprogrammazione dei dispositivi di rete. Utilizza il protocollo TLS su TCP.
+Come prima cosa per creare l'interfaccia si deve usare [NETCONF](network%20configuration%20protocol.md); dopo che il dispositivo conosce tutto si deve [creare il NIB](#Link%20discovery). Dopo tutto ha senso usare [OpenFlow](OpenFlow.md) per creare le regole.
 ##### East/West
-Si tratta di un canale di comunicazione tra controller. Per far collaborare due domini diversi si utilizza il [SDNi](border%20gateway%20protocol.md#SDNi).
+Si tratta di un canale di comunicazione tra [più controller](control%20plane%20distribuito.md). Per far collaborare due domini diversi si utilizza il [SDNi](border%20gateway%20protocol.md#SDNi); per parlare la prima volta devono conoscere l'indirizzo IP l'uno dell'altro (non si può fare automaticamente questo).
 Una delle due interfacce (e.g., east) è delegata alla comunicazione tra controller di [pari livello](control%20plane%20distribuito.md#Un%20livello) mentre l'altra (e.g., west) è per la comunicazione tra [livelli adiacenti](control%20plane%20distribuito.md#Due%20livelli).
 # Implementazioni
 Le implementazioni del control plane possono essere sia proprietarie che open.
@@ -21,10 +22,9 @@ Le implementazioni del control plane possono essere sia proprietarie che open.
 - Onix
 	Controller proprietario di Google.
 # Grafo di rete
-Per implementare il [routing](routing.md) in modo centralizzato il controller ha una visione del grafo di rete completa.
-Per far funzionare il routing, il Controller SDN esegue due compiti fondamentali: link discovery e topology manager. Grazie a questi può creare, manutenere e utilizzare il NIB (Network Information Base).
+Per implementare il [routing](routing.md) in modo centralizzato il controller ha una visione del grafo di rete completa, detto NIB (Network Information Base).
 ##### Link discovery
-Per scoprire i nodi della rete il controller usa il LLDP (Link Layer Discovery Protocol), un protocollo di livello 2 dove il richiede pacchetti LLDP (0x88cc EtherType) agli switch per fornirgli informazioni su nome e le capacità.
+Per scoprire i nodi della rete e creare il NIB, il controller usa il LLDP (Link Layer Discovery Protocol), un protocollo di livello 2 dove il richiede pacchetti LLDP (0x88cc EtherType) agli switch per fornirgli informazioni su nome e le capacità.
 Quando uno switch nasce ha una configurazione iniziale definita da: l'indirizzo del controller; la regola OpenFlow per cui se lo switch ricevo un pachetto LLDP lo deve mandare al controller tramite un $Packet-In$.
 Quando lo switch si connette cerca di avviare una comunicazione TLS con il controller: con un FEATURE REQUEST MESSAGE il controller chiede identità e capacità del dispositivo; con un FEATURE REPLY MESSAGE lo switch risponde con il suo ID e le sue porte attive. Dopo l'handshake il controller sa esattamente quali dispositivi ci sono e le loro porte.
 A questo punto invia un un pacchetto LLDP tramite un messaggio $Packet{-Out}$ allo switch $A$ che lo invia alla rete tramite un multicast; lo switch $B$ riceve il pacchetto lo deve inviare al controller con un messaggio $Packet-In$ (per via della regola iniziale) arricchendolo con i metadati della sua provenienza; a questo punto i controller ha tutte le informazioni per creare il NIB.

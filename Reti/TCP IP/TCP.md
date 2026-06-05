@@ -35,14 +35,15 @@ L’header TCP ([Figura 4.18](Figura%204.18.png)) non ha dimensione ma fissa, ma
 	È rilevante solo se il flag URG è posto a 1 e indica il numero di byte che sono urgenti.
 - Opzioni
 	Ha una lunghezza variabile. Sono delle funzionalità aggiuntive, ma solitamente sono poco usate.
-## CONNESSIONE
+# Collegamento
+##### Three Way Handshake 
 Prima di spedire il flusso informativo si deve stabilire una connessione virtuale con il destinatario tramite una fase di handshake.
-Siccome il protocollo TCP può inviare flussi di grandi dimensioni in questa fase si gestisce la frammentazione, cioè la suddivisione dell'intero flusso in MTU compatibili con il livello [internet](TCP%20IP.md#INTERNET%20(IP)%20-%20[IPv4](IPv4.md)%20-%20[IPv6](IPv6.md)), in modo da non doverla richiede al livello sottostante.
-La connessione avviene usando una procedura di handshake a tre fasi (Three-way handshake):
-- Il processo client che vuole instaurare una connessione manda un messaggio detto "SYN" al server con cui si vuole collegare; questo messaggio è un datagram con il bit SYN posto a 1 e un numero di sequenza casuale all’interno del range consentito.
+Siccome il protocollo TCP può inviare flussi di grandi dimensioni, in questa fase si gestisce la frammentazione, cioè la suddivisione dell'intero flusso in MTU compatibili con il livello [internet](TCP%20IP.md#INTERNET%20(IP)%20-%20[IPv4](IPv4.md)%20-%20[IPv6](IPv6.md)), in modo da non doverla richiede al livello sottostante.
+La connessione avviene usando una procedura di handshake a tre fasi:
+- Il processo client che vuole instaurare una connessione manda un messaggio detto "SYN" al server con cui si vuole collegare; questo messaggio è un datagram con il bit SYN posto a 1 e un numero di sequenza casuale all’interno del range consentito.
 - Il server risponde con un messaggio detto "SYN+ACK"; questo messaggio è un datagram con i bit SYN e ACK posti a 1, un numero di sequenza casuale e un numero di riscontro pari al numero di sequenza ricevuto aumentato di 1.
 - Il client risponde un messaggio detto "ACK"; questo messaggio è un datagram con il bit ACK è posto a 1 e il numero di riscontro è pari al numero di sequenza ricevuto aumentato di 1. Questo datagram, per velocizzare l’invio del flusso informativo, può contenere dati.
-## DISCONNESSIONE
+##### Disconnessione
 Quando il client vuole chiudere la connessione può scegliere due strade:
 - Three-way handshake:
 	- Il client manda un messaggio detto "FIN" al server; questo messaggio è un datagram con il bit FIN posto a 1 che può contenere dati.

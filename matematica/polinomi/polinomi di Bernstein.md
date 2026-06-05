@@ -5,7 +5,7 @@ Rispetto alla base dei polinomi, dove usiamo una somma pesata di potenze di $x$ 
 ##### Operatore
 Sia $f:[0,1]\to\mathbb{R}$. L'operatore o polinomio di Bernstein di ordine $n$ è definito come $B_{n}(f,x)=\displaystyle \sum_{i=0}^n f_{i,n}b_{i,n}(x)$, dove:
 - Coefficienti
-	$f_{i,n}$ sono i coefficienti e rappresentano il peso associato al relativo elemento della base. L'$i$-esimo coefficiente è il valore della funzione in $\frac{i}{n}$, cioè $f\left( \frac{i}{n} \right)$: in questo modo stiamo prendendo $n$ valori della funzione $f$ in punti equi spaziati.
+	$f_{i,n}$ sono i coefficienti e rappresentano il peso associato al relativo elemento della base. L'$i$-esimo coefficiente è il valore della funzione in $\frac{i}{n}$, cioè $f\left( \frac{i}{n} \right)$: in questo modo stiamo prendendo $n$ valori della funzione $f$ in punti equi spaziati (i.e., punti di Chebyshev).
 	C'è una relazione tra il numero di coefficienti e il grado $n$ del polinomio: $\text{numero coefficienti}=n+1$.
 - Base
 	$b_{i,n}$ sono i polinomi di [base](#Base) di Bernstein. Sono definiti dalla [distribuzione binomiale](distribuzione%20binomiale.md): $b_{i,n}(x)=\binom{n}{i}x^i(1−x)^{n−i}$, $i=0,\cdots,n$.
@@ -46,6 +46,3 @@ Se i due gradi sono diversi allora dobbiamo prima matchare i gradi aumentando il
 Se $f(t)$ ha grado $m$ e coefficienti $a_{0},\cdots,a_{m}$ e $g(t)$ ha grado $n$ e coefficienti $b_{0},\cdots,b_{n}$ allora il polinomio risultante dal loro prodotto ha coefficienti $c_{k}=\sum_{j=max(0,k-n)}^{min(m,k)}\frac{\binom{m}{j}\binom{n}{k-j}}{\binom{m+n}{k}}a_{j}b_{k-j}$, con $k=0,\dots,m+n$.
 ##### Divisione
 Vedi [articolo](the_Bernstein_polynomial_basis_a_centennial_retrospective.pdf) alla proprietà 14.
-##### Convoluzione
-Se i due polinomi di Bernstein rappresentano due distribuzioni di probabilità (i.e., [PDF](random%20variable.md#PDF)) allora la [moltiplicazione](#Moltiplicazione) può essere utilizzata.
-Il supporto del polinomio risultante sarà in $[a+c,b+d]$, anche nel caso di due supporti in $[0,1]$.
