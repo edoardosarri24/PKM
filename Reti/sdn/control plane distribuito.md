@@ -14,14 +14,14 @@ I vantaggi di distribuire il control plane sono:
 # Gerarchia
 Dal momento che abbiamo molti controller dobbiamo dare un'architettura anche a questi. Abbiamo due possibilità:
 ##### Un livello
-I controller sono tutti sullo stesso livello.
+I controller sono tutti sullo stesso livello che comunicano tramite interfaccai west/est.
 Si usa questa architettura quando l'unica informazione che i controller devono gestire è il NIB; se la rete cresce troppo allora l'algoritmo del consenso per lo scambio di informazioni potrebbe saturare tutta la banda.
 ##### Due livelli
-Abbiamo un controller di controller.
+Abbiamo un controller di controller che comunicano tramite interfaccai est/west.
 Si usa questa architettura quando vogliamo avere un controller con una visione globale inter-domionio; in questo caso il controller root non ha idea di come funziona lo scambio di pacchetti.
 # Master-slaves
 Per aumentare l'affidabilità all'interno di un dominio (i.e., di un'isola) possiamo implementare un'architettura [master-slave](reliability%20block%20diagram.md#Stand-by): il master ($OFPCR\_ROLE\_MASTER$) ha permessi di lettura e scrittura sugli switch ed è sempre attivo; lo slave ($OFPCR\_ROLE\_SLAVE$) ha solo permessi di lettura ed entra in gioco se il master fallisce. C'è in realtà un terzo ruolo, quello di equal (i.e., $OFPCR\_ROLE\_EQUAL$), per cui più controller hanno permessi in lettura e scrittura; questa soluzione è usata quando abbiamo più controller (i.e., nel classico caso distribuito).
 ##### Switch
 Lo slave monitora il traffico dell'interfaccia sud e nord del master; se rileva che qualcosa non funziona allora entra in gioco e inizia a comportarsi da master. Questo funziona perché l'indirizzo IP (virtuale) del master e dello slave sono gli stessi e quindi sono autorizzati dallo switch alla scrittura (i.e., alla riprogrammazione delle tabelle di routing).
 ##### Hot stand-by
-Lo slave è in hot standby perché quando non è attivo il suo compito è interrogare gli switch e ricevere informazioni sul NIB. questo gli permette, quando deve entrare in gioco, di avere la maggior parte delle informazioni (alcune mancano perché il master potrebbe aver cambiato qualcosa dall'ultima interrogazione).
+Lo slave è in hot standby perché quando non è attivo il suo compito è interrogare gli switch e ricevere informazioni sul NIB. Questo gli permette, quando deve entrare in gioco, di avere la maggior parte delle informazioni (alcune mancano perché il master potrebbe aver cambiato qualcosa dall'ultima interrogazione).

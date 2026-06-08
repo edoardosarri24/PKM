@@ -2,7 +2,7 @@ REpresentational State Transfer (REST) è uno stile architetturale di [comunicaz
 # Vincoli
 In pratica il paradigma rest defiisce dei vincoli ce le API devono rispettare:
 ##### Client server
-La comunicazione deve seguire un paradigma [request-responce](microservizi/comunicazione/comunicazione.md#Stili) asincrono.
+La comunicazione deve seguire un paradigma [request-responce](microservizi/comunicazione/comunicazione.md#Stili) sincrono.
 ##### Stateless
 Il mssaggio deve contenere tutte le informazioni necessarie per la sua elaborazione. Qusto permette di disaccopiare client e server.
 ##### Cache

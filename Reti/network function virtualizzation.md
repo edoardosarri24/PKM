@@ -48,13 +48,13 @@ Sopra il livello fisico abbiamo un layer di virtualizzazione; chi interagisce co
 Il MANO è il MAnagement and Orchestration layer che ha visione sia delle NFV e dell'NFVI e si occupa orchetsrare il ciclo di vita dell VFN.
 È composto da tre blocchi:
 - VIM
-	È il Virtualized Infrastructure Manager. Gestisce le risorse fisiche e la loro virtualizzazione.
+	È il Virtualized Infrastructure Manager. Gestisce le risorse fisiche e la loro virtualizzazione: si occupa di conoscere lo stato dei dispositivi di rete.
 	In ambienti complessi ci possono essere più VIM, ognuno dei quali gestisce una partizione di nodi.
-- VFNM
-	È il Virtual Network Function Manager. Gestisce il ciclo di vita delle funzioni di rete, visto che ognuna di quest epuò essere composta da una o più VNFc.
-	In pratica si occupa di: istanziare nuove VNF; modifica e aggiornamento del codice di una VNF; scalilabilità delle VNF; raccolta dei dati a runtime; terminazione delle VNF
+- VNFM
+	È il Virtual Network Function Manager. Gestisce il ciclo di vita delle funzioni di rete, visto che ognuna di queste può essere composta da una o più VNFc.
+	In pratica si occupa di: istanziare nuove VNF; modifica e aggiornamento del codice di una VNF; scalilabilità delle VNF; raccolta dei dati a runtime; terminazione delle VNF; conoscenza di quali VNF ci sono.
 - NFVO
-	È l'NFV Orchestrator che orchestra due ambiti:
+	È l'NFV Orchestrator che orchestra i due ambiti:
 	- Risorse
 		Gestisce (i.e., autorizza e impegna) le risorse di rete, assegnandole ai vari VIM.
 	- Servizi

@@ -27,7 +27,7 @@ Le tabelle contengono le regole di inoltro che devono essere applicate ai pacche
 - Flow tables
 	Uno switch può avere più tabelle (si parte dalla tabella 0). Questo permette di realizzare il [Single responsability principle](Single%20responsability%20principle.md): ogni tabella gestisce il controllo di una sola parte. Inoltre si evita di avere regole molto complesse con molte combinazioni logiche.
 - Group tables
-	Un gruppo è un insieme di bucket, dove un bucket è un insieme di azioni; se un pacchetto viene assegnato a un gruppo (tramite l'action in sequito a un match su una flow table) allora viene scelto uno o più (se più il pacchetto viene duplicato) buckets a cui assegnare il pacchetto. Il tipo di gruppo permette di definire come scegliere il bucket:
+	Un gruppo è un insieme di bucket, dove un bucket è un insieme di azioni; se un pacchetto viene assegnato a un gruppo (tramite l'action in sequito a un match su una flow table) allora viene scelto uno o più (se più il pacchetto viene duplicato) buckets da cui far elaborare il pacchetto. Il tipo di gruppo permette di definire come scegliere il bucket:
 	 - ALL
 		Il pacchetto viene duplicato su tutti i bucket.
 	 - SELECT

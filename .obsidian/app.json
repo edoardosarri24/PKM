@@ -145,7 +145,8 @@
     "handshake",
     "clock",
     "monomiale",
-    "middlebox"
+    "middlebox",
+    "switch"
   ],
   "promptDelete": false,
   "pdfExportSettings": {
