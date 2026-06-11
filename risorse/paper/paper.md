@@ -23,3 +23,4 @@
 	Afferma che l'istante critico definito da Lui and Leyland non va bene in un contestesto di [probabilistic timing analysis](probabilistic%20timing%20analysis.md). Definisce due tecniche di [probabilistic responce time analysis](probabilistic%20responce%20time%20analysis.md) per risolvere questo problema.
 - [analytical approximations in probabilistic analysis of real time systems](analytical%20approximations%20in%20probabilistic%20analysis%20of%20real%20time%20systems.pdf)
 	Definisce una tencica [analitica](timing%20analysis.md#Tecniche) per determinare il WCRT in un contesto di [probabilistic timing analysis](probabilistic%20timing%20analysis.md).
+- [Measuring_the_Performance_of_Schedulability_Tests](Measuring_the_Performance_of_Schedulability_Tests.pdf)
