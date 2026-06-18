@@ -20,7 +20,6 @@
 - [traffic engeneering](traffic%20engeneering.md)
 - [cloud computing](cloud%20computing.md)
 - [information comunication network](information%20comunication%20network.md)
-- [data center](data%20center.md)
 - [network function virtualizzation](network%20function%20virtualizzation.md)
 # Esame
 Come si fa:

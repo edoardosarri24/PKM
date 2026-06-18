@@ -1,7 +1,7 @@
 Il monitoring è un'applicazione dell'[application plane](application%20plane.md).
 # Pre-SDN
 Prima delle reti [sdn](sdn.md) il monitoraggio era strutturato con un'architettura client-server.
-Supponendo di avere una serie di server, collegati tramite router, e un bounder router che espone il servizio all'esterno, allora possiamo eseguire il controllo su due entità:
+Supponendo di avere una serie di server collegati tramite router e un bounder router che espone il servizio all'esterno, allora possiamo eseguire il controllo su due entità:
 - Bounder router
 	Se monitoriamo il router che espone il servizio all'esterno allora oltre al traffico dati normale deve passare anche il traffico di monitoraggio. Questo può causare problemi se il controllo ha una grana molto fine o se il router è saturo o quasi saturo.
 - Server
@@ -9,7 +9,7 @@ Supponendo di avere una serie di server, collegati tramite router, e un bounder 
 # Soluzione SDN
 Con le reti SDN il monitoring diventa un'operazione distribuita nello spazio e nel tempo: non tutti gli switch si devono occupare del monitoring; possiamo scalarlo a seconda del momento.
 ##### Regole
-La soluzione più semplice è quella di introdurre delle regole a livello di [OpenFlow](OpenFlow.md) che si occupano di rilevare una qualche condizione (e.g., una sorgente invia molti pacchetti secondo una qualche soglia), verificata la quale si manca un $Packet-In$ al controller. Il pacchetto al controller è fondamentale: uno [switch](data%20plane.md#Switch) è un dispositivo stupido, non può fare elaborazione o eseguire script: rileva solo le regole installate e notifica il controller.
+La soluzione più semplice è quella di introdurre delle regole a livello di [OpenFlow](OpenFlow.md) che si occupano di rilevare una qualche condizione (e.g., una sorgente invia molti pacchetti secondo una qualche soglia), verificata la quale si manda un $Packet-In$ al controller. Il pacchetto al controller è fondamentale: uno [switch](data%20plane.md#Switch) è un dispositivo stupido, non può fare elaborazione o eseguire script: rileva solo le regole installate e notifica il controller.
 ##### Vantaggi
 - Efficienza
 - Scala bene per la gestione dinamica delle regole che possono essere aggiunte e rimosse.
@@ -17,9 +17,9 @@ La soluzione più semplice è quella di introdurre delle regole a livello di [Op
 # Classi di dispositivi
 I dispositivi che si occupano del monitoring possono essere suddividi in due classi: monitors e watcher.
 ##### Monitors
-Sono solitamente gli switch sdn. Gestiscono eventi tramite regole: quando un valore supera una data soglia catturano l'evento e lo inviano al controller tramite Packet-In.
+Sono solitamente gli switch SDN. Gestiscono eventi tramite regole: quando un valore supera una data soglia catturano l'evento e lo inviano al controller tramite Packet-In.
 In questo caso gli eventi sono definiti da counter che superano una data soglia: lo switch non può controllare flussi.
-##### watcher
+##### Watcher
 Collezionano e analizzano flussi: ricevono una serie di pacchetti che compongono un flusso e lo analizzano per classificare e valutare il problema.
 In questo caso non possono essere semplici switch SDN: devono raccogliere i dati ed applicarci algoritmi di machine learning per la classificazione dei problemi.
 # Defense4All

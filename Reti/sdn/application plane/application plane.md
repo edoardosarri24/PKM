@@ -1,6 +1,6 @@
 L'application plane in [sdn](sdn.md) contiene le applicazioni che definiscono, monitorano e controllano le risorse di rete del [data plane](data%20plane.md) tramite il [control plane](control%20plane.md).
 # Network Services Abstraction Layer
-La comunicazione tra l'application layer e il control layer è data dall'[interfaccia nord](control%20plane.md#Nord). Tale interfaccia può essere locale o remota: nel primo caso contro e application plane sono sulla stess macchian; nel secondo sono su macchine diverse.
+La comunicazione tra l'application layer e il control layer è data dall'[interfaccia nord](control%20plane.md#Nord). Tale interfaccia può essere locale o remota: nel primo caso contro e application plane sono sulla stess macchina; nel secondo sono su macchine diverse.
 Il Network Services Abstraction Layer serve per unifica l'interfaccia nord ed esporla in modo uniforme all'application plane.
 ##### Frenetic
 Si tratta di un query language che implementa il NSAL. La sua caratteristica è di mostrare la rete non più come un grafo, ma come un database; in questo modo le applicazioni posso fare query tramite questo linguaggio senza ragionare sulla topologia.

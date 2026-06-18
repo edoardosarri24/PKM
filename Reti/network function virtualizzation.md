@@ -19,7 +19,7 @@ Ogni funzione di rete può essere scomposta in tre dimensioni:
 - Load balancer
 	È una funzione che inoltra un pacchetto a un server in modo da massimizzare una qualche metrica.
 - Anonimizzatore
-	Funzione che anonimizza l'IP di un host. È simile al NA ma il suo compito è focalizzato sull'uscamento, mentre il NAT è quello di permettere la comunicazione tra più host in una rete con l'esterno.
+	Funzione che anonimizza l'IP di un host. È simile al NAT ma il suo compito è focalizzato sull'oscuramento, mentre il NAT è quello di permettere la comunicazione tra più host in una rete con l'esterno.
 # Network service
 Dal punto di vista concettuale un servizio di rete è ciò che viene fornito all'utente. Da un punto di vista tecnico un servizio di rete è un grafo di funzioni di rete connesse da un'infrastruttura.
 ##### Network Fucntion Forwarding Graph

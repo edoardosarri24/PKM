@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reti/sdn/control plane.md",
+                "file": "Reti/network function virtualizzation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "control plane"
+              "title": "network function virtualizzation"
             }
           }
         ]
@@ -139,8 +139,20 @@
   },
   "active": "3b9180aff8822fc6",
   "lastOpenFiles": [
+    "UniFi/ATIN.md",
+    "Reti/cloud computing.md",
+    "Reti/sdn/application plane/monitoring.md",
+    "Reti/sdn/application plane/traffic engeneering.md",
+    "Reti/sdn/application plane/application plane.md",
     "Reti/Protocolli/border gateway protocol.md",
     "Reti/sdn/control plane.md",
+    "Reti/sdn/control plane distribuito.md",
+    "Reti/sdn/data plane.md",
+    "Reti/sdn/network configuration protocol.md",
+    "Reti/sdn/sdn.md",
+    "Reti/network function virtualizzation.md",
+    "Reti/information comunication network.md",
+    "data center.md",
     "Reti/TCP IP/IPv4.md",
     "Reti/TCP IP/TCP IP.md",
     "Reti/TCP IP/UDP.md",
@@ -155,18 +167,6 @@
     "Real time/timing analysis/timing analysis.md",
     "Real time/task.md",
     "Real time/real time.md",
-    "Reti/sdn/OpenFlow.md",
-    "Reti/network function virtualizzation.md",
-    "Reti/sdn/control plane distribuito.md",
-    "UniFi/ATIN.md",
-    "Reti/sdn/data plane.md",
-    "Reti/sdn/network configuration protocol.md",
-    "microservizi/comunicazione/REST.md",
-    "Reti/sdn/sdn.md",
-    "Reti/sdn/OpenDaylight.md",
-    "Reti/routing/algoritmi con tabella.md",
-    "opneflow.md",
-    "matematica/polinomi/polinomi di Bernstein.md",
     "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
     "coding/C++/file/Diamond_Inheritance_Problem.jpg",
     "Reti/File/NFV architeccture.png",
