@@ -1,12 +1,12 @@
 - obbligatori
 	- [x] SWE for embedded system
-	- [ ] quantitative evaluation stochastic models
+	- [x] quantitative evaluation stochastic models
 	- [x] machine learning
 	- [x] optimization methods
 - tabella A
 	- [x] explainable AI
-	- [ ] **parallel computing**
-	- [ ] software architecture and methodologies
+	- [x] parallel computing
+	- [x] software architecture and methodologies
 	- [x] data mining
 - tabella B
 	- [x] multi agent system
@@ -15,13 +15,12 @@
 - tabella D
 	- [x] IoT
 	- [x] network security
-- tabella E
-	- [ ] systems reliability and safety (2)
+	- [x] Architecture and Technologies for Intelligent Network
 - scelta
 	- [x] deep learning application
 	- [x] natural language processing
 - laboratori
 	- [x] SE for embedded system
-	- [ ] quantitative evaluation stochastic models
+	- [x] quantitative evaluation stochastic models
 	- [ ] software architecture and methodologies
 	- [x] explainable AI
