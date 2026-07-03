@@ -74,18 +74,18 @@
 	- Logico
 	- Concorrente
 - Da rivedere
-		- [ ] JavaDoc.
-		- [ ] Reflection.
-		- [ ] Enum.
-		- [ ] JAR.
-		- [ ] Classi anonime.
-		- [ ] Classi interne.
-		- [ ] Var.
-		- [ ] Covarianza, controvarianza.
-		- [ ] Classi statiche e metodi statici.
-		- [ ] System.out o err e System in generale.
-		- [ ] Log.
-		- [ ] Quante interfacce può estendere un'interfaccia.
-		- [ ] Classi interne vs classi interne statiche.
-		- [ ] Classi sealed.
-		- [ ] Pattern.
+	- [ ] JavaDoc.
+	- [ ] Reflection.
+	- [ ] Enum.
+	- [ ] JAR.
+	- [ ] Classi anonime.
+	- [ ] Classi interne.
+	- [ ] Var.
+	- [ ] Covarianza, controvarianza.
+	- [ ] Classi statiche e metodi statici.
+	- [ ] System.out o err e System in generale.
+	- [ ] Log.
+	- [ ] Quante interfacce può estendere un'interfaccia.
+	- [ ] Classi interne vs classi interne statiche.
+	- [ ] Classi sealed.
+	- [ ] Pattern.

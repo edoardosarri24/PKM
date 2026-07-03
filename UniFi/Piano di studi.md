@@ -11,7 +11,7 @@
 - tabella B
 	- [x] multi agent system
 - tabella C
-	- [ ] resiliency, Real Time and Certification Methods (2)
+	- [x] resiliency, Real Time and Certification Methods
 - tabella D
 	- [x] IoT
 	- [x] network security
