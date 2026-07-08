@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "a689ddfc9e4c198e",
+        "id": "c9b401635edec71f",
         "type": "tabs",
         "children": [
           {
-            "id": "a5437a6e68343265",
+            "id": "654441457f2e33a4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "coding/C/sincronizzazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "sincronizzazione"
             }
           }
         ]
@@ -132,12 +137,20 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "a5437a6e68343265",
+  "active": "654441457f2e33a4",
   "lastOpenFiles": [
+    "coding/C++/costruttore.md",
+    "coding/C++/sincronizzazione.md",
+    "coding/C/sincronizzazione.md",
+    "sistemi operativi/thread/sincronizzazione.md",
+    "parallel computing/proprietà.md",
+    "parallel computing/concorrenza.md",
+    "coding/C/strutture.md",
+    "coding/C/standard library.md",
+    "borsa vero.md",
     "UniFi/Da imparare.md",
     "UniFi/piano di studi.md",
     "UniFi/RRTC.md",
-    "borsa vero.md",
     "borsa.md",
     "dependability/safety.md",
     "Reti/network function virtualizzation.md",
@@ -152,15 +165,7 @@
     "Reti/sdn/data plane.md",
     "Reti/sdn/network configuration protocol.md",
     "Reti/sdn/sdn.md",
-    "Reti/information comunication network.md",
-    "data center.md",
-    "Reti/TCP IP/IPv4.md",
-    "Reti/TCP IP/TCP IP.md",
-    "Reti/TCP IP/UDP.md",
-    "Reti/TCP IP/TCP.md",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "UniFi/tesi/tesi.md",
-    "Real time/taskset.md",
     "risorse/paper/real time/Measuring_the_Performance_of_Schedulability_Tests.pdf",
     "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
     "coding/C++/file/Diamond_Inheritance_Problem.jpg",

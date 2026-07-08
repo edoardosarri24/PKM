@@ -6,11 +6,11 @@ A seconda del processore questo viene implementato in modo diverso: in Intel ad 
 # Meccanismi
 Ci sono vari meccanismi per implementare la sincronizzazione.
 ##### Lock
-Una variabile lock (o mutex) ha due stati: locked e unlocked.
+Una variabile lock (o mutex) ha due stati: locked e unlocked. Si usano per gestire l'esecuzione in mutua esclusione di una risorsa condivisa. Tramite le condition variable possiamo anche lavorare sulle condizioni: un thread si blocca quando tenta di acquisire un mutex se la condizione specificata non è verificata.
 Ci sono invece due operazioni fondamentali: $lock(l)$ permette di acquisire la variabile in modo che nessun thread potrà acquisirla prima che essa sia rilasciata dal thread che la possiede; $unlock(l)$ libera la risorsa e permette ad altri thread di acquisirla.
 Siccome gli altri thread che volgiono usare la risorsa bloccata sono in attesa su essa, è fondamentale limitare il codice compreso tra $lock$ e $unlock$.
 ##### Semaphore
-È un'estensione del lock, dove un semaforo ha un contatore (i.e., un intero) associato che rappresenta il numero di risorse libere di quella variabile.
+È un'estensione del lock, dove un semaforo ha un contatore (i.e., un intero) associato che rappresenta il numero di risorse libere di quella variabile. Solitamente non si usano per gestire risorse in mutua esclusione ma per garantire una corretta segnazione tra thread.
 L'operazione che acquisisce un istanza del semaforo, e che quindi decrementa il contatore, è detta $wait$; l'operazione che libera un'istanza del semaforo è detta $signal$.
 I semafori sono strutture più complessi di un semplice lock; se non sono necessari è meglio usare il lock.
 ##### Monitor
