@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "80d511a81b0ece69",
+        "id": "26236219923dd04b",
         "type": "tabs",
         "children": [
           {
-            "id": "479dd9c92138a014",
+            "id": "a14faf66b5b768fc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -37,10 +37,12 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Esplora file"
             }
           }
         ]
@@ -125,20 +127,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
+      "switcher:Apri selettore rapido": false,
+      "daily-notes:Apri nota giornaliera": false,
       "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
       "omnisearch:Omnisearch": false,
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "479dd9c92138a014",
+  "active": "a14faf66b5b768fc",
   "lastOpenFiles": [
+    "Real time/scheduling/Rate monotonic (RM).md",
+    "explainable AI/Explainability/Gradient-base explainability.md",
+    "explainable AI/Explainability/Metodi.md",
+    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
+    "UniFi/tesi/tesi.md",
+    "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
+    "Real time/task.md",
+    "Real time/scheduling/Deadline Monotonic.md",
     "borsa tommi.md",
     "borsa vero.md",
-    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems copia.pdf",
-    "UniFi/tesi/tesi.md",
     "Real time/scheduling/file/Cyclic executive scheduling timer.png",
     "Real time/scheduling/cyclic executive scheduling.md",
     "Real time/scheduling/scheduling.md",
@@ -158,11 +166,6 @@
     "Reti/network function virtualizzation.md",
     "UniFi/ATIN.md",
     "Reti/cloud computing.md",
-    "Reti/sdn/application plane/monitoring.md",
-    "Reti/sdn/application plane/traffic engeneering.md",
-    "Reti/sdn/application plane/application plane.md",
-    "Reti/Protocolli/border gateway protocol.md",
-    "Reti/sdn/control plane.md",
     "risorse/paper/real time/Measuring_the_Performance_of_Schedulability_Tests.pdf",
     "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
     "coding/C++/file/Diamond_Inheritance_Problem.jpg",
@@ -170,7 +173,6 @@
     "Reti/File/Figura 3.8.png",
     "Reti/IoT/file/ETSI atchitecture NFV.png",
     "UniFi/tesi/MODULO_INIZIO_TESI_LM.pdf",
-    "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
     "sistemi operativi/virtualizzazione/file/hypervisor type.png",
     "sistemi operativi/virtualizzazione/docker",

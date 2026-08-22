@@ -63,7 +63,7 @@ Ci sono più famiglie di tecniche che ricadono nell'outcame explaination.
 	- [Prediction Difference](Prediction%20Difference%20(Pred%20Dif).md)
 	- [SHAP](SHAP.md)
 - Saliency masks
-	Si vuole mostrare (es: in modo visivo) quale porzione dell'input è stato più importante per produrre il risultato. Ad esempio si potrebbero mostrare dei pixel in un'immagine o quali parole in una frase.
+	Si vuole mostrare (e.g., in modo visivo) quale porzione dell'input è stato più importante per produrre il risultato. Ad esempio si potrebbero mostrare dei pixel in un'immagine o quali parole in una frase.
 	- [Gradient-base explainability](Gradient-base%20explainability.md)
 # Model inspection
 È una spiegazione ibrida che ha delle somiglianze con entrambi i metodi di cui sopra.

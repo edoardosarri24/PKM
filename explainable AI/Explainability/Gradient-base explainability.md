@@ -1,17 +1,17 @@
 I metodi grandient-base explainability sono tecniche di tipo [outcam explaination](Metodi.md#Outcam%20explaination) usate nel campo dell'[Explainability](Explainability.md).
 - Sono metodi usati quando la black box è una rete neurale.
-- È una tecnica molto usata per dati multimediali (es: immagini) e si può usare anche per dati testuali. Per dati tabulari non si usa molto e conviene usare altre tecnoche come [LIME](LIME.md) o [SHAP](SHAP.md).
+- È una tecnica molto usata per dati multimediali (e.g., immagini) e si può usare anche per dati testuali. Per dati tabulari non si usa molto e conviene usare altre tecnoche come [LIME](LIME.md) o [SHAP](SHAP.md).
 # Idea
 Questi metodi si basano sul capire quali features dell'input (i.e. pixel) hanno una maggiore influenza sull'output, cioè per quali features una loro piccola variazione provoca un grande cambiamento nell'output.
-Per fare questo si calcola il gradiente rispetto all'input (e non rispetto ai pesi come nell'addestramento). Il modo in cui calcolare il gradiente definisce la tecnica utilizzata.
+Per fare questo si calcola il gradiente rispetto all'input e non rispetto ai pesi come nell'addestramento. Il modo in cui calcolare il gradiente definisce la tecnica utilizzata.
 ##### Mappa di salienza
 Quello che si genera è una saliency map.
 Una saliency map ha la stessa dimensionalità dell'input; ogni suo pixel è definito da un peso, che rappresenta l'importanza di quel pixel.
 Solitamente l'output di questi metodi è l'immagine in input a cui è stata sovrapporta la mappa di salienza; questo permette, tramite la colorazione in base al peso, di capire quali pixel sono appunto più importanti.
 ##### Utilità
-Le critiche mosse a questi metodi riguarda l'effettiva spiegazione che essi ci forniscono. 
+Le critiche mosse a questi metodi riguarda l'effettiva spiegazione che essi ci forniscono.
 Ci sono due test per valutare la bontà della spiegazione data dalla salincy map:
-- Si confronta la saliency map prodotta dalla rete addestrata normalmente con quella ottenuta da una rete non addestrata (i.e. inizializzata casualmente). L'idea è che se non c'è differenza tra queste due saliency map allora le non possono essere buone spiegazioni per quel modello.
+- Si confronta la saliency map prodotta dalla rete addestrata normalmente con quella ottenuta da una rete non addestrata (i.e., inizializzata casualmente). L'idea è che se non c'è differenza tra queste due saliency map allora le non possono essere buone spiegazioni per quel modello.
 - Si confrontano le saliency map ottenute dal modello normalmente addestrato e dallo stesso modello addestrato sullo stesso dataset dove le etichette sono state permutate casualmente. L'idea è che se non c'è differenza allora le salincy map non possono essere buone spiegazioni per quel dataset.
 - Vanilla, smooth grad e gradcam passano questi test. Guided cam non passano il test.
 # Vanilla gradient
