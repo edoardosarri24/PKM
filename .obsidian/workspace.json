@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "26236219923dd04b",
+        "id": "39f855ba962eed50",
         "type": "tabs",
         "children": [
           {
-            "id": "a14faf66b5b768fc",
+            "id": "72a0ee05140cc27d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "coding/C/bitwise.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "bitwise"
             }
           }
         ]
@@ -134,14 +139,19 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "a14faf66b5b768fc",
+  "active": "72a0ee05140cc27d",
   "lastOpenFiles": [
+    "coding/C/sincronizzazione.md",
+    "coding/C/bitwise.md",
+    "coding/C/puntatori.md",
+    "coding/C/IO.md",
+    "coding/C/funzioni.md",
+    "UniFi/tesi/tesi.md",
+    "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
+    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
     "Real time/scheduling/Rate monotonic (RM).md",
     "explainable AI/Explainability/Gradient-base explainability.md",
     "explainable AI/Explainability/Metodi.md",
-    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "UniFi/tesi/tesi.md",
-    "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "Real time/task.md",
     "Real time/scheduling/Deadline Monotonic.md",
     "borsa tommi.md",
@@ -150,7 +160,6 @@
     "Real time/scheduling/file/Cyclic executive scheduling timer.png",
     "Real time/scheduling/cyclic executive scheduling.md",
     "Real time/scheduling/scheduling.md",
-    "coding/C/sincronizzazione.md",
     "coding/C++/costruttore.md",
     "coding/C++/sincronizzazione.md",
     "sistemi operativi/thread/sincronizzazione.md",
@@ -162,10 +171,6 @@
     "UniFi/piano di studi.md",
     "UniFi/RRTC.md",
     "borsa.md",
-    "dependability/safety.md",
-    "Reti/network function virtualizzation.md",
-    "UniFi/ATIN.md",
-    "Reti/cloud computing.md",
     "risorse/paper/real time/Measuring_the_Performance_of_Schedulability_Tests.pdf",
     "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
     "coding/C++/file/Diamond_Inheritance_Problem.jpg",
