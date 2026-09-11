@@ -71,3 +71,5 @@
 - [JMT](JMT.pdf)
 # Testing
 - [TDD, Build Automation, Continuous Integration](TDD,%20Build%20Automation,%20Continuous%20Integration.pdf)
+# Embedded
+- [Programming Embedded Systems in C and C++](Programming%20Embedded%20Systems%20in%20C%20and%20C++.pdf)
