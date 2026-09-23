@@ -146,7 +146,8 @@
     "clock",
     "monomiale",
     "middlebox",
-    "switch"
+    "switch",
+    "interrupt"
   ],
   "promptDelete": false,
   "pdfExportSettings": {

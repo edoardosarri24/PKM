@@ -18,20 +18,20 @@ Sono core particolari, detti Special Function Unit, che permettono di eseguire o
 # Memoria
 In una GPU, come nelle CPU, abbiamo più livelli di memoria. Ognuna di questa memoria ha un aspetto [logico](gestione%20della%20memoria.md#Architettura%20logica) da considerare.
 ##### Globale
-È la RAM condivisa tra tutti gli SM. Viene letta e scritta dalla CPU per mettere i dati da eseguire al suo interno.
+È la memoria condivisa tra tutti gli SM. Viene letta e scritta dalla CPU per mettere i dati da eseguire al suo interno.
 Rispetto alle CPU abbiamo meno livelli di memoria perché la [bandwidth](bandwidth.md) è molto maggiore: si possono portare più dati dalla memoria globale ai registri dei core (o alla cache).
 Si divide in due livelli:
 - Global memory
 	Tutti i thread hanno permessi di scrittura e lettura.
 - Constant memory
-	È una specie di cache, quindi molto veloce, dove tutti i thread hanno solo permessi di lettura. Solitamente viene usata per dati condivisi da tutti i thread.
+	È una specie di cache, quindi molto veloce, dove tutti i thread hanno solo permessi di lettura. Solitamente viene usata per dati condivisi da tutti i thread. Può essere scritta dall'host.
 ##### Local memory
 È la memoria interna a un singolo SM e si divide in:
 - Shared memory
-	È una cache L1 programmabile, cioè che i thread possono usare per scrivere dati. A livello [logico](gestione%20della%20memoria.md#Architettura%20logica) è condivisa solo dai threda che appartengono allo stesso blocco.
+	È una cache L1 programmabile, cioè che i thread possono usare per scrivere dati. A livello [logico](gestione%20della%20memoria.md#Architettura%20logica) è condivisa solo dai thread che appartengono allo stesso blocco: due thread appartenenti a SM diversi non possono comunicare tramite di essa.
 - Cache
 	Sono cache non scrivibili dai thread.
 ##### Private memory
 Sono i registri, cioè la parte che i thread usano per le computazioni.
 Non sono a livello di core, ma contenuti nello [SM](#Streaming%20multiprocessor) e questo permette a un thread di poter eseguire in uno qualunque dei core dello SM.
-A differenza delle CPU nelle GPU i registri sono moltissimi (e.g., 264K) e questo permette di avere un costo nullo nel [context switch](parallel%20computing/GPU/concorrenza.md#Context%20switch) all'interno delle GPU perché non si devono ricaricare i dati del singolo thred visto ma questi rimangono all'interno dei registri.
+A differenza delle CPU nelle GPU i registri sono moltissimi (e.g., 264$k$) e questo permette di avere un costo nullo nel [context switch](parallel%20computing/GPU/concorrenza.md#Context%20switch) all'interno delle GPU perché non si devono ricaricare i dati del singolo thread visto ma questi rimangono all'interno dei registri.

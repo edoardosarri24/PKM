@@ -2,7 +2,7 @@
 # Architettura logica
 ![permessi memoria](permessi%20memoria.png)
 A livello fisico conosciamo l'architettura della [memoria nelle GPU](architettura.md#Memoria). A livello logico, cioè considerando come poi andiamo a programmare le GPU, i permessi sono i seguenti:
-- La memoria globale può essere letta e scritta dai thread dell'host e letta da tutti i thread della GPU.
+- La memoria globale può essere letta e scritta dai thread dell'host e letta e scritta da tutti i thread della GPU.
 - La memoria costante può essere letta e scritta dai thread host, ma solo letta dai thread device. Solitamente si usa per configurazioni.
 - La shared memory fisicamente è condivisa a livello di [streaming multiprocessor](architettura.md#Streaming%20multiprocessor), ma a livello logico è suddivisa in base al blocco: i thread dello stesso blocco possono sincronizzarsi con questa memoria; non possono vedere la shared memory allocata per blocchi diversi.
 - I registri possono essere letti e scritti solo dai propri thread proprietari.

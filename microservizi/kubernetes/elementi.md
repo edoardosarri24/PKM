@@ -23,4 +23,6 @@ Ci sono diversi tipi di service:
 - LoadBalancer
 	È il modo per esporre service in ambienti cloud. Viene eseguito un load balance sul carico.
 # Deployment
-Gestisce i pods e i replica sets per garantire aggiornamento e lo scaling.
+È l'entità che si occupa del ciclo di vita dei pod e del replica set.
+##### Update e roll back
+Uno dei suoi scopi principali e gestire gli update. Quando una nuova immagine viene associata a un pod (i.e., c'è un update), quello che il deployment fa è rilasciare un nuovo replicaset per quel service; nel tempo spegne i vecchi pod e il nuova replica set si poccupa di tirare su i nuovo pod con la nuova versione, il vecchio replica set resta per eseguire operazioni di roll back (i.e., è richiesto un downgrade) in sicurezza.

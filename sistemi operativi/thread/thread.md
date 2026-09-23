@@ -8,7 +8,7 @@ Lo stack privato esiste finché il thread è in vivo; quando termina allora la m
 I thread dello stesso processo condividono lo heap e quindi possono comunicare tramite variabili condivise.
 Sono condivise ovviamente anche le variabili globale definite dal processo.
 ##### Program counter
-Ogni thread ha il proprio program counter.
+Ogni thread ha il proprio program counter, cioè l'indirzzo dell'istruzione successiva.
 # Efficienza
 I thread possono essere supportati a livello sw o hw; nel secondo caso (ormai comune) si permette un'efficienza molto maggiore.
 - Il context switch tra thread è molto più veloce rispetto al context switch tra processi. Questo avviene soprattutto grazie all'[hyper threading](hyper%20threading.md).

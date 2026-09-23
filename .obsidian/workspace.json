@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1300fbe1a6aaeae6",
+        "id": "cf07475b036d2a63",
         "type": "tabs",
         "children": [
           {
-            "id": "f78550b4092d3615",
+            "id": "fa9c82b7c61cdf8a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "a survey of probabilistic timing analysis techniques for real-time systems"
             }
           }
         ]
@@ -134,39 +136,42 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "f78550b4092d3615",
+  "active": "fa9c82b7c61cdf8a",
   "lastOpenFiles": [
-    "risorse/libri/libri.md",
-    "risorse/libri/Programming Embedded Systems in C and C++.pdf",
-    "coding/C/bitwise.md",
-    "coding/C/sincronizzazione.md",
-    "coding/C/puntatori.md",
-    "coding/C/IO.md",
-    "coding/C/funzioni.md",
     "UniFi/tesi/tesi.md",
+    "parallel computing/GPU/architettura.md",
+    "parallel computing/GPU/CUDA/tiling.md",
+    "parallel computing/GPU/CUDA/sincronizzazione.md",
+    "parallel computing/GPU/CUDA/program pipeline.md",
+    "parallel computing/GPU/CUDA/occupazione hw.md",
+    "parallel computing/GPU/CUDA/gestione della memoria.md",
+    "parallel computing/GPU/CUDA/gerarchia thread.md",
+    "parallel computing/GPU/CUDA/divergenza.md",
+    "parallel computing/GPU/CUDA/CUDA.md",
+    "parallel computing/GPU/CUDA/atomicità.md",
+    "parallel computing/GPU/bandwidth.md",
+    "parallel computing/GPU/concorrenza.md",
+    "sistemi operativi/thread/thread.md",
+    "parallel computing/GPU/GPU.md",
+    "microservizi/kubernetes/elementi.md",
+    "microservizi/kubernetes/kubernetes.md",
     "risorse/paper/real time/critical instant for Probabilistic timing uarantees refuted and revisited.pdf.pdf",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems.pdf",
-    "Real time/scheduling/Rate monotonic (RM).md",
-    "explainable AI/Explainability/Gradient-base explainability.md",
-    "explainable AI/Explainability/Metodi.md",
-    "Real time/task.md",
-    "Real time/scheduling/Deadline Monotonic.md",
-    "borsa tommi.md",
-    "borsa vero.md",
-    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems copia.pdf",
-    "Real time/scheduling/file/Cyclic executive scheduling timer.png",
+    "Real time/scheduling/file/demand bound function for EDF.png",
+    "Real time/scheduling/Earliest deadline first (EDF).md",
     "Real time/scheduling/cyclic executive scheduling.md",
+    "Real time/scheduling/file/Cyclic executive scheduling timer.png",
+    "Real time/scheduling/Analisi di schedulabilità.md",
     "Real time/scheduling/scheduling.md",
-    "coding/C++/costruttore.md",
-    "coding/C++/sincronizzazione.md",
-    "sistemi operativi/thread/sincronizzazione.md",
-    "parallel computing/proprietà.md",
-    "parallel computing/concorrenza.md",
-    "coding/C/strutture.md",
-    "coding/C/standard library.md",
-    "UniFi/Da imparare.md",
-    "UniFi/piano di studi.md",
-    "UniFi/RRTC.md",
+    "sistemi operativi/embedded/interrupt.md",
+    "Real time/timing analysis/timing analysis.md",
+    "sistemi operativi/memoria/memoria.md",
+    "risorse/libri/libri.md",
+    "risorse/libri/Programming Embedded Systems in C and C++.pdf",
+    "sistemi operativi/memoria/file/famiglie.png",
+    "sistemi operativi/memoria/accesso.md",
+    "sistemi operativi/embedded",
+    "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems copia.pdf",
     "risorse/paper/real time/Measuring_the_Performance_of_Schedulability_Tests.pdf",
     "risorse/paper/matematica/bernstein/EPEW26_bernstein (1).pdf",
     "coding/C++/file/Diamond_Inheritance_Problem.jpg",
@@ -178,10 +183,7 @@
     "sistemi operativi/virtualizzazione/file/hypervisor type.png",
     "sistemi operativi/virtualizzazione/docker",
     "Reti/sdn/application plane/file/defence4all architecture.png",
-    "Reti/sdn/application plane/file",
     "Reti/sdn/file/layers.png",
-    "Reti/sdn/file/OpenFLow switch.png",
-    "Reti/sdn/file/decoupling of control and data plane.png",
     "Senza nome.canvas"
   ]
 }
