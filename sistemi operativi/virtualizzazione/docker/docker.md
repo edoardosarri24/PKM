@@ -1,4 +1,4 @@
-Possiamo definite Docker come runner di [container](container.md) basato su sandbox, cioè un framework per lo sviluppo e il rilascio di applicazioni isolate l'una dall'altra.
+he Possiamo definite Docker come runner di [container](container.md) basato su sandbox, cioè un framework per lo sviluppo e il rilascio di applicazioni isolate l'una dall'altra.
 Per la guida vedi la [documentazione](https://docs.docker.com).
 # Comandi
 - $\texttt{docker build}$

@@ -4,19 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "cf07475b036d2a63",
+        "id": "252fa826c34aab75",
         "type": "tabs",
         "children": [
           {
-            "id": "fa9c82b7c61cdf8a",
+            "id": "08de66ac1e168225",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf"
+                "file": "sistemi operativi/virtualizzazione/docker/docker.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
-              "title": "a survey of probabilistic timing analysis techniques for real-time systems"
+              "icon": "lucide-file",
+              "title": "docker"
             }
           }
         ]
@@ -136,8 +139,9 @@
       "audio-recorder:Avvia/ferma registrazione": false
     }
   },
-  "active": "fa9c82b7c61cdf8a",
+  "active": "08de66ac1e168225",
   "lastOpenFiles": [
+    "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
     "UniFi/tesi/tesi.md",
     "parallel computing/GPU/architettura.md",
     "parallel computing/GPU/CUDA/tiling.md",
@@ -169,7 +173,6 @@
     "risorse/libri/libri.md",
     "risorse/libri/Programming Embedded Systems in C and C++.pdf",
     "sistemi operativi/memoria/file/famiglie.png",
-    "sistemi operativi/memoria/accesso.md",
     "sistemi operativi/embedded",
     "risorse/paper/real time/analytical approximations in probabilistic analysis of real time systems copia.pdf",
     "risorse/paper/real time/Measuring_the_Performance_of_Schedulability_Tests.pdf",
@@ -179,7 +182,6 @@
     "Reti/File/Figura 3.8.png",
     "Reti/IoT/file/ETSI atchitecture NFV.png",
     "UniFi/tesi/MODULO_INIZIO_TESI_LM.pdf",
-    "risorse/paper/real time/a survey of probabilistic timing analysis techniques for real-time systems.pdf",
     "sistemi operativi/virtualizzazione/file/hypervisor type.png",
     "sistemi operativi/virtualizzazione/docker",
     "Reti/sdn/application plane/file/defence4all architecture.png",
