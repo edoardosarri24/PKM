@@ -1,7 +1,7 @@
 - [Apprendimento supervisionato](Apprendimento%20supervisionato.md)
 # Loss
 - [Funzioni di loss](Funzioni%20di%20loss.md)
-- [[Regolarizzazione]]
+- [[regolarizzazione]]
 # Modelli
 - [Decision tree](Decision%20tree.md)
 - [Rule-based system](Rule-based%20system.md)

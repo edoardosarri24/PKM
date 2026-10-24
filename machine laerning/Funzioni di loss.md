@@ -1,5 +1,5 @@
 Quando lavoriamo con l'[Apprendimento supervisionato](Apprendimento%20supervisionato.md) si risolve solitamente un problema di Empirical risk minimization: si vuole trovare il vettore dei pesi $w$ tale da minimizzare $J_{emp}(w)=\sum_{i=N}^KL(y_i,\phi(x_i,w))$, dove $L(y_i,\phi(x_i,w))$ è la funzione di loss.
-Solitamente la loss complessiva è composta da una [Regolarizzazione](Regolarizzazione.md).
+Solitamente la loss complessiva è composta da una [regolarizzazione](regolarizzazione.md).
 # Sum of Squere Error (SSE)
 La $SSE$ è definita come $SSE=\displaystyle\sum_{i=1}^N(y_i-\hat{y}_i)^2$. La soluzione è detta soluzione ai minimi quadrati.
 ##### Conseguenze

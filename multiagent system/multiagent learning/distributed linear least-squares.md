@@ -17,7 +17,7 @@ Supponendo un grafo del sistema multi agente connesso e indiretto e che la [matr
 - $\displaystyle\lim_{t\to\infty}q_i(t)=\tfrac{1}{N}\sum_{i=1}^Nq_i(0)=\tfrac{1}{N}\sum_{i=1}^Nq_i=\tfrac{1}{N}q$.
 - $\displaystyle\lim_{t\to\infty}w_i(t)=\lim_{t\to\infty}\Omega_i(t)^{-1}q_i(t)=(\tfrac{1}{N}\Omega)^{-1}\tfrac{1}{N}q=\Omega^{-1}q=w^o$. Questo vuol dire che per la convergenza ai pesi ottimi il sistema non deve conoscere il numero di agenti $N$.
 # Regolarizzatore di Tikhonov
-Se al problema aggiungiamo un regolarizzatore di tipo di Tikhonov (i.e., [Ridge](Regolarizzazione.md#Ridge) regularization).
+Se al problema aggiungiamo un regolarizzatore di tipo di Tikhonov (i.e., [Ridge](regolarizzazione.md#Ridge) regularization).
 La funzione di loss, che oltre al rischio empirico ha anche il regolarizzatore, diventa $J_{EMP}(w)=\displaystyle\sum_{k=1}^K(y_k-w'\phi(x_k))^2+\rho\left\|w\right\|^2$. In forma chiusa i pesi possono essere definiti come $w^o=(\Omega+\rho I)^{-1}q$: la matrice da invertire $\Omega+\rho I$ diventa meno mal condizionata e otteniamo un calcolo più stabile.
 ##### Algortimo
 Rispetto all'algoritmo nel caso precedente dobbiamo solo modificare l'aggiornamento dei pesi: $w_i(t+1)=[\Omega_i(t+1)+\tfrac{\rho}{N}I]^{-1}q_i(t+1)$.

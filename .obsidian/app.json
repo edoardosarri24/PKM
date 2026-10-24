@@ -147,7 +147,8 @@
     "monomiale",
     "middlebox",
     "switch",
-    "interrupt"
+    "interrupt",
+    "aumentation"
   ],
   "promptDelete": false,
   "pdfExportSettings": {
