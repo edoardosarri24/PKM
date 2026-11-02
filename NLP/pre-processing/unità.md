@@ -13,7 +13,7 @@ Questa e le successive fasi utilizzano delle unità di base su cui si costruisco
 		Sono parole più significative e meno comuni.
 		Sono esempi i nomi, i verbi e gli aggettivi.
 - Termine
-	È una parola [normalizzata](normalizzazione.md) in qualche modo.
+	È una parola [normalizzata](NLP/pre-processing/normalizzazione.md) in qualche modo.
 - Token
 	È un'istanza di una parola che ha subito una [tokenizzazione](tokenizzazione.md).
 # Morfemi

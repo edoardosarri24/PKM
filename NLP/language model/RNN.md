@@ -7,7 +7,7 @@ La funzione applicata all'output del MLP (i.e., quella che produce $y_i$) dipend
 # Training
 Per il training si utilizza il self-supervised learning, dove il task fittizio è il next word prediction: al tempo $t$ si genera la distribuzione di probabilità sul vocabolario $P(w_{t+1}=(i|w_1,\cdots,w_t)=y_t[i], \forall i)$, dove $y_t[i]$ rappresenta l'$i$-esima posizione della softmax al tempo $t$.
 Ogni passo dell'addestramento consiste in:
-- Far predirre al modello la distribuzione della prossima parola e calcolare una loss per ogni parola predetta. Si usa la [cross-entropy loss](Funzioni%20di%20loss.md#Cross-entropy%20loss), che in questa circostanza è definita come $CE_t=-\displaystyle\sum_{w\in V}y_t[w]log\hat{y_t}[w]$. La corretta distribuzione del prossimo token è un vettore in one-hot dove è posta a 1 la probabilità dell'effettiva prossima parola.
+- Far predirre al modello la distribuzione della prossima parola e calcolare una loss per ogni parola predetta. Si usa la [cross-entropy loss](loss%20function.md#Cross-entropy%20loss), che in questa circostanza è definita come $CE_t=-\displaystyle\sum_{w\in V}y_t[w]log\hat{y_t}[w]$. La corretta distribuzione del prossimo token è un vettore in one-hot dove è posta a 1 la probabilità dell'effettiva prossima parola.
 - Si considera come loss totale, quella su cui poi si applica back propagation, la media delle loss su ogni istante $t$, cioè su ogni token generato. Prendere la media e non la somma totale è una specie di normalizzazione che non penalizza sequenze lunghe.
 - Aggiornare i pesi della rete tramite GD.
 ##### Teching forcing

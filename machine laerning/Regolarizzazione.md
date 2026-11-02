@@ -1,4 +1,4 @@
-Il regolarizzatore è un termine che aggiungiamo alla [loss](Funzioni%20di%20loss.md) per migliorare l'apprendimento. In generare la loss totale si definisce come $L(w)=E_w(w)+\lambda E_r(w)$, dove $\lambda$ è il peso della regolarizzazione.
+Il regolarizzatore è un termine che aggiungiamo alla [loss](loss%20function.md) per migliorare l'apprendimento. In generare la loss totale si definisce come $L(w)=E_w(w)+\lambda E_r(w)$, dove $\lambda$ è il peso della regolarizzazione.
 # Obiettivi
 - Mitiga il problema dell'overfitting: abbassa la varianza della funzione impara, rendendola più smooth e più semplice.
 - Se la funzione del rischio empirico contiene la lakelihoow, cioè l'errore sui dati, la regolarizzazione puà contenere la priori, cioè quanto già abbiamo imparato sui dati. Questo è utile in problemi di [Continual learning](Continual%20learning.md).

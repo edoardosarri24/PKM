@@ -22,13 +22,6 @@ Il problema del dropout è che diminuisce significativamente la velocità di add
 ##### Extreme ensamble
 Questa tecniche è detta anche extreme ensamble, perché se abbiamo $n$ neuroni possiamo avere $2^n$ modelli.
 Il dropout permette anche di fare cose che senza non si possono fare.
-# Normalizzazione
-La normalizzazione è fondamentale per aumentare la velocità di addestramento ed è usata solo sui dati in input di un modello.
-La normalizzazione avviene sottraendo la media e dividendo per la varianza:
-- Ha l'obiettivo di mettere sulla stessa scala tutte le features, in modo che alcuni valori non siano molto grandi e altri molto piccoli.
-- Evita che il modello dipenda molto dalla scelta iniziale dei pesi.
-##### Regolarizzazione
-Se si è usata la [regolarizzazione dei pesi](Tecniche%20CNN.md#Weight%20regularization) allora la normalizzazione dei dati potrebbe essere necessaria. Se i dati non sono normalizzati allora l'addestramento potrebbe assegnare pesi molto diversi alle variabili e questo influenza negativamente la regolarizzazione.
 # Normaliation layer
 Se tramite la normalizzazione si controlla la scala dell'input, la batch normalizzation mitiga i problemi in cui i dei layer interni sono su scale troppo diverse.
 Quando un layer produce delle features si calcola la loro media e varianza, si normalizzano sottraendo tale media e dividendo per tale varianza e si passano al layer successivo: $\hat{x}=\tfrac{x-\mu}{\sigma}$, dove $\mu=\tfrac{1}{d_h}\sum_{i=1}^{d_h}x_i$ e $\sigma=\sqrt{\tfrac{1}{d_h}\sum_{i=1}^{d_h}(x_i-\mu)^2}$, dove $d_h$ è la dimensione del layer.
