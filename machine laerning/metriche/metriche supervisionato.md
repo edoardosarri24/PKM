@@ -32,7 +32,7 @@ Tra le più usate abbiamo la [MAE](loss%20function.md#Mean%20Absolute%20Error%20
 - Se $MAE\approx RMSE$ allora vuol dire che gli errori sono distributi uniformemente tra tutti i campioni.
 - Se $MAE < RMSE$ allora ci sono momenti in cui il modello predice bene, ma ci sono dati per cui fa più fatica. Questo è dovuto alla qudraticità della RMSE.
 ##### Coefficiente di determinazione
-È detto anche R-quadro, da cui il nome $R^2$ e si definisce come $R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}\in(-\infty,1]$, dove: $N$ è il numero di campioni; $y_{i}$ è i target vero; $\hat{y_{i}}$ è la predizione; $\bar{y}$ è la media su tutti i campioni $N$.
+È detto anche R-quadro, da cui il nome $R^2$ e si definisce come $R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}\in(-\infty,1]$, dove: $N$ è il numero di campioni; $y_{i}$ è i target vero; $\hat{y_{i}}$ è la predizione; $\bar{y}$ è la media su tutti gli $N$ campioni veri.
 - Risultato
 	- $R^2=1$: Il nostro modello predice tutti i campioni perfettamente.
 	- $R^2=0$: Il nostro modello funziona come un predittore banale che calcola solo la media dei target.
@@ -47,4 +47,4 @@ Tra le più usate abbiamo la [MAE](loss%20function.md#Mean%20Absolute%20Error%20
 	Può essere calcolata su un batch grande ma anche sul singolo dataset.
 - Osservazioni
 	- Se usata con la normalizzazione [Z-Score](machine%20laerning/normalizzazione.md#Z-Score) allora $\bar{y}\approx 0$ e di conseguenza si ha che $R^2\approx 1-MSE(y,\hat{y})$.
-	- Se stiamo analizzando un insieme di dati con varianza molto bassa allora il denominatore porta ad avere valori molto grandi anche se l'errore del modello è molto piccolo.
+	- Se stiamo analizzando un insieme di dati con varianza molto bassa allora il denominatore porta ad avere valori molto grandi anche se l'errore del modello è molto piccolo (perché avremo $den\to{0}$).

@@ -1,0 +1,1 @@
+Un job, gestito dal [deployment](elementi.md#Deployment), è una risorsa [kubernetes](Software%20Engineering/microservizi/kubernetes/kubernetes.md) che termina una volta che un compito è finito, cosa che va in constrasto con i normali [pod](risorse.md#Pod) che sono pensati per essere sempre in esecuzione.
