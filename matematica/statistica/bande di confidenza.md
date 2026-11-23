@@ -29,11 +29,7 @@ Fornisco delle bande probabilistiche di confidenza della CDF della distribuzione
 Siccome ha un'ampiezza costante tende a essere troppo conservativa; viene usato quando si lavora in contesti di sicurezza.
 La matematica ci dice che la vera CDF $F(x)$ è in $L(x)\le F(x)\le U(x)$, dove $U(x)=\min(F_n​(x)+\epsilon,1)$ e $L(x)=\min(F_n​(x)-\epsilon,0)$, con $F_n(x)$ che è la CDF campionaria.
 # Bootstrapping
-Si tratta di un approccio data-driven: invece che usare formule teoriche che solitamente fanno assunzioni come il tipo di distribuzione o il numero di campioni infiniti, in questo caso si usano i dati per studiare la variabilità dei dati.
-##### Idea
-L'idea è quella di campionare $n$ elementi dalla distribuzione campionaria $F$ in modo da definire una CDF empirica $F^*$; se ripetiamo questo processo per $N$ volte, per ogni valore $x$ all'interno del range che i nostri dati assumono avremo molti valori di $F^*(x)$.
-##### Tipi
-Con questa tecnica possiamo definire le bande di confidenza in entrambi i modi; in entrambi i casi la in entrambi i casi le bande ottenuto sono meno conservative di quelle derivate dai metodi Pearson-Clopper e DKW.
+Il [bootstrapping](bootstrapping.md) permette di ottenere delle bande di confidenza in due modi; le bande ottenute sono meno conservative di quelle derivate dai metodi Pearson-Clopper e DKW.
 - Pointwise
 	Se abbiamo intervallo di confidenza del 95\% allora prendiamo il 2.5° percentile e il 97.5° percentile dei valori assunti da tutte le $F^*(x)$ ottenute. Avremo in questo modo una banda di confidenza che varia in funzione di $x$.
 - Simultaneus

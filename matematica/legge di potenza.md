@@ -12,3 +12,5 @@ Le leggi di potenza invece sono invarianti di scala. Questo vuol che moltiplican
 ##### Vantaggi
 - Si gestiscono bene enormi ordini di grandezza: l'amento di un fattore 2 o fattore 10 è rappresentato dallo stesso incremento visuale.
 - Si riesce subito a capire il fenomeno: le leggi di potenza diventano linee rette e quindi si identificano subito dei pattern.
+##### Svantaggi
+Si perdono informazioni sulla curva dell'errore. Ad esempio un cambio di concavità su log-log non coincide necessariamente con un punto di flesso su lin-lin.
